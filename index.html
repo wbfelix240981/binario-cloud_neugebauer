@@ -24,10 +24,11 @@
   }
   *{box-sizing:border-box;}
   html{color-scheme:dark;}
+  html, body{background:#0a0e14 !important;}
   html,body{overflow-x:hidden; max-width:100%;}
   body{
     margin:0;
-    background-color:#0a0e14;
+    background-color:#0a0e14 !important;
     background-image:
       radial-gradient(1100px 600px at 85% -10%, #0e2733 0%, transparent 60%),
       radial-gradient(900px 500px at -10% 10%, #171029 0%, transparent 55%);
@@ -45,18 +46,6 @@
     padding:40px 32px 36px;
     overflow:hidden;
     border-bottom:1px solid var(--border);
-  }
-  .binpattern{
-    position:absolute; inset:0;
-    font-family:var(--mono);
-    font-size:13px;
-    color:rgba(45,217,245,0.05);
-    line-height:1.9;
-    letter-spacing:.3em;
-    white-space:pre;
-    padding:8px;
-    pointer-events:none;
-    user-select:none;
   }
   .hero-inner{position:relative;z-index:1;}
   .hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:28px;}
@@ -161,10 +150,6 @@
 <div class="wrap">
 
   <header class="hero">
-    <div class="binpattern">01001100 01011001 10101100 00100110 11001101 01001100 01011001 10101100
-01011001 10101100 00100110 11001101 01001100 01011001 10101100 00100110
-00100110 11001101 01001100 01011001 10101100 00100110 11001101 01001100
-01011001 10101100 00100110 11001101 01001100 01011001 10101100 00100110</div>
     <div class="hero-inner">
       <div class="hero-top">
         <div class="lockup">

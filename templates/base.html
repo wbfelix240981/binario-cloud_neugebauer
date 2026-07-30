@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neugebauer — Painel Binário Cloud</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,{{FAVICON_B64}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080b10; --bg2:#0f1520; --panel:#141c29; --panel-hi:#1b2534; --border:#2a374a; --border-hi:#3c4f68;
+    --text:#f3f6fa; --text-dim:#c3cee0; --text-mute:#8a9ab0;
+    --cyan:#2dd9f5; --cyan-dim:#0d3d49;
+    --green:#4ade9c; --green-dim:#123527;
+    --blue:#4cc3fb; --blue-dim:#10324a;
+    --amber:#ffc65c; --amber-dim:#3a2907;
+    --violet:#b79bfb; --violet-dim:#2a2148;
+    --orange:#ff9052; --orange-dim:#3a2110;
+    --slate:#8695a8; --slate-dim:#212c3b;
+    --red:#ff8585;
+    --mono:'JetBrains Mono',monospace; --disp:'Space Grotesk',sans-serif; --body:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{color-scheme:dark;}
+  html, body{background:#0a0e14 !important;}
+  html,body{overflow-x:hidden; max-width:100%;}
+  body{
+    margin:0;
+    background-color:#0a0e14 !important;
+    background-image:
+      radial-gradient(1100px 600px at 85% -10%, #0e2733 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, #171029 0%, transparent 55%);
+    background-repeat:no-repeat;
+    min-height:100vh;
+    color:var(--text); font-family:var(--body); -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--cyan); color:#03181c;}
+
+  .wrap{max-width:960px;margin:0 auto;padding-bottom:64px;}
+
+  /* ---- hero / brand header ---- */
+  header.hero{
+    position:relative;
+    padding:40px 32px 36px;
+    overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .hero-inner{position:relative;z-index:1;}
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:28px;}
+
+  .lockup{display:flex;align-items:center;gap:16px;}
+  .lockup img{display:block;width:auto;}
+  .lockup .logo-provider{height:34px;}
+  .lockup .lockup-x{color:var(--border-hi);font-size:18px;font-weight:300;line-height:1;}
+  .lockup .logo-client{height:46px;}
+
+  .meta{text-align:right;font-size:12.5px;color:var(--text-mute);line-height:1.6;font-family:var(--mono);flex:none;}
+  .meta strong{color:var(--text-dim);font-weight:500;}
+
+  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin:0 0 10px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:'';width:20px;height:1px;background:var(--cyan);}
+  h1{font-family:var(--disp);font-size:26px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em;color:var(--text);}
+  .sub{color:var(--text-dim);font-size:15px;line-height:1.6;margin:0;max-width:56ch;}
+
+  .content{padding:36px 32px 0;}
+  .section-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-mute);margin:0 0 12px;}
+
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+  .metric{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--cyan);border-radius:14px;padding:18px;}
+  .metric .label{font-size:11px;color:var(--text-mute);margin:0 0 8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;}
+  .metric .value{font-family:var(--disp);font-size:28px;font-weight:700;margin:0;color:var(--text);}
+  .metric .value small{font-size:14px;color:var(--text-mute);font-weight:400;font-family:var(--body);}
+
+  /* journey tracker */
+  .journey{background:linear-gradient(180deg,var(--panel-hi),var(--panel));border:1px solid var(--border-hi);border-radius:18px;padding:28px 28px 22px;margin-bottom:28px;}
+  .journey h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-mute);font-weight:600;margin:0 0 22px;font-family:var(--mono);}
+  .track{display:flex;align-items:flex-start;position:relative;}
+  .track::before{content:"";position:absolute;top:15px;left:6%;right:6%;height:2px;background:var(--border);z-index:0;}
+  .stop{flex:1;text-align:center;position:relative;z-index:1;}
+  .stop .ring{width:32px;height:32px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:13px;font-weight:600;background:var(--panel);border:2px solid var(--border);color:var(--text-mute);}
+  .stop.done .ring{border-color:var(--green);background:var(--green-dim);color:var(--green);}
+  .stop.active .ring{border-color:var(--cyan);background:var(--cyan-dim);color:var(--cyan);box-shadow:0 0 0 4px rgba(45,217,245,0.14);}
+  .stop .name{font-size:12.5px;color:var(--text-mute);font-weight:500;line-height:1.4;padding:0 4px;}
+  .stop.active .name{color:var(--text);font-weight:600;}
+
+  /* phase cards */
+  .phase{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:20px 22px;margin-bottom:14px;transition:border-color .15s;}
+  .phase:hover{border-color:var(--border-hi);}
+  .phase.current{border-color:var(--cyan); box-shadow:inset 3px 0 0 var(--cyan), 0 0 0 1px rgba(45,217,245,0.12); background:linear-gradient(90deg, rgba(45,217,245,0.06), var(--panel) 18%);}
+  .phase-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:2px;}
+  .phase-head .name{font-size:16px;font-weight:600;margin:0;color:var(--text);}
+  .phase-head .name .num{font-family:var(--mono);color:var(--cyan);margin-right:2px;}
+  .phase-head .desc{font-size:13px;color:var(--text-mute);margin:3px 0 0;}
+
+  .badge{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:4px 11px;border-radius:100px;white-space:nowrap;text-transform:uppercase;letter-spacing:.03em;}
+  .b-done{background:var(--green-dim);color:var(--green);}
+  .b-progress{background:var(--cyan-dim);color:var(--cyan);}
+  .b-wait{background:var(--amber-dim);color:var(--amber);}
+  .b-todo{background:var(--slate-dim);color:var(--slate);}
+
+  /* accordion subphases */
+  details.subphase{border-bottom:1px solid var(--border);}
+  details.subphase:last-of-type{border-bottom:none;}
+  details.subphase summary{
+    list-style:none; cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;
+  }
+  details.subphase summary::-webkit-details-marker{display:none;}
+  details.subphase summary .sleft{display:flex;align-items:center;gap:8px;}
+  details.subphase summary .chev{color:var(--text-mute);font-size:11px;transition:transform .15s;flex:none;}
+  details.subphase[open] summary .chev{transform:rotate(90deg);}
+  details.subphase summary .sname{font-size:14px;color:var(--text-dim);}
+  details.subphase summary .right{display:flex;align-items:center;gap:14px;}
+  details.subphase summary .count{font-size:12px;color:var(--text-mute);min-width:110px;text-align:right;font-family:var(--mono);}
+
+  .activities{padding:0 0 14px 19px;display:flex;flex-direction:column;gap:2px;}
+  .activity{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 10px;border-radius:8px;}
+  .activity:hover{background:var(--bg2);}
+  .activity.done{background:rgba(74,222,156,0.10);}
+  .activity.done:hover{background:rgba(74,222,156,0.16);}
+  .activity.done .aname{color:var(--text);}
+  .activity.done .astatus{color:var(--green);}
+  .activity .aleft{display:flex;align-items:center;gap:9px;}
+  .activity .dot{width:6px;height:6px;border-radius:50%;flex:none;}
+  .dot.done{background:var(--green);}
+  .dot.progress{background:var(--cyan);}
+  .dot.wait{background:var(--amber);}
+  .dot.todo{background:var(--slate);}
+  .activity .aname{font-size:13px;color:var(--text-dim);}
+  .activity .astatus{font-size:11px;font-family:var(--mono);color:var(--text-mute);white-space:nowrap;}
+
+  footer{margin-top:24px;padding:18px 32px 32px;border-top:1px solid var(--border);font-size:12px;color:var(--text-mute);font-family:var(--mono);}
+
+  @media (max-width:640px){
+    .metrics{grid-template-columns:repeat(2,1fr);}
+    header.hero{padding:26px 20px 34px;}
+    .content{padding:28px 20px 0;}
+    footer{padding:18px 20px 28px;}
+    .hero-inner{flex-direction:column;align-items:flex-start;}
+    .meta{text-align:left;}
+    .track{flex-wrap:wrap;row-gap:16px;}
+    .track::before{display:none;}
+    .stop{flex:1 1 30%;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="lockup">
+          <img class="logo-provider" src="data:image/png;base64,{{BINARIO_LOGO_B64}}" alt="Binário Cloud">
+          <span class="lockup-x">×</span>
+          <img class="logo-client" src="data:image/png;base64,{{NEUGEBAUER_LOGO_B64}}" alt="Neugebauer">
+        </div>
+        <div class="meta">
+          <div><strong>Painel gerado em</strong> {{GENERATED_DATE}}</div>
+        </div>
+      </div>
+      <p class="eyebrow">Painel executivo · Jornada para a nuvem</p>
+      <h1>Acompanhamento do projeto</h1>
+      <p class="sub">Visão consolidada de fases e atividades para a liderança do projeto.</p>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <p class="section-label">Visão geral</p>
+    {{METRICS_HTML}}
+
+    <div class="journey">
+      <h2>Jornada do projeto</h2>
+      <div class="track">{{JOURNEY_HTML}}</div>
+    </div>
+
+    <p class="section-label" style="margin-top:4px;">Fases do projeto</p>
+
+    {{PHASES_HTML}}
+
+  </div>
+
+  <footer>
+    Painel executivo — Binário Cloud
+  </footer>
+
+</div>
+</body>
+</html>

@@ -7,8 +7,28 @@
     "hero_title": "Acompanhamento do projeto",
     "hero_subtitle": "Visão consolidada de fases e atividades para a liderança do projeto.",
     "login": {
-      "username": "neugebauer",
-      "password": "binario2026"
+      "users": [
+        {
+          "username": "neugebauer",
+          "password": "binario2026",
+          "name": "Acesso geral"
+        },
+        {
+          "username": "ndomingues",
+          "password": "Norton@2026",
+          "name": "Norton Soares Domingues"
+        },
+        {
+          "username": "fpicoli",
+          "password": "Francis@2026",
+          "name": "Francis Picoli"
+        },
+        {
+          "username": "cmsantos",
+          "password": "Cassiano@2026",
+          "name": "Cassiano Morin dos Santos"
+        }
+      ]
     }
   },
   "phases": [

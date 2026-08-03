@@ -708,24 +708,32 @@
 
 </div>
 
+<script id="gate-users-data" type="application/json">[{"username": "neugebauer", "password": "binario2026", "name": "Acesso geral"}, {"username": "ndomingues", "password": "Norton@2026", "name": "Norton Soares Domingues"}, {"username": "fpicoli", "password": "Francis@2026", "name": "Francis Picoli"}, {"username": "cmsantos", "password": "Cassiano@2026", "name": "Cassiano Morin dos Santos"}]</script>
 <script>
-  document.getElementById('gate-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var user = document.getElementById('gate-user').value.trim().toLowerCase();
-    var pass = document.getElementById('gate-pass').value;
-    var errorEl = document.getElementById('gate-error');
-    var card = document.querySelector('.gate-card');
+  (function () {
+    var USERS = JSON.parse(document.getElementById('gate-users-data').textContent);
+    document.getElementById('gate-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var user = document.getElementById('gate-user').value.trim().toLowerCase();
+      var pass = document.getElementById('gate-pass').value;
+      var errorEl = document.getElementById('gate-error');
+      var card = document.querySelector('.gate-card');
 
-    if (user === 'neugebauer' && pass === 'binario2026') {
-      sessionStorage.setItem('ngb_auth', '1');
-      document.documentElement.classList.add('authenticated');
-    } else {
-      errorEl.textContent = 'Usuário ou senha incorretos.';
-      card.classList.remove('shake');
-      void card.offsetWidth;
-      card.classList.add('shake');
-    }
-  });
+      var match = USERS.some(function (u) {
+        return u.username.toLowerCase() === user && u.password === pass;
+      });
+
+      if (match) {
+        sessionStorage.setItem('ngb_auth', '1');
+        document.documentElement.classList.add('authenticated');
+      } else {
+        errorEl.textContent = 'Usuário ou senha incorretos.';
+        card.classList.remove('shake');
+        void card.offsetWidth;
+        card.classList.add('shake');
+      }
+    });
+  })();
 </script>
 </body>
 </html>

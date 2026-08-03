@@ -1,0 +1,1337 @@
+{
+  "list_id": "901328018187",
+  "last_synced": "2026-08-03T16:12:35.495554Z",
+  "meta": {
+    "page_title": "Neugebauer — Painel Binário Cloud",
+    "hero_eyebrow": "Painel executivo · Jornada para a nuvem",
+    "hero_title": "Acompanhamento do projeto",
+    "hero_subtitle": "Visão consolidada de fases e atividades para a liderança do projeto.",
+    "login": {
+      "username": "neugebauer",
+      "password": "binario2026"
+    }
+  },
+  "phases": [
+    {
+      "id": "86ajrf5d1",
+      "num": 1,
+      "name": "Fase 1 — Iniciação e planejamento",
+      "descricao": "Formalização, refinamento técnico e planejamento do cronograma",
+      "status": "em andamento",
+      "assignee": null,
+      "due_date": null,
+      "subphases": [
+        {
+          "id": "86ajrf5df",
+          "name": "1.1 Kickoff e formalização",
+          "status": "complete",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Definir stakeholders",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar apresentação de kickoff",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Realizar reunião de kickoff",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Registrar decisões e pendências do kickoff",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar TAP",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Enviar TAP para assinatura",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Obter assinatura da Binário Cloud",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Obter assinatura da Neugebauer",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Formalizar abertura do projeto",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5de",
+          "name": "1.2 Refinamento do escopo",
+          "status": "em andamento",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Validar inventário de servidores",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar servidores ativos e desligados",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Identificar servidores que serão migrados",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Identificar servidores fora do escopo",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar sistemas operacionais",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar capacidade de disco por servidor",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir tipo de migração por servidor",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar dependências entre aplicações",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir criticidade dos sistemas",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir RPO e RTO",
+              "status": "aguardando cliente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar integrações externas, IPs e domínios",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar requisitos de licenciamento",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir janelas de manutenção",
+              "status": "aguardando cliente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Aprovar escopo técnico refinado",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar serviços hospedados",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dc",
+          "name": "1.3 Planejamento do projeto",
+          "status": "em andamento",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Definir marcos do projeto",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar cronograma detalhado",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir responsáveis por frente",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir dependências entre atividades",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir critérios de conclusão por tarefa",
+              "status": "pendente",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar plano de comunicação",
+              "status": "complete",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir reuniões semanais de acompanhamento",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar registro de riscos e impedimentos",
+              "status": "em andamento",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Aprovar cronograma com o cliente",
+              "status": "pendente",
+              "assignee": "Diogo Lerison",
+              "due_date": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "86ajrf5cz",
+      "num": 2,
+      "name": "Fase 2 — Preparação e implementação",
+      "descricao": "Ambiente Binário Cloud: rede, firewall, VMs, backup e monitoramento",
+      "status": "em andamento",
+      "assignee": null,
+      "due_date": null,
+      "subphases": [
+        {
+          "id": "86ajrf5dh",
+          "name": "2.1 Preparação da Binário Cloud",
+          "status": "em andamento",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Validar sizing contratado",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar disponibilidade de capacidade",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar projeto/tenant",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar usuários e permissões",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar quotas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar regiões e zonas de disponibilidade",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Registrar evidências do ambiente criado",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dj",
+          "name": "2.2 Rede e conectividade",
+          "status": "to do",
+          "assignee": "Brunno Leonardo Borges Lopes",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Levantar redes de origem",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir redes de destino",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir endereçamento IP",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir gateways e rotas",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir modelo de conectividade entre ambientes",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar VPN ou link de migração",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar DNS necessário",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar conectividade entre ambientes",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar throughput disponível",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Documentar topologia final",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dk",
+          "name": "2.3 Firewall e segurança",
+          "status": "to do",
+          "assignee": "Brunno Leonardo Borges Lopes",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Levantar políticas atuais",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Levantar objetos, grupos e serviços",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir estratégia de implantação do Fortinet",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Provisionar Virtual Firewall Fortinet",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar interfaces",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar rotas",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar políticas de segurança",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar NATs",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar VPNs",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar acessos",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Obter aprovação das regras pelo cliente",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dp",
+          "name": "2.4 Máquinas virtuais",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Definir estratégia de migração por VM",
+              "status": "em andamento",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Agrupar VMs por sistema ou onda",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar flavors",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar redes e portas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar volumes",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar servidores virtuais",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Aplicar hardening básico",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar sistema operacional",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar acesso administrativo",
+              "status": "em andamento",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar CPU, memória e armazenamento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar conectividade",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Liberar VMs para instalação ou migração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dr",
+          "name": "2.5 Backup",
+          "status": "em andamento",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Confirmar RPO/RTO com o cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Confirmar servidores protegidos",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar capacidade do repositório",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Criar tenant Veeam",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar repositório",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar política de retenção de 90 dias",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar backup full semanal",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar backups incrementais duas vezes ao dia",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar cópia imutável",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar Health Check semanal",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar monitoramento dos jobs",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Executar primeiro backup",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Executar teste de restauração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Obter validação do cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dt",
+          "name": "2.6 Monitoramento e serviços gerenciados",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Integrar ambiente ao Cloud+",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar monitoramento das VMs",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar monitoramento do sistema operacional",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar monitoramento do firewall",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Configurar monitoramento dos backups",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar geração automática de alertas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir processo de acionamento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar operação CCOE 24x7",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Preparar documentação para sustentação",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "86ajrf5cy",
+      "num": 3,
+      "name": "Fase 3 — Migração",
+      "descricao": "Estratégia, piloto e ondas de migração dos servidores",
+      "status": "to do",
+      "assignee": null,
+      "due_date": null,
+      "subphases": [
+        {
+          "id": "86ajrf5dz",
+          "name": "3.1 Estratégia de migração",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Definir método por servidor",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir ondas de migração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir ordem baseada em dependências",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir responsáveis de cada onda",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir janela por onda",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Definir tempo estimado",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar checklist pré-migração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar plano de rollback",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Aprovar plano com o cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dx",
+          "name": "3.2 Migração piloto",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Selecionar servidores piloto",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Executar replicação inicial",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar sincronização",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Executar teste funcional",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Registrar problemas encontrados",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Ajustar procedimento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Obter aprovação para demais ondas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dy",
+          "name": "3.3 Ondas de migração",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Onda 1 — Servidores de baixa criticidade",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Onda 2 — Aplicações intermediárias",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Onda 3 — Oracle",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Onda 4 — SAP/HANA",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Onda 5 — Serviços críticos restantes",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "86ajrf5d3",
+      "num": 4,
+      "name": "Fase 4 — Go-live e estabilização",
+      "descricao": "Testes finais, virada de chave e estabilização pós go-live",
+      "status": "to do",
+      "assignee": null,
+      "due_date": null,
+      "subphases": [
+        {
+          "id": "86ajrf5e8",
+          "name": "4.1 Testes finais",
+          "status": "to do",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Testar conectividade",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar aplicações",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar integrações",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar acessos externos",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar firewall e políticas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar jobs de backup",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Testar restauração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar monitoramento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar desempenho",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Registrar aceite dos testes",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5e4",
+          "name": "4.2 Virada de chave",
+          "status": "to do",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Confirmar autorização do cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Comunicar início da virada",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Realizar sincronização final",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Desativar ou isolar ambiente anterior",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Atualizar DNS, rotas ou apontamentos",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Liberar ambiente de produção",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Executar testes pós-virada",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Comunicar conclusão",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5e7",
+          "name": "4.3 Estabilização",
+          "status": "to do",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Monitorar ambiente após o go-live",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Acompanhar alertas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Corrigir pendências",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Registrar incidentes da estabilização",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar desempenho",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Confirmar estabilidade com o cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "86ajrf5d6",
+      "num": 5,
+      "name": "Fase 5 — Encerramento e transição",
+      "descricao": "Transição para operação (CCOE) e encerramento formal do projeto",
+      "status": "to do",
+      "assignee": null,
+      "due_date": null,
+      "subphases": [
+        {
+          "id": "86ajrf5ee",
+          "name": "5.1 Transição para operação",
+          "status": "to do",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Elaborar documentação as built",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Atualizar diagrama de rede",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Documentar inventário final",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Documentar políticas de firewall",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Documentar rotinas de backup",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Validar cadastro no monitoramento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Realizar passagem para o CCOE",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Confirmar canais de suporte",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Confirmar SLAs",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Realizar reunião de transição",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5ef",
+          "name": "5.2 Encerramento",
+          "status": "to do",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": null,
+              "name": "Validar entregáveis contratados",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Consolidar pendências residuais",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Elaborar relatório final",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Realizar reunião de encerramento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Enviar termo de aceite",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Obter aceite formal da Neugebauer",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Registrar lições aprendidas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": null,
+              "name": "Encerrar o projeto",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

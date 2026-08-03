@@ -67,11 +67,19 @@
   .content{padding:36px 32px 0;}
   .section-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text-mute);margin:0 0 12px;}
 
-  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px;}
   .metric{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--cyan);border-radius:14px;padding:18px;}
   .metric .label{font-size:11px;color:var(--text-mute);margin:0 0 8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;}
   .metric .value{font-family:var(--disp);font-size:28px;font-weight:700;margin:0;color:var(--text);}
   .metric .value small{font-size:14px;color:var(--text-mute);font-weight:400;font-family:var(--body);}
+
+  .metric-ring{display:flex;flex-direction:column;align-items:flex-start;text-align:left;justify-content:flex-start;border-top-color:var(--green) !important;}
+  .metric-ring .label{align-self:flex-start;}
+  .ring-wrap{position:relative;width:60px;height:60px;margin-top:6px;}
+  .progress-ring{width:60px;height:60px;transform:rotate(-90deg);}
+  .ring-bg{fill:none;stroke:var(--border);stroke-width:6;}
+  .ring-fill{fill:none;stroke:var(--green);stroke-width:6;stroke-linecap:round;}
+  .ring-percent{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:700;font-size:14px;color:var(--green);}
 
   /* journey tracker */
   .journey{background:linear-gradient(180deg,var(--panel-hi),var(--panel));border:1px solid var(--border-hi);border-radius:18px;padding:28px 28px 22px;margin-bottom:28px;}
@@ -99,6 +107,7 @@
   .b-progress{background:var(--cyan-dim);color:var(--cyan);}
   .b-wait{background:var(--amber-dim);color:var(--amber);}
   .b-todo{background:var(--slate-dim);color:var(--slate);}
+  .b-unknown{background:var(--violet-dim);color:var(--violet);}
 
   /* accordion subphases */
   details.subphase{border-bottom:1px solid var(--border);}
@@ -128,25 +137,137 @@
   .dot.progress{background:var(--cyan);}
   .dot.wait{background:var(--amber);}
   .dot.todo{background:var(--slate);}
+  .dot.unknown{background:var(--violet);}
   .activity .aname{font-size:13px;color:var(--text-dim);}
   .activity .astatus{font-size:11px;font-family:var(--mono);color:var(--text-mute);white-space:nowrap;}
 
   footer{margin-top:24px;padding:18px 32px 32px;border-top:1px solid var(--border);font-size:12px;color:var(--text-mute);font-family:var(--mono);}
 
   @media (max-width:640px){
-    .metrics{grid-template-columns:repeat(2,1fr);}
-    header.hero{padding:26px 20px 34px;}
-    .content{padding:28px 20px 0;}
-    footer{padding:18px 20px 28px;}
-    .hero-inner{flex-direction:column;align-items:flex-start;}
-    .meta{text-align:left;}
-    .track{flex-wrap:wrap;row-gap:16px;}
+    .wrap{padding-bottom:48px;}
+    header.hero{padding:22px 18px 26px;}
+    .content{padding:24px 16px 0;}
+    footer{padding:16px 18px 26px;}
+
+    .hero-top{flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:20px;}
+    .lockup{flex-wrap:wrap;gap:10px;row-gap:6px;}
+    .lockup .logo-provider{height:22px;}
+    .lockup .logo-client{height:30px;}
+    .meta{text-align:left;font-size:11.5px;}
+
+    .eyebrow{font-size:10.5px;}
+    h1{font-size:21px;}
+    .sub{font-size:13.5px;max-width:none;}
+
+    .metrics{grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px;}
+    .metric{padding:14px;}
+    .metric .value{font-size:22px;}
+    .metric-ring{grid-column:span 2;flex-direction:row;align-items:center;justify-content:flex-start;gap:16px;text-align:left;}
+    .metric-ring .label{align-self:auto;}
+    .ring-wrap{margin-top:0;}
+
+    .journey{padding:18px 14px 14px;margin-bottom:20px;}
+    .track{flex-wrap:wrap;row-gap:18px;}
     .track::before{display:none;}
     .stop{flex:1 1 30%;}
+    .stop .name{font-size:11px;}
+
+    .phase{padding:16px 14px;margin-bottom:12px;}
+    .phase-head{flex-wrap:wrap;row-gap:8px;}
+    .phase-head .name{font-size:14.5px;}
+
+    details.subphase summary{flex-wrap:wrap;row-gap:6px;padding:11px 0;}
+    details.subphase summary .right{width:100%;justify-content:space-between;padding-left:19px;}
+    details.subphase summary .count{min-width:0;text-align:left;}
+
+    .activities{padding-left:14px;}
+    .activity{flex-wrap:wrap;row-gap:2px;}
+
+    .gate-card{padding:26px 20px;}
+  }
+
+  @media (max-width:380px){
+    .lockup .logo-provider{height:18px;}
+    .lockup .logo-client{height:25px;}
+    .metrics{grid-template-columns:1fr 1fr;}
+  }
+
+  /* ---- login gate ---- */
+  .gate{
+    position:fixed; inset:0; z-index:9999;
+    display:flex; align-items:center; justify-content:center;
+    background-color:#0a0e14;
+    background-image:
+      radial-gradient(1100px 600px at 85% -10%, #0e2733 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, #171029 0%, transparent 55%);
+    padding:20px;
+  }
+  html.authenticated .gate{display:none;}
+  .gate-card{
+    width:100%; max-width:360px;
+    background:var(--panel); border:1px solid var(--border-hi);
+    border-radius:16px; padding:32px 28px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.4);
+  }
+  .gate-lockup{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:22px;}
+  .gate-lockup img.gp{height:26px;}
+  .gate-lockup img.gc{height:34px;}
+  .gate-lockup .x{color:var(--border-hi);font-size:16px;font-weight:300;}
+  .gate-title{font-family:var(--disp);font-size:16px;font-weight:600;color:var(--text);text-align:center;margin:0 0 4px;}
+  .gate-sub{font-size:12.5px;color:var(--text-mute);text-align:center;margin:0 0 22px;}
+  .gate-field{margin-bottom:12px;}
+  .gate-field label{display:block;font-size:11px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-mute);margin-bottom:6px;}
+  .gate-field input{
+    width:100%; background:var(--bg2); border:1px solid var(--border);
+    border-radius:8px; padding:10px 12px; color:var(--text); font-size:14px;
+    font-family:var(--body); outline:none;
+  }
+  .gate-field input:focus{border-color:var(--cyan);}
+  .gate-error{font-size:12.5px; color:var(--red); margin:2px 0 12px; min-height:16px;}
+  .gate-submit{
+    width:100%; padding:11px; border-radius:8px; border:none;
+    background:var(--cyan); color:#03181c; font-weight:600; font-size:14px;
+    font-family:var(--body); cursor:pointer; margin-top:6px;
+  }
+  .gate-submit:hover{filter:brightness(1.05);}
+  .shake{animation:gateshake .35s;}
+  @keyframes gateshake{
+    0%,100%{transform:translateX(0);}
+    25%{transform:translateX(-6px);}
+    75%{transform:translateX(6px);}
   }
 </style>
 </head>
 <body>
+<script>
+  if (sessionStorage.getItem('ngb_auth') === '1') {
+    document.documentElement.classList.add('authenticated');
+  }
+</script>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-lockup">
+      <img class="gp" src="data:image/png;base64,{{BINARIO_LOGO_B64}}" alt="Binário Cloud">
+      <img class="gc" src="data:image/png;base64,{{NEUGEBAUER_LOGO_B64}}" alt="Neugebauer">
+    </div>
+    <p class="gate-title">Painel executivo</p>
+    <p class="gate-sub">Acesso restrito · Neugebauer / Binário Cloud</p>
+    <form id="gate-form" autocomplete="off">
+      <div class="gate-field">
+        <label for="gate-user">Usuário</label>
+        <input type="text" id="gate-user" autocomplete="username">
+      </div>
+      <div class="gate-field">
+        <label for="gate-pass">Senha</label>
+        <input type="password" id="gate-pass" autocomplete="current-password">
+      </div>
+      <p class="gate-error" id="gate-error"></p>
+      <button type="submit" class="gate-submit">Entrar</button>
+    </form>
+  </div>
+</div>
+
 <div class="wrap">
 
   <header class="hero">
@@ -188,5 +309,25 @@
   </footer>
 
 </div>
+
+<script>
+  document.getElementById('gate-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var user = document.getElementById('gate-user').value.trim().toLowerCase();
+    var pass = document.getElementById('gate-pass').value;
+    var errorEl = document.getElementById('gate-error');
+    var card = document.querySelector('.gate-card');
+
+    if (user === '{{LOGIN_USER}}' && pass === '{{LOGIN_PASS}}') {
+      sessionStorage.setItem('ngb_auth', '1');
+      document.documentElement.classList.add('authenticated');
+    } else {
+      errorEl.textContent = 'Usuário ou senha incorretos.';
+      card.classList.remove('shake');
+      void card.offsetWidth;
+      card.classList.add('shake');
+    }
+  });
+</script>
 </body>
 </html>

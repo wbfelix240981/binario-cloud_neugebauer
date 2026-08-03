@@ -1,0 +1,49 @@
+name: Sincronizar com ClickUp
+
+on:
+  schedule:
+    # Horários em UTC (Brasília = UTC-3):
+    - cron: "0 9 * * *"   # 06:00 BRT
+    - cron: "0 15 * * *"  # 12:00 BRT
+    - cron: "0 23 * * *"  # 20:00 BRT
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Sincronizar dados do ClickUp (data/neugebauer.json)
+        env:
+          CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}
+          CLICKUP_LIST_ID: "901328018187"
+        run: python scripts/sync_clickup.py
+
+      - name: Reconstruir o painel (index.html)
+        run: python scripts/build.py
+
+      - name: Publicar alterações (se houver)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/neugebauer.json index.html
+          # IMPORTANTE: NUNCA usar "[skip ci]" na mensagem de commit --
+          # o Cloudflare Pages também respeita essa tag e pula o build,
+          # deixando o site publicado desatualizado mesmo com o GitHub
+          # certo. Este workflow só roda por agendamento/manual (nunca
+          # por push), então não há risco de loop mesmo sem o [skip ci].
+          git diff --cached --quiet && echo "Nada para commitar" || git commit -m "Sincronização automática com ClickUp"
+          git push

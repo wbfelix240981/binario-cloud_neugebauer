@@ -1,6 +1,6 @@
 {
   "list_id": "901328018187",
-  "last_synced": "2026-08-03T16:12:35.495554Z",
+  "last_synced": "2026-08-03T22:39:59.129122Z",
   "meta": {
     "page_title": "Neugebauer — Painel Binário Cloud",
     "hero_eyebrow": "Painel executivo · Jornada para a nuvem",
@@ -123,14 +123,14 @@
             {
               "id": null,
               "name": "Validar inventário de servidores",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
             {
               "id": null,
               "name": "Validar servidores ativos e desligados",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -151,7 +151,7 @@
             {
               "id": null,
               "name": "Levantar sistemas operacionais",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -251,7 +251,7 @@
             {
               "id": null,
               "name": "Definir responsáveis por frente",
-              "status": "pendente",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -279,7 +279,7 @@
             {
               "id": null,
               "name": "Definir reuniões semanais de acompanhamento",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -320,7 +320,7 @@
             {
               "id": null,
               "name": "Validar sizing contratado",
-              "status": "to do",
+              "status": "em andamento",
               "assignee": null,
               "due_date": null
             },
@@ -341,7 +341,7 @@
             {
               "id": null,
               "name": "Criar usuários e permissões",
-              "status": "to do",
+              "status": "em andamento",
               "assignee": null,
               "due_date": null
             },

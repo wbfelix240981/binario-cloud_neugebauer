@@ -2,10 +2,8 @@ name: Sincronizar com ClickUp
 
 on:
   schedule:
-    # Horários em UTC (Brasília = UTC-3):
-    - cron: "0 9 * * *"   # 06:00 BRT
-    - cron: "0 15 * * *"  # 12:00 BRT
-    - cron: "0 23 * * *"  # 20:00 BRT
+    # De hora em hora (mesmo padrão dos painéis UOL e Metas)
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:

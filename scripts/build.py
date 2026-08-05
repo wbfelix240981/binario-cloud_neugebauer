@@ -241,14 +241,13 @@ def build(template_path=DEFAULT_TEMPLATE, data_path=DEFAULT_DATA, out_path=DEFAU
     phases_html = "\n\n".join(render_phase(p, p["num"] in active_phase_nums) for p in phases)
 
     last_synced = data.get("last_synced")
+    import datetime
+    BRT = datetime.timezone(datetime.timedelta(hours=-3))
     if last_synced:
-        import datetime
-        dt = datetime.datetime.fromisoformat(last_synced.replace("Z", "+00:00"))
-        generated_date = f"{dt.day} {MONTHS_PT[dt.month - 1]}. {dt.year}"
+        dt = datetime.datetime.fromisoformat(last_synced.replace("Z", "+00:00")).astimezone(BRT)
     else:
-        import datetime
-        today = datetime.datetime.now()
-        generated_date = f"{today.day} {MONTHS_PT[today.month - 1]}. {today.year}"
+        dt = datetime.datetime.now(BRT)
+    generated_date = f"{dt.day} {MONTHS_PT[dt.month - 1]}. {dt.year} \u00e0s {dt.hour:02d}:{dt.minute:02d}"
 
     with open(template_path, "r", encoding="utf-8") as f:
         template = f.read()

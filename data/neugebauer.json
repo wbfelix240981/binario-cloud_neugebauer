@@ -1,6 +1,6 @@
 {
   "list_id": "901328018187",
-  "last_synced": "2026-08-03T22:39:59.129122Z",
+  "last_synced": "2026-08-05T14:44:36.390284Z",
   "meta": {
     "page_title": "Neugebauer — Painel Binário Cloud",
     "hero_eyebrow": "Painel executivo · Jornada para a nuvem",
@@ -195,13 +195,6 @@
             },
             {
               "id": null,
-              "name": "Definir RPO e RTO",
-              "status": "aguardando cliente",
-              "assignee": "Diogo Lerison",
-              "due_date": null
-            },
-            {
-              "id": null,
               "name": "Levantar integrações externas, IPs e domínios",
               "status": "pendente",
               "assignee": "Diogo Lerison",
@@ -211,20 +204,6 @@
               "id": null,
               "name": "Levantar requisitos de licenciamento",
               "status": "em andamento",
-              "assignee": "Diogo Lerison",
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Definir janelas de manutenção",
-              "status": "aguardando cliente",
-              "assignee": "Diogo Lerison",
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Aprovar escopo técnico refinado",
-              "status": "pendente",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -270,13 +249,6 @@
               "name": "Definir dependências entre atividades",
               "status": "pendente",
               "assignee": "Diogo Lerison",
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Definir critérios de conclusão por tarefa",
-              "status": "pendente",
-              "assignee": null,
               "due_date": null
             },
             {
@@ -336,13 +308,6 @@
             },
             {
               "id": null,
-              "name": "Validar disponibilidade de capacidade",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
               "name": "Criar projeto/tenant",
               "status": "complete",
               "assignee": "Lucas Federissis de Souza",
@@ -352,27 +317,6 @@
               "id": null,
               "name": "Criar usuários e permissões",
               "status": "em andamento",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Configurar quotas",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Configurar regiões e zonas de disponibilidade",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Registrar evidências do ambiente criado",
-              "status": "to do",
               "assignee": null,
               "due_date": null
             }
@@ -566,13 +510,6 @@
             },
             {
               "id": null,
-              "name": "Criar flavors",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
               "name": "Criar redes e portas",
               "status": "to do",
               "assignee": null,
@@ -580,21 +517,7 @@
             },
             {
               "id": null,
-              "name": "Criar volumes",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
               "name": "Criar servidores virtuais",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Aplicar hardening básico",
               "status": "to do",
               "assignee": null,
               "due_date": null
@@ -695,13 +618,6 @@
             {
               "id": null,
               "name": "Configurar backups incrementais duas vezes ao dia",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": null,
-              "name": "Configurar cópia imutável",
               "status": "to do",
               "assignee": null,
               "due_date": null

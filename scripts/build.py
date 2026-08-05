@@ -29,7 +29,8 @@ MONTHS_PT = ["jan", "fev", "mar", "abr", "mai", "jun",
 STATUS_RULES = [
     (("complete", "concluido", "concluído", "done"), "done", "Concluído"),
     (("em andamento", "in progress", "andamento"), "progress", "Em andamento"),
-    (("aguardando cliente", "aguardando", "waiting", "blocked"), "wait", "Aguardando cliente"),
+    (("bloqueio/impeditivo", "bloqueio", "impeditivo", "bloqueado", "blocked"), "blocked", "Bloqueado"),
+    (("aguardando cliente", "aguardando", "waiting"), "wait", "Aguardando cliente"),
     (("to do", "pendente", "open", "backlog", "não iniciado", "nao iniciado"), "todo", "Não iniciado"),
 ]
 
@@ -120,6 +121,33 @@ def render_phase(phase, is_current):
     </div>'''
 
 
+def render_alerts(alerts):
+    if not alerts:
+        return ""
+    items = []
+    for a in alerts:
+        name = esc(a["name"])
+        children = a.get("children", [])
+        if children:
+            child_names = "; ".join(esc(c["name"]) for c in children)
+            items.append(f'<li><strong>{name}</strong> — {child_names}</li>')
+        else:
+            items.append(f'<li><strong>{name}</strong></li>')
+    items_html = "\n          ".join(items)
+    plural = "s" if len(alerts) > 1 else ""
+    return f'''    <div class="alert-banner" role="alert">
+      <div class="alert-head">
+        <span class="alert-dot"></span>
+        <span class="alert-title">Bloqueio{plural} / impeditivo{plural} identificado{plural}</span>
+      </div>
+      <ul class="alert-list">
+          {items_html}
+      </ul>
+    </div>
+
+'''
+
+
 def render_metrics(phases):
     total_phases = len(phases)
     active_phase_nums = [p["num"] for p in phases if classify_status(p["status"])[0] == "progress"]
@@ -207,6 +235,7 @@ def build(template_path=DEFAULT_TEMPLATE, data_path=DEFAULT_DATA, out_path=DEFAU
     phases = data["phases"]
     meta = data["meta"]
 
+    alerts_html = render_alerts(data.get("alerts", []))
     metrics_html, active_phase_nums = render_metrics(phases)
     journey_html = render_journey(phases, active_phase_nums)
     phases_html = "\n\n".join(render_phase(p, p["num"] in active_phase_nums) for p in phases)
@@ -231,6 +260,7 @@ def build(template_path=DEFAULT_TEMPLATE, data_path=DEFAULT_DATA, out_path=DEFAU
         .replace("{{NEUGEBAUER_LOGO_B64}}", b64(os.path.join(ASSETS, "neugebauer-logo.png")))
         .replace("{{GENERATED_DATE}}", generated_date)
         .replace("{{LOGIN_USERS_JSON}}", json.dumps(meta["login"]["users"], ensure_ascii=False))
+        .replace("{{ALERTS_HTML}}", alerts_html)
         .replace("{{METRICS_HTML}}", metrics_html)
         .replace("{{JOURNEY_HTML}}", journey_html)
         .replace("{{PHASES_HTML}}", phases_html)

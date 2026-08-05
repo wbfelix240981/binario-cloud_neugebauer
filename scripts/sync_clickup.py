@@ -42,7 +42,14 @@ API_BASE = "https://api.clickup.com/api/v2"
 # assumir o vocabulário errado numa lista com nomes customizados).
 KNOWN_STATUSES = {
     "complete", "to do", "em andamento", "pendente", "aguardando cliente",
+    "bloqueio/impeditivo",
 }
+
+# Status que, quando aparecem numa tarefa RAIZ (sem pai) que não é uma das
+# 5 fases já conhecidas, indicam que é um alerta de bloqueio -- não uma
+# fase nova de verdade. Esses vão para data["alerts"], não para
+# data["phases"], e aparecem como banner piscando em vermelho no painel.
+BLOCKER_STATUSES = {"bloqueio/impeditivo"}
 
 
 def fetch_all_tasks_flat(list_id, token):
@@ -124,8 +131,30 @@ def sync(data, tasks, warnings):
     existing_phases_by_id = {p["id"]: p for p in data["phases"] if p.get("id")}
     existing_phases_by_name = {p["name"]: p for p in data["phases"] if not p.get("id")}
 
+    # Separa: raízes que já são fases conhecidas (ou vão virar fase nova de
+    # verdade) das raízes que são só alertas de bloqueio soltos na lista
+    # (ex.: tarefa tipo "Fase" chamada "Bloqueio", criada à parte pelo time
+    # pra sinalizar um impeditivo -- não faz parte da jornada do projeto).
+    phase_roots = []
+    blocker_roots = []
+    for root_task in roots:
+        is_known_phase = root_task["id"] in existing_phases_by_id or root_task["name"] in existing_phases_by_name
+        status_key = (root_task["status"]["status"] or "").strip().lower()
+        if not is_known_phase and status_key in BLOCKER_STATUSES:
+            blocker_roots.append(root_task)
+        else:
+            phase_roots.append(root_task)
+
+    alerts = []
+    for blocker_task in blocker_roots:
+        dyn = task_to_dynamic(blocker_task)
+        children = [task_to_dynamic(c) for c in children_map.get(blocker_task["id"], [])]
+        alerts.append({**dyn, "children": children})
+        warnings.append(f"ALERTA: bloqueio/impeditivo encontrado -- '{dyn['name']}'")
+    data["alerts"] = alerts
+
     new_phases = []
-    for i, root_task in enumerate(roots, start=1):
+    for i, root_task in enumerate(phase_roots, start=1):
         existing_phase = existing_phases_by_id.get(root_task["id"]) or existing_phases_by_name.get(root_task["name"])
         dyn = task_to_dynamic(root_task)
         status_key = dyn["status"].strip().lower()

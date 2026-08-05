@@ -200,6 +200,29 @@ def test_c4_fase_nova_gera_aviso_para_curar():
     check("descricao da fase nova começa vazia (não inventamos texto)", nova["descricao"] == "")
 
 
+def test_c5_bloqueio_vira_alerta_nao_fase():
+    print("\n--- (c5) tarefa raiz com status de bloqueio vira alerta, não fase nova ---")
+    data = base_data()
+    tasks = base_tasks()
+    tasks.append(task("blk1", "Bloqueio", "bloqueio/impeditivo", None, order=99))
+    tasks.append(task("blk2", "Algo travado com fornecedor X", "bloqueio/impeditivo", "blk1", order=1))
+
+    warnings = []
+    result = sc.sync(copy.deepcopy(data), tasks, warnings)
+
+    check("'Bloqueio' NÃO foi criado como fase", all(p["name"] != "Bloqueio" for p in result["phases"]))
+    check("fase original (Fase 1) continua a única fase", len(result["phases"]) == 1)
+    check("alerts tem 1 item", len(result.get("alerts", [])) == 1)
+    check("alerta é o 'Bloqueio' com a filha aninhada", result["alerts"][0]["name"] == "Bloqueio"
+          and result["alerts"][0]["children"][0]["name"] == "Algo travado com fornecedor X")
+    check("aviso de ALERTA foi emitido", any("ALERTA" in w and "Bloqueio" in w for w in warnings))
+
+    # camada de renderização: badge deve ser 'blocked', não 'unknown' nem 'todo'
+    css_class, label, recognized = _classify_via_build("bloqueio/impeditivo")
+    check("build.py reconhece 'bloqueio/impeditivo' como classe 'blocked'", css_class == "blocked")
+    check("build.py reconhece esse status como conhecido", recognized is True)
+
+
 if __name__ == "__main__":
     test_a_nada_mudou()
     test_b_algo_mudou()
@@ -207,6 +230,7 @@ if __name__ == "__main__":
     test_c2_status_container_independente_das_filhas()
     test_c3_bootstrap_casa_por_nome()
     test_c4_fase_nova_gera_aviso_para_curar()
+    test_c5_bloqueio_vira_alerta_nao_fase()
 
     print("\n" + "=" * 50)
     if FAILURES:

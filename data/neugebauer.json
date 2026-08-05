@@ -1358,5 +1358,23 @@
         }
       ]
     }
+  ],
+  "alerts": [
+    {
+      "id": "86ajwdxee",
+      "name": "Bloqueio",
+      "status": "bloqueio/impeditivo",
+      "assignee": "Diogo Lerison",
+      "due_date": null,
+      "children": [
+        {
+          "id": "86ajwdywa",
+          "name": "Comunicação entre Binario e Kosmo bloqueado",
+          "status": "bloqueio/impeditivo",
+          "assignee": "Diogo Lerison",
+          "due_date": null
+        }
+      ]
+    }
   ]
 }

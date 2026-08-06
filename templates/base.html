@@ -57,6 +57,7 @@
   .lockup .logo-client{height:46px;}
 
   .meta{text-align:right;font-size:12.5px;color:var(--text-mute);line-height:1.6;font-family:var(--mono);flex:none;}
+  .meta-time{color:var(--green);font-weight:600;}
   .meta strong{color:var(--text-dim);font-weight:500;}
 
   .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin:0 0 10px;display:flex;align-items:center;gap:10px;}
@@ -304,7 +305,7 @@
           <img class="logo-client" src="data:image/png;base64,{{NEUGEBAUER_LOGO_B64}}" alt="Neugebauer">
         </div>
         <div class="meta">
-          <div><strong>Painel gerado em</strong> {{GENERATED_DATE}}</div>
+          <div><strong>Painel gerado em</strong> <span class="meta-time">{{GENERATED_DATE}}</span></div>
         </div>
       </div>
       <p class="eyebrow">Painel executivo · Jornada para a nuvem</p>

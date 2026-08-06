@@ -1,6 +1,6 @@
 {
   "list_id": "901328018187",
-  "last_synced": "2026-08-05T14:44:36.390284Z",
+  "last_synced": "2026-08-05T23:30:15.373646Z",
   "meta": {
     "page_title": "Neugebauer — Painel Binário Cloud",
     "hero_eyebrow": "Painel executivo · Jornada para a nuvem",
@@ -147,14 +147,14 @@
             {
               "id": null,
               "name": "Identificar servidores que serão migrados",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
             {
               "id": null,
               "name": "Identificar servidores fora do escopo",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -168,7 +168,7 @@
             {
               "id": null,
               "name": "Levantar capacidade de disco por servidor",
-              "status": "em andamento",
+              "status": "complete",
               "assignee": "Diogo Lerison",
               "due_date": null
             },
@@ -727,6 +727,29 @@
               "name": "Preparar documentação para sustentação",
               "status": "to do",
               "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajwq6ah",
+          "name": "2.7 Coleta de dados e configurações locais",
+          "status": "em andamento",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajwq728",
+              "name": "Coleta de informações para inventario do ambiente NGB Kosmo",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": "86ajwq7dt",
+              "name": "Instalação do Agent de backup nos servidores para mapear processo de migração",
+              "status": "em andamento",
+              "assignee": "Lucas Federissis de Souza",
               "due_date": null
             }
           ]

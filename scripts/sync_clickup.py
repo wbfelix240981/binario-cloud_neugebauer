@@ -23,6 +23,7 @@ Uso:
 """
 import datetime
 import json
+import re
 import os
 import sys
 from collections import defaultdict
@@ -203,8 +204,21 @@ def sync(data, tasks, warnings):
             sub["activities"] = new_acts
             new_subs.append(sub)
 
+        # Mesma proteção: ordena as subfases pelo número no início do
+        # nome (ex.: "2.7 Coleta..." -> 2.7), não pela orderindex viva.
+        def _leading_number(name):
+            m = re.match(r"^(\d+(?:\.\d+)?)", name.strip())
+            return float(m.group(1)) if m else float("inf")
+        new_subs.sort(key=lambda s: _leading_number(s["name"]))
+
         phase["subphases"] = new_subs
         new_phases.append(phase)
+
+    # Ordena pelas fases pelo campo curado "num" (não pela orderindex viva
+    # do ClickUp) -- isso já causou publicação fora de ordem uma vez,
+    # quando a Fase 2 foi tocada recentemente no ClickUp e sua orderindex
+    # mudou, jogando-a para o final da lista.
+    new_phases.sort(key=lambda p: p["num"])
 
     data["phases"] = new_phases
     data["last_synced"] = datetime.datetime.utcnow().isoformat() + "Z"

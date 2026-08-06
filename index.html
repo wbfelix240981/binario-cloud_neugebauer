@@ -360,10 +360,10 @@
       <h2>Jornada do projeto</h2>
       <div class="track">
         <div class="stop active"><div class="ring">1</div><div class="name">Iniciação e planejamento</div></div>
+        <div class="stop active"><div class="ring">2</div><div class="name">Preparação e implementação</div></div>
         <div class="stop"><div class="ring">3</div><div class="name">Migração</div></div>
         <div class="stop"><div class="ring">4</div><div class="name">Go-live e estabilização</div></div>
         <div class="stop"><div class="ring">5</div><div class="name">Encerramento e transição</div></div>
-        <div class="stop active"><div class="ring">2</div><div class="name">Preparação e implementação</div></div>
       </div>
     </div>
 
@@ -432,6 +432,135 @@
           <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Definir reuniões semanais de acompanhamento</span></span><span class="astatus">Concluído</span></div>
           <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Criar registro de riscos e impedimentos</span></span><span class="astatus">Em andamento</span></div>
           <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Aprovar cronograma com o cliente</span></span><span class="astatus">Não iniciado</span></div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Fase 2 -->
+    <div class="phase current">
+      <div class="phase-head">
+        <div>
+          <p class="name"><span class="num">02</span>Fase 2 — Preparação e implementação</p>
+          <p class="desc">Ambiente Binário Cloud: rede, firewall, VMs, backup e monitoramento</p>
+        </div>
+        <span class="badge b-progress">Em andamento</span>
+      </div>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.1 Preparação da Binário Cloud</span></span>
+          <span class="right"><span class="count">1 concluídas · 2 em andamento</span><span class="badge b-progress">Em andamento</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Validar sizing contratado</span></span><span class="astatus">Em andamento</span></div>
+          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Criar projeto/tenant</span></span><span class="astatus">Concluído</span></div>
+          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Criar usuários e permissões</span></span><span class="astatus">Em andamento</span></div>
+        </div>
+      </details>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.2 Rede e conectividade</span></span>
+          <span class="right"><span class="count">10 atividades</span><span class="badge b-todo">Não iniciado</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Levantar redes de origem</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir redes de destino</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir endereçamento IP</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir gateways e rotas</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir modelo de conectividade entre ambientes</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar VPN ou link de migração</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar DNS necessário</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Testar conectividade entre ambientes</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar throughput disponível</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Documentar topologia final</span></span><span class="astatus">Não iniciado</span></div>
+        </div>
+      </details>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.3 Firewall e segurança</span></span>
+          <span class="right"><span class="count">11 atividades</span><span class="badge b-todo">Não iniciado</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Levantar políticas atuais</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Levantar objetos, grupos e serviços</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir estratégia de implantação do Fortinet</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Provisionar Virtual Firewall Fortinet</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar interfaces</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar rotas</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar políticas de segurança</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar NATs</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar VPNs</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar acessos</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Obter aprovação das regras pelo cliente</span></span><span class="astatus">Não iniciado</span></div>
+        </div>
+      </details>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.4 Máquinas virtuais</span></span>
+          <span class="right"><span class="count">2 de 9 em andamento</span><span class="badge b-todo">Não iniciado</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Definir estratégia de migração por VM</span></span><span class="astatus">Em andamento</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Agrupar VMs por sistema ou onda</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Criar redes e portas</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Criar servidores virtuais</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar sistema operacional</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Configurar acesso administrativo</span></span><span class="astatus">Em andamento</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar CPU, memória e armazenamento</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar conectividade</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Liberar VMs para instalação ou migração</span></span><span class="astatus">Não iniciado</span></div>
+        </div>
+      </details>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.5 Backup</span></span>
+          <span class="right"><span class="count">2 de 11 concluídas</span><span class="badge b-progress">Em andamento</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Confirmar RPO/RTO com o cliente</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Criar tenant Veeam</span></span><span class="astatus">Concluído</span></div>
+          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Configurar repositório</span></span><span class="astatus">Concluído</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar política de retenção de 90 dias</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar backup full semanal</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar backups incrementais duas vezes ao dia</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar Health Check semanal</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento dos jobs</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Executar primeiro backup</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Executar teste de restauração</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Obter validação do cliente</span></span><span class="astatus">Não iniciado</span></div>
+        </div>
+      </details>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.6 Monitoramento e serviços gerenciados</span></span>
+          <span class="right"><span class="count">9 atividades</span><span class="badge b-todo">Não iniciado</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Integrar ambiente ao Cloud+</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento das VMs</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento do sistema operacional</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento do firewall</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento dos backups</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar geração automática de alertas</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir processo de acionamento</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar operação CCOE 24x7</span></span><span class="astatus">Não iniciado</span></div>
+          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Preparar documentação para sustentação</span></span><span class="astatus">Não iniciado</span></div>
+        </div>
+      </details>
+
+      <details class="subphase">
+        <summary>
+          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.7 Coleta de dados e configurações locais</span></span>
+          <span class="right"><span class="count">1 concluídas · 1 em andamento</span><span class="badge b-progress">Em andamento</span></span>
+        </summary>
+        <div class="activities">
+          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Coleta de informações para inventario do ambiente NGB Kosmo</span></span><span class="astatus">Concluído</span></div>
+          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Instalação do Agent de backup nos servidores para mapear processo de migração</span></span><span class="astatus">Em andamento</span></div>
         </div>
       </details>
     </div>
@@ -600,135 +729,6 @@
           <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Obter aceite formal da Neugebauer</span></span><span class="astatus">Não iniciado</span></div>
           <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Registrar lições aprendidas</span></span><span class="astatus">Não iniciado</span></div>
           <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Encerrar o projeto</span></span><span class="astatus">Não iniciado</span></div>
-        </div>
-      </details>
-    </div>
-
-    <!-- Fase 2 -->
-    <div class="phase current">
-      <div class="phase-head">
-        <div>
-          <p class="name"><span class="num">02</span>Fase 2 — Preparação e implementação</p>
-          <p class="desc">Ambiente Binário Cloud: rede, firewall, VMs, backup e monitoramento</p>
-        </div>
-        <span class="badge b-progress">Em andamento</span>
-      </div>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.1 Preparação da Binário Cloud</span></span>
-          <span class="right"><span class="count">1 concluídas · 2 em andamento</span><span class="badge b-progress">Em andamento</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Validar sizing contratado</span></span><span class="astatus">Em andamento</span></div>
-          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Criar projeto/tenant</span></span><span class="astatus">Concluído</span></div>
-          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Criar usuários e permissões</span></span><span class="astatus">Em andamento</span></div>
-        </div>
-      </details>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.2 Rede e conectividade</span></span>
-          <span class="right"><span class="count">10 atividades</span><span class="badge b-todo">Não iniciado</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Levantar redes de origem</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir redes de destino</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir endereçamento IP</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir gateways e rotas</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir modelo de conectividade entre ambientes</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar VPN ou link de migração</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar DNS necessário</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Testar conectividade entre ambientes</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar throughput disponível</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Documentar topologia final</span></span><span class="astatus">Não iniciado</span></div>
-        </div>
-      </details>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.3 Firewall e segurança</span></span>
-          <span class="right"><span class="count">11 atividades</span><span class="badge b-todo">Não iniciado</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Levantar políticas atuais</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Levantar objetos, grupos e serviços</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir estratégia de implantação do Fortinet</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Provisionar Virtual Firewall Fortinet</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar interfaces</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar rotas</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar políticas de segurança</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar NATs</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar VPNs</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar acessos</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Obter aprovação das regras pelo cliente</span></span><span class="astatus">Não iniciado</span></div>
-        </div>
-      </details>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.4 Máquinas virtuais</span></span>
-          <span class="right"><span class="count">2 de 9 em andamento</span><span class="badge b-todo">Não iniciado</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Definir estratégia de migração por VM</span></span><span class="astatus">Em andamento</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Agrupar VMs por sistema ou onda</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Criar redes e portas</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Criar servidores virtuais</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar sistema operacional</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Configurar acesso administrativo</span></span><span class="astatus">Em andamento</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar CPU, memória e armazenamento</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar conectividade</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Liberar VMs para instalação ou migração</span></span><span class="astatus">Não iniciado</span></div>
-        </div>
-      </details>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.5 Backup</span></span>
-          <span class="right"><span class="count">2 de 11 concluídas</span><span class="badge b-progress">Em andamento</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Confirmar RPO/RTO com o cliente</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Criar tenant Veeam</span></span><span class="astatus">Concluído</span></div>
-          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Configurar repositório</span></span><span class="astatus">Concluído</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar política de retenção de 90 dias</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar backup full semanal</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar backups incrementais duas vezes ao dia</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar Health Check semanal</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento dos jobs</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Executar primeiro backup</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Executar teste de restauração</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Obter validação do cliente</span></span><span class="astatus">Não iniciado</span></div>
-        </div>
-      </details>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.6 Monitoramento e serviços gerenciados</span></span>
-          <span class="right"><span class="count">9 atividades</span><span class="badge b-todo">Não iniciado</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Integrar ambiente ao Cloud+</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento das VMs</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento do sistema operacional</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento do firewall</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Configurar monitoramento dos backups</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar geração automática de alertas</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Definir processo de acionamento</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Validar operação CCOE 24x7</span></span><span class="astatus">Não iniciado</span></div>
-          <div class="activity"><span class="aleft"><span class="dot todo"></span><span class="aname">Preparar documentação para sustentação</span></span><span class="astatus">Não iniciado</span></div>
-        </div>
-      </details>
-
-      <details class="subphase">
-        <summary>
-          <span class="sleft"><span class="chev">&#9656;</span><span class="sname">2.7 Coleta de dados e configurações locais</span></span>
-          <span class="right"><span class="count">1 concluídas · 1 em andamento</span><span class="badge b-progress">Em andamento</span></span>
-        </summary>
-        <div class="activities">
-          <div class="activity done"><span class="aleft"><span class="dot done"></span><span class="aname">Coleta de informações para inventario do ambiente NGB Kosmo</span></span><span class="astatus">Concluído</span></div>
-          <div class="activity"><span class="aleft"><span class="dot progress"></span><span class="aname">Instalação do Agent de backup nos servidores para mapear processo de migração</span></span><span class="astatus">Em andamento</span></div>
         </div>
       </details>
     </div>

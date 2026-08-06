@@ -284,6 +284,465 @@
       ]
     },
     {
+      "id": "86ajrf5cz",
+      "num": 2,
+      "name": "Fase 2 — Preparação e implementação",
+      "descricao": "Ambiente Binário Cloud: rede, firewall, VMs, backup e monitoramento",
+      "status": "em andamento",
+      "assignee": "José Maria Ferreira da Silva",
+      "due_date": null,
+      "subphases": [
+        {
+          "id": "86ajrf5dh",
+          "name": "2.1 Preparação da Binário Cloud",
+          "status": "em andamento",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajrf5m2",
+              "name": "Validar sizing contratado",
+              "status": "em andamento",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5mb",
+              "name": "Criar projeto/tenant",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5me",
+              "name": "Criar usuários e permissões",
+              "status": "em andamento",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dj",
+          "name": "2.2 Rede e conectividade",
+          "status": "to do",
+          "assignee": "Brunno Leonardo Borges Lopes",
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajrf5n8",
+              "name": "Levantar redes de origem",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5nr",
+              "name": "Definir redes de destino",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5na",
+              "name": "Definir endereçamento IP",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5nq",
+              "name": "Definir gateways e rotas",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5nv",
+              "name": "Definir modelo de conectividade entre ambientes",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5p5",
+              "name": "Configurar VPN ou link de migração",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5p4",
+              "name": "Configurar DNS necessário",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5pm",
+              "name": "Testar conectividade entre ambientes",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5ph",
+              "name": "Validar throughput disponível",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5pn",
+              "name": "Documentar topologia final",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dk",
+          "name": "2.3 Firewall e segurança",
+          "status": "to do",
+          "assignee": "Brunno Leonardo Borges Lopes",
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajrf5q5",
+              "name": "Levantar políticas atuais",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5q3",
+              "name": "Levantar objetos, grupos e serviços",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5q2",
+              "name": "Definir estratégia de implantação do Fortinet",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5qc",
+              "name": "Provisionar Virtual Firewall Fortinet",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5qe",
+              "name": "Configurar interfaces",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5qg",
+              "name": "Configurar rotas",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5qr",
+              "name": "Configurar políticas de segurança",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5qw",
+              "name": "Configurar NATs",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5qv",
+              "name": "Configurar VPNs",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5r1",
+              "name": "Validar acessos",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5r4",
+              "name": "Obter aprovação das regras pelo cliente",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dp",
+          "name": "2.4 Máquinas virtuais",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajrf5r7",
+              "name": "Definir estratégia de migração por VM",
+              "status": "em andamento",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5rd",
+              "name": "Agrupar VMs por sistema ou onda",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5rj",
+              "name": "Criar redes e portas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5rr",
+              "name": "Criar servidores virtuais",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5t3",
+              "name": "Configurar sistema operacional",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5t2",
+              "name": "Configurar acesso administrativo",
+              "status": "em andamento",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5t6",
+              "name": "Validar CPU, memória e armazenamento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5tc",
+              "name": "Validar conectividade",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5tg",
+              "name": "Liberar VMs para instalação ou migração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dr",
+          "name": "2.5 Backup",
+          "status": "em andamento",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajrf5tn",
+              "name": "Confirmar RPO/RTO com o cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5u0",
+              "name": "Criar tenant Veeam",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5u4",
+              "name": "Configurar repositório",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5u5",
+              "name": "Configurar política de retenção de 90 dias",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5ud",
+              "name": "Configurar backup full semanal",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5uh",
+              "name": "Configurar backups incrementais duas vezes ao dia",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5um",
+              "name": "Configurar Health Check semanal",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5ut",
+              "name": "Configurar monitoramento dos jobs",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5uu",
+              "name": "Executar primeiro backup",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5uw",
+              "name": "Executar teste de restauração",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5v2",
+              "name": "Obter validação do cliente",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajrf5dt",
+          "name": "2.6 Monitoramento e serviços gerenciados",
+          "status": "to do",
+          "assignee": "José Maria Ferreira da Silva",
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajrf5v6",
+              "name": "Integrar ambiente ao Cloud+",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5v9",
+              "name": "Configurar monitoramento das VMs",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5ve",
+              "name": "Configurar monitoramento do sistema operacional",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5vn",
+              "name": "Configurar monitoramento do firewall",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5vm",
+              "name": "Configurar monitoramento dos backups",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5vt",
+              "name": "Validar geração automática de alertas",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5vx",
+              "name": "Definir processo de acionamento",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5vw",
+              "name": "Validar operação CCOE 24x7",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            },
+            {
+              "id": "86ajrf5w1",
+              "name": "Preparar documentação para sustentação",
+              "status": "to do",
+              "assignee": null,
+              "due_date": null
+            }
+          ]
+        },
+        {
+          "id": "86ajwq6ah",
+          "name": "2.7 Coleta de dados e configurações locais",
+          "status": "em andamento",
+          "assignee": null,
+          "due_date": null,
+          "activities": [
+            {
+              "id": "86ajwq728",
+              "name": "Coleta de informações para inventario do ambiente NGB Kosmo",
+              "status": "complete",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            },
+            {
+              "id": "86ajwq7dt",
+              "name": "Instalação do Agent de backup nos servidores para mapear processo de migração",
+              "status": "em andamento",
+              "assignee": "Lucas Federissis de Souza",
+              "due_date": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "86ajrf5cy",
       "num": 3,
       "name": "Fase 3 — Migração",
@@ -823,465 +1282,6 @@
               "name": "Encerrar o projeto",
               "status": "to do",
               "assignee": null,
-              "due_date": null
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "86ajrf5cz",
-      "num": 2,
-      "name": "Fase 2 — Preparação e implementação",
-      "descricao": "Ambiente Binário Cloud: rede, firewall, VMs, backup e monitoramento",
-      "status": "em andamento",
-      "assignee": "José Maria Ferreira da Silva",
-      "due_date": null,
-      "subphases": [
-        {
-          "id": "86ajrf5dh",
-          "name": "2.1 Preparação da Binário Cloud",
-          "status": "em andamento",
-          "assignee": "José Maria Ferreira da Silva",
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajrf5m2",
-              "name": "Validar sizing contratado",
-              "status": "em andamento",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5mb",
-              "name": "Criar projeto/tenant",
-              "status": "complete",
-              "assignee": "Lucas Federissis de Souza",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5me",
-              "name": "Criar usuários e permissões",
-              "status": "em andamento",
-              "assignee": null,
-              "due_date": null
-            }
-          ]
-        },
-        {
-          "id": "86ajrf5dj",
-          "name": "2.2 Rede e conectividade",
-          "status": "to do",
-          "assignee": "Brunno Leonardo Borges Lopes",
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajrf5n8",
-              "name": "Levantar redes de origem",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5nr",
-              "name": "Definir redes de destino",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5na",
-              "name": "Definir endereçamento IP",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5nq",
-              "name": "Definir gateways e rotas",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5nv",
-              "name": "Definir modelo de conectividade entre ambientes",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5p5",
-              "name": "Configurar VPN ou link de migração",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5p4",
-              "name": "Configurar DNS necessário",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5pm",
-              "name": "Testar conectividade entre ambientes",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5ph",
-              "name": "Validar throughput disponível",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5pn",
-              "name": "Documentar topologia final",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            }
-          ]
-        },
-        {
-          "id": "86ajrf5dk",
-          "name": "2.3 Firewall e segurança",
-          "status": "to do",
-          "assignee": "Brunno Leonardo Borges Lopes",
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajrf5q5",
-              "name": "Levantar políticas atuais",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5q3",
-              "name": "Levantar objetos, grupos e serviços",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5q2",
-              "name": "Definir estratégia de implantação do Fortinet",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5qc",
-              "name": "Provisionar Virtual Firewall Fortinet",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5qe",
-              "name": "Configurar interfaces",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5qg",
-              "name": "Configurar rotas",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5qr",
-              "name": "Configurar políticas de segurança",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5qw",
-              "name": "Configurar NATs",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5qv",
-              "name": "Configurar VPNs",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5r1",
-              "name": "Validar acessos",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5r4",
-              "name": "Obter aprovação das regras pelo cliente",
-              "status": "to do",
-              "assignee": "Brunno Leonardo Borges Lopes",
-              "due_date": null
-            }
-          ]
-        },
-        {
-          "id": "86ajrf5dp",
-          "name": "2.4 Máquinas virtuais",
-          "status": "to do",
-          "assignee": "José Maria Ferreira da Silva",
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajrf5r7",
-              "name": "Definir estratégia de migração por VM",
-              "status": "em andamento",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5rd",
-              "name": "Agrupar VMs por sistema ou onda",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5rj",
-              "name": "Criar redes e portas",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5rr",
-              "name": "Criar servidores virtuais",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5t3",
-              "name": "Configurar sistema operacional",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5t2",
-              "name": "Configurar acesso administrativo",
-              "status": "em andamento",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5t6",
-              "name": "Validar CPU, memória e armazenamento",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5tc",
-              "name": "Validar conectividade",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5tg",
-              "name": "Liberar VMs para instalação ou migração",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            }
-          ]
-        },
-        {
-          "id": "86ajrf5dr",
-          "name": "2.5 Backup",
-          "status": "em andamento",
-          "assignee": "José Maria Ferreira da Silva",
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajrf5tn",
-              "name": "Confirmar RPO/RTO com o cliente",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5u0",
-              "name": "Criar tenant Veeam",
-              "status": "complete",
-              "assignee": "Lucas Federissis de Souza",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5u4",
-              "name": "Configurar repositório",
-              "status": "complete",
-              "assignee": "Lucas Federissis de Souza",
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5u5",
-              "name": "Configurar política de retenção de 90 dias",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5ud",
-              "name": "Configurar backup full semanal",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5uh",
-              "name": "Configurar backups incrementais duas vezes ao dia",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5um",
-              "name": "Configurar Health Check semanal",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5ut",
-              "name": "Configurar monitoramento dos jobs",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5uu",
-              "name": "Executar primeiro backup",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5uw",
-              "name": "Executar teste de restauração",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5v2",
-              "name": "Obter validação do cliente",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            }
-          ]
-        },
-        {
-          "id": "86ajrf5dt",
-          "name": "2.6 Monitoramento e serviços gerenciados",
-          "status": "to do",
-          "assignee": "José Maria Ferreira da Silva",
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajrf5v6",
-              "name": "Integrar ambiente ao Cloud+",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5v9",
-              "name": "Configurar monitoramento das VMs",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5ve",
-              "name": "Configurar monitoramento do sistema operacional",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5vn",
-              "name": "Configurar monitoramento do firewall",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5vm",
-              "name": "Configurar monitoramento dos backups",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5vt",
-              "name": "Validar geração automática de alertas",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5vx",
-              "name": "Definir processo de acionamento",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5vw",
-              "name": "Validar operação CCOE 24x7",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            },
-            {
-              "id": "86ajrf5w1",
-              "name": "Preparar documentação para sustentação",
-              "status": "to do",
-              "assignee": null,
-              "due_date": null
-            }
-          ]
-        },
-        {
-          "id": "86ajwq6ah",
-          "name": "2.7 Coleta de dados e configurações locais",
-          "status": "em andamento",
-          "assignee": null,
-          "due_date": null,
-          "activities": [
-            {
-              "id": "86ajwq728",
-              "name": "Coleta de informações para inventario do ambiente NGB Kosmo",
-              "status": "complete",
-              "assignee": "Lucas Federissis de Souza",
-              "due_date": null
-            },
-            {
-              "id": "86ajwq7dt",
-              "name": "Instalação do Agent de backup nos servidores para mapear processo de migração",
-              "status": "em andamento",
-              "assignee": "Lucas Federissis de Souza",
               "due_date": null
             }
           ]

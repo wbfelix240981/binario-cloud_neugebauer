@@ -223,6 +223,25 @@ def test_c5_bloqueio_vira_alerta_nao_fase():
     check("build.py reconhece esse status como conhecido", recognized is True)
 
 
+def test_c6_ordem_das_fases_nao_segue_orderindex_do_clickup():
+    print("\n--- (c6) fases voltam ordenadas pelo 'num' curado, mesmo se a orderindex do ClickUp embaralhar ---")
+    data = base_data()
+    data["phases"].append({
+        "id": "f2", "num": 2, "name": "Fase 2", "descricao": "Descrição curada da fase 2",
+        "status": "to do", "assignee": None, "due_date": None, "subphases": [],
+    })
+    tasks = base_tasks()
+    tasks.append(task("f2", "Fase 2", "to do", None, order=0))
+    tasks[0]["orderindex"] = "5"  # Fase 1 agora com orderindex bem maior que a Fase 2
+
+    warnings = []
+    result = sc.sync(copy.deepcopy(data), tasks, warnings)
+
+    nums = [p["num"] for p in result["phases"]]
+    check("fases publicadas em ordem crescente de 'num' (1, 2), não pela orderindex do ClickUp",
+          nums == [1, 2])
+
+
 if __name__ == "__main__":
     test_a_nada_mudou()
     test_b_algo_mudou()
@@ -231,6 +250,7 @@ if __name__ == "__main__":
     test_c3_bootstrap_casa_por_nome()
     test_c4_fase_nova_gera_aviso_para_curar()
     test_c5_bloqueio_vira_alerta_nao_fase()
+    test_c6_ordem_das_fases_nao_segue_orderindex_do_clickup()
 
     print("\n" + "=" * 50)
     if FAILURES:

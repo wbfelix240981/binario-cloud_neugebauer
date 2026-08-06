@@ -248,6 +248,8 @@ def build(template_path=DEFAULT_TEMPLATE, data_path=DEFAULT_DATA, out_path=DEFAU
     else:
         dt = datetime.datetime.now(BRT)
     generated_date = f"{dt.day} {MONTHS_PT[dt.month - 1]}. {dt.year} \u00e0s {dt.hour:02d}:{dt.minute:02d}"
+    sync_date_long = f"{dt.day:02d} de {MONTHS_PT[dt.month - 1]}. de {dt.year}"
+    sync_datetime_short = f"{dt.day:02d}/{dt.month:02d}/{dt.year}, {dt.hour:02d}:{dt.minute:02d}"
 
     with open(template_path, "r", encoding="utf-8") as f:
         template = f.read()
@@ -258,6 +260,8 @@ def build(template_path=DEFAULT_TEMPLATE, data_path=DEFAULT_DATA, out_path=DEFAU
         .replace("{{BINARIO_LOGO_B64}}", b64(os.path.join(ASSETS, "binario-cloud-logo.png")))
         .replace("{{NEUGEBAUER_LOGO_B64}}", b64(os.path.join(ASSETS, "neugebauer-logo.png")))
         .replace("{{GENERATED_DATE}}", generated_date)
+        .replace("{{SYNC_DATE_LONG}}", sync_date_long)
+        .replace("{{SYNC_DATETIME_SHORT}}", sync_datetime_short)
         .replace("{{LOGIN_USERS_JSON}}", json.dumps(meta["login"]["users"], ensure_ascii=False))
         .replace("{{ALERTS_HTML}}", alerts_html)
         .replace("{{METRICS_HTML}}", metrics_html)

@@ -1,6 +1,6 @@
 {
   "list_id": "901328018187",
-  "last_synced": "2026-08-07T18:45:02.146732Z",
+  "last_synced": "2026-08-07T22:58:41.562541Z",
   "meta": {
     "page_title": "Neugebauer — Painel Binário Cloud",
     "hero_eyebrow": "Painel executivo · Jornada para a nuvem",
@@ -481,6 +481,13 @@
             {
               "id": "86ajrf5r4",
               "name": "Obter aprovação das regras pelo cliente",
+              "status": "to do",
+              "assignee": "Brunno Leonardo Borges Lopes",
+              "due_date": null
+            },
+            {
+              "id": "86ajxt0gj",
+              "name": "Criação do FORTIVM bc1-firewall-4-16",
               "status": "to do",
               "assignee": "Brunno Leonardo Borges Lopes",
               "due_date": null

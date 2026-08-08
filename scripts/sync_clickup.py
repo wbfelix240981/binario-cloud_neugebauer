@@ -24,8 +24,9 @@ Uso:
 import datetime
 import json
 import re
-import os
 import sys
+import time
+import os
 from collections import defaultdict
 
 import requests
@@ -54,19 +55,44 @@ BLOCKER_STATUSES = {"bloqueio/impeditivo"}
 
 
 def fetch_all_tasks_flat(list_id, token):
-    """Busca todas as tarefas da lista (formato plano, com subtarefas)."""
+    """Busca todas as tarefas da lista (formato plano, com subtarefas).
+    Tenta de novo (com espera crescente) em falhas transitorias de rede
+    ou rate limit do ClickUp, e imprime uma mensagem clara antes de
+    desistir -- sem isso, uma falha aqui derrubava o sync inteiro sem
+    dar pista nenhuma do motivo real."""
     headers = {"Authorization": token}
     all_tasks = []
     page = 0
     while True:
-        resp = requests.get(
-            f"{API_BASE}/list/{list_id}/task",
-            headers=headers,
-            params={"subtasks": "true", "include_closed": "true", "page": page},
-            timeout=30,
-        )
-        resp.raise_for_status()
-        payload = resp.json()
+        last_error = None
+        for attempt in range(1, 4):
+            try:
+                resp = requests.get(
+                    f"{API_BASE}/list/{list_id}/task",
+                    headers=headers,
+                    params={"subtasks": "true", "include_closed": "true", "page": page},
+                    timeout=60,
+                )
+                if resp.status_code == 429:
+                    wait = int(resp.headers.get("Retry-After", 5 * attempt))
+                    print(f"AVISO: rate limit do ClickUp (429) na pagina {page}, "
+                          f"tentativa {attempt}/3, esperando {wait}s...", file=sys.stderr)
+                    time.sleep(wait)
+                    continue
+                resp.raise_for_status()
+                payload = resp.json()
+                break
+            except requests.exceptions.RequestException as e:
+                last_error = e
+                wait = 5 * attempt
+                print(f"AVISO: falha ao buscar pagina {page} (tentativa {attempt}/3): "
+                      f"{type(e).__name__}: {e} -- tentando de novo em {wait}s...", file=sys.stderr)
+                time.sleep(wait)
+        else:
+            print(f"ERRO: nao foi possivel buscar a pagina {page} do ClickUp apos 3 tentativas: "
+                  f"{type(last_error).__name__}: {last_error}", file=sys.stderr)
+            raise SystemExit(1)
+
         batch = payload.get("tasks", [])
         if not batch:
             break

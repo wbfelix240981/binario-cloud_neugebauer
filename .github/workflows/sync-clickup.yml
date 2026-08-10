@@ -2,9 +2,9 @@ name: Sincronizar com ClickUp
 
 on:
   schedule:
-    # Backup, só para o caso da VM cair -- o driver principal agora é o
-    # cron de 5 em 5 minutos rodando na VM (ver deploy/sync-cron.sh).
-    - cron: "0 */6 * * *"
+    # De hora em hora (voltamos deste ritmo -- a automação via VM/Windows
+    # de 5 em 5 min ainda não foi configurada).
+    - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:

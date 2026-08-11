@@ -1,6 +1,6 @@
 {
   "list_id": "901328018187",
-  "last_synced": "2026-08-11T11:44:38.289397Z",
+  "last_synced": "2026-08-11T13:09:17.108074Z",
   "meta": {
     "page_title": "Neugebauer — Painel Binário Cloud",
     "hero_eyebrow": "Painel executivo · Jornada para a nuvem",
@@ -938,14 +938,14 @@
       "name": "Fase 4 — Go-live e estabilização",
       "descricao": "Testes finais, virada de chave e estabilização pós go-live",
       "status": "to do",
-      "assignee": null,
+      "assignee": "Diogo Lerison",
       "due_date": null,
       "subphases": [
         {
           "id": "86ajrf5e8",
           "name": "4.1 Testes finais",
           "status": "to do",
-          "assignee": null,
+          "assignee": "Diogo Lerison",
           "due_date": null,
           "activities": [
             {
@@ -1024,7 +1024,7 @@
           "id": "86ajrf5e4",
           "name": "4.2 Virada de chave",
           "status": "to do",
-          "assignee": null,
+          "assignee": "Diogo Lerison",
           "due_date": null,
           "activities": [
             {
@@ -1089,7 +1089,7 @@
           "id": "86ajrf5e7",
           "name": "4.3 Estabilização",
           "status": "to do",
-          "assignee": null,
+          "assignee": "Diogo Lerison",
           "due_date": null,
           "activities": [
             {

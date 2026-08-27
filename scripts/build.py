@@ -19,7 +19,8 @@ DEFAULT_TEMPLATE = os.path.join(ROOT, "templates", "base.html")
 DEFAULT_DATA = os.path.join(ROOT, "data", "neugebauer.json")
 DEFAULT_OUT = os.path.join(ROOT, "index.html")
 
-PLACEHOLDERS = ("{{GANTT_TASKS_JSON}}", "{{RAFAEL_METAS_JSON}}", "{{LOGIN_USERS_JSON}}")
+PLACEHOLDERS = ("{{GANTT_TASKS_JSON}}", "{{RAFAEL_METAS_JSON}}", "{{LOGIN_USERS_JSON}}",
+                "{{LAST_SYNC_UTC}}")
 
 
 def js_array(obj, indent=1):
@@ -44,6 +45,9 @@ def build(template_path=DEFAULT_TEMPLATE, data_path=DEFAULT_DATA, out_path=DEFAU
         .replace("{{GANTT_TASKS_JSON}}", js_array(data["gantt"]))
         .replace("{{RAFAEL_METAS_JSON}}", js_array(data["metas"]))
         .replace("{{LOGIN_USERS_JSON}}", js_array(data["login"]["users"]))
+        # Sem isto o painel mostrava sempre a mesma data (o valor ficava
+        # congelado no template) e parecia que nunca atualizava.
+        .replace("{{LAST_SYNC_UTC}}", data.get("last_synced") or "")
     )
 
     leftover = re.findall(r"\{\{[A-Z_]+\}\}", out)

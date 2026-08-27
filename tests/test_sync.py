@@ -205,11 +205,30 @@ def t_c8_tarefa_solta_ignorada():
     check("nenhum aviso de fase nova", not any("NOVA fase" in x for x in w))
 
 
+
+def t_c9_timestamp_nao_congela():
+    print("\n--- (c9) o painel publica a data real da sincronização ---")
+    import subprocess, tempfile, os, json as _j
+    raiz = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    dados = _j.load(open(os.path.join(raiz, "data", "neugebauer.json"), encoding="utf-8"))
+    dados["last_synced"] = "2030-01-02T03:04:05Z"
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
+        _j.dump(dados, f, ensure_ascii=False); tmp_json = f.name
+    tmp_out = tempfile.NamedTemporaryFile(suffix=".html", delete=False).name
+    subprocess.run([sys.executable, os.path.join(raiz, "scripts", "build.py"),
+                    "--data", tmp_json, "--out", tmp_out], check=True, capture_output=True)
+    saida = open(tmp_out, encoding="utf-8").read()
+    check("LAST_SYNC_UTC veio do JSON, não fixo no template",
+          'const LAST_SYNC_UTC = "2030-01-02T03:04:05Z"' in saida)
+    check("nenhum placeholder sobrou", "{{LAST_SYNC_UTC}}" not in saida)
+    os.unlink(tmp_json); os.unlink(tmp_out)
+
+
 if __name__ == "__main__":
     for fn in (t_a_nada_mudou, t_b_algo_mudou, t_c1_dois_vocabularios,
                t_c2_status_desconhecido, t_c3_curados_sobrevivem,
                t_c4_original_due_congelada, t_c5_gantt_curado,
-               t_c6_ordem_pelo_num, t_c7_inventario_profundo, t_c8_tarefa_solta_ignorada):
+               t_c6_ordem_pelo_num, t_c7_inventario_profundo, t_c8_tarefa_solta_ignorada, t_c9_timestamp_nao_congela):
         fn()
     print("\n" + "=" * 52)
     if FALHAS:

@@ -182,8 +182,14 @@ def sync(data, tasks, warnings):
 
     # ---------- visão METAS ----------
     existing_by_id = {m["id"]: m for m in data["metas"] if m.get("id")}
+    # Tarefas soltas na raiz da lista que NÃO são fases do projeto
+    # (ex.: avisos de bloqueio criados à parte). Ficam de fora da visão
+    # Metas para não virarem uma "Fase 6" fantasma.
+    ignorar = set(data.get("ignore_root_ids", []))
     new_metas = []
     for root in roots:
+        if root["id"] in ignorar:
+            continue
         cur = existing_by_id.get(root["id"])
         if cur is None:
             # fase nova no ClickUp que ainda não foi curada -- entra com os

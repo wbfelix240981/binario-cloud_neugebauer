@@ -960,18 +960,10 @@
      "ativ": []
     }
    ]
-  },
-  {
-   "id": "86ajwdywa",
-   "num": 999,
-   "name": "Comunicação entre Binario e Kosmo bloqueado",
-   "short": "Comunicação entre Binario e Kosmo bloqueado",
-   "detail": "",
-   "tags": [],
-   "status": "shipped",
-   "due": 1786518000000,
-   "assignee": "Diogo Lerison",
-   "fases": []
   }
+ ],
+ "ignore_root_ids": [
+  "86ajwdywa",
+  "86ajwdxee"
  ]
 }

@@ -192,11 +192,24 @@ def t_c7_inventario_profundo():
     check("VM do inventário não subiu para o painel", "NGBORA1" not in nomes)
 
 
+
+def t_c8_tarefa_solta_ignorada():
+    print("\n--- (c8) tarefa solta na raiz não vira fase fantasma ---")
+    d = copy.deepcopy(base_data())
+    d["ignore_root_ids"] = ["avulsa"]
+    tasks = base_tasks()
+    tasks.append(task("avulsa", "Aviso de bloqueio qualquer", "concluído", None, 9))
+    w = []
+    r = sc.sync(d, tasks, w)
+    check("continua com 1 meta (não criou fase fantasma)", len(r["metas"]) == 1)
+    check("nenhum aviso de fase nova", not any("NOVA fase" in x for x in w))
+
+
 if __name__ == "__main__":
     for fn in (t_a_nada_mudou, t_b_algo_mudou, t_c1_dois_vocabularios,
                t_c2_status_desconhecido, t_c3_curados_sobrevivem,
                t_c4_original_due_congelada, t_c5_gantt_curado,
-               t_c6_ordem_pelo_num, t_c7_inventario_profundo):
+               t_c6_ordem_pelo_num, t_c7_inventario_profundo, t_c8_tarefa_solta_ignorada):
         fn()
     print("\n" + "=" * 52)
     if FALHAS:

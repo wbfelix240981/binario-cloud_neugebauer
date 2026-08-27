@@ -1,10 +1,19 @@
 name: Sincronizar com ClickUp
 
 on:
-  schedule:
-    # De hora em hora (voltamos deste ritmo -- a automação via VM/Windows
-    # de 5 em 5 min ainda não foi configurada).
-    - cron: "0 * * * *"
+  # AGENDAMENTO DESATIVADO em 27/08/2026.
+  #
+  # Motivo: o painel passou a ser o HTML novo (publicado direto em
+  # index.html). Este workflow reconstrói o index.html a partir do
+  # template ANTIGO (legado/templates/base.html) e commita por cima --
+  # ou seja, se voltar a rodar, ele APAGA o painel novo.
+  #
+  # Os scripts antigos foram movidos para legado/ e o gatilho automático
+  # foi removido de propósito. Para religar a automação é preciso antes
+  # reescrever o build.py para gerar o layout novo.
+  #
+  # schedule:
+  #   - cron: "0 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -29,16 +38,16 @@ jobs:
         env:
           CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}
           CLICKUP_LIST_ID: "901328018187"
-        run: python scripts/sync_clickup.py
+        run: python legado/scripts/sync_clickup.py
 
       - name: Reconstruir o painel (index.html)
-        run: python scripts/build.py
+        run: python legado/scripts/build.py
 
       - name: Publicar alterações (se houver)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/neugebauer.json index.html
+          git add legado/data/neugebauer.json
           # IMPORTANTE: NUNCA usar "[skip ci]" na mensagem de commit --
           # o Cloudflare Pages também respeita essa tag e pula o build,
           # deixando o site publicado desatualizado mesmo com o GitHub

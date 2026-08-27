@@ -2,8 +2,14 @@ name: Sincronizar com ClickUp
 
 on:
   schedule:
-    # De hora em hora (mesmo ritmo do painel de Metas).
-    - cron: "0 * * * *"
+    # De hora em hora, no minuto 23.
+    #
+    # NÃO use o minuto :00 aqui. O GitHub concentra milhões de crons nesse
+    # minuto e descarta os excedentes sob carga -- com "0 * * * *" este
+    # repositório estava rodando só ~3x por dia em vez de 24x (medido em
+    # 26/08: execuções às 16:18, 19:04 e 22:50, e depois 8h de silêncio).
+    # Minutos fora de pico são bem mais confiáveis.
+    - cron: "23 * * * *"
   workflow_dispatch: {}
 
 permissions:

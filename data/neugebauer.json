@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-08-27T14:58:59.573992Z",
+ "last_synced": "2026-08-28T12:51:33.629688Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [

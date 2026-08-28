@@ -30,31 +30,20 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
-      - name: Diagnóstico do acesso ao ClickUp
-        if: always()
+      - name: Verificar acesso ao ClickUp
         env:
           CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}
         run: |
-          {
-            echo "gerado em: $(date -u)"
-            if [ -z "$CLICKUP_TOKEN" ]; then
-              echo "secret CLICKUP_TOKEN: VAZIO/AUSENTE"
-            else
-              echo "secret CLICKUP_TOKEN: presente (tamanho ${#CLICKUP_TOKEN}, prefixo ${CLICKUP_TOKEN:0:11})"
-            fi
-            CODE=$(curl -s -o /tmp/cu.json -w "%{http_code}" \
-              -H "Authorization: $CLICKUP_TOKEN" \
-              "https://api.clickup.com/api/v2/list/901328018187/task?page=0")
-            echo "HTTP: $CODE"
-            echo "resposta (400 chars):"
-            head -c 400 /tmp/cu.json
-          } > DIAGNOSTICO.txt 2>&1
-          cat DIAGNOSTICO.txt
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add DIAGNOSTICO.txt
-          git commit -m "diagnóstico automático" || true
-          git push || true
+          CODE=$(curl -s -o /tmp/cu.json -w "%{http_code}" \
+            -H "Authorization: $CLICKUP_TOKEN" \
+            "https://api.clickup.com/api/v2/list/901328018187/task?page=0")
+          if [ "$CODE" != "200" ]; then
+            echo "::error::ClickUp respondeu HTTP $CODE. Resposta: $(head -c 200 /tmp/cu.json)"
+            echo "Se for 401 'Token invalid', o token foi revogado/regenerado."
+            echo "Gere outro em app.clickup.com/3080406/settings/apps e atualize o secret CLICKUP_TOKEN."
+            exit 1
+          fi
+          echo "Acesso ao ClickUp OK (HTTP 200)."
 
       - name: Sincronizar dados do ClickUp
         env:

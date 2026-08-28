@@ -1,5 +1,0 @@
-gerado em: Fri Aug 28 01:08:45 UTC 2026
-secret CLICKUP_TOKEN: presente (tamanho 45, prefixo pk_11804391)
-HTTP: 401
-resposta (400 chars):
-{"err":"Token invalid","ECODE":"OAUTH_025"}

@@ -30,6 +30,27 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
+      - name: Diagnóstico do acesso ao ClickUp
+        if: always()
+        env:
+          CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}
+        run: |
+          echo "### Diagnóstico ClickUp" >> $GITHUB_STEP_SUMMARY
+          if [ -z "$CLICKUP_TOKEN" ]; then
+            echo "- secret CLICKUP_TOKEN VAZIO ou ausente" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- secret presente (tamanho: ${#CLICKUP_TOKEN}, começa com: ${CLICKUP_TOKEN:0:8})" >> $GITHUB_STEP_SUMMARY
+          fi
+          CODE=$(curl -s -o /tmp/cu.json -w "%{http_code}" \
+            -H "Authorization: $CLICKUP_TOKEN" \
+            "https://api.clickup.com/api/v2/list/901328018187/task?page=0")
+          echo "- HTTP da API do ClickUp: $CODE" >> $GITHUB_STEP_SUMMARY
+          echo "- resposta (300 primeiros caracteres):" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          head -c 300 /tmp/cu.json >> $GITHUB_STEP_SUMMARY
+          echo '' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
       - name: Sincronizar dados do ClickUp
         env:
           CLICKUP_TOKEN: ${{ secrets.CLICKUP_TOKEN }}

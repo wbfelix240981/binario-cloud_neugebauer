@@ -10,7 +10,12 @@ on:
     # 26/08: execuções às 16:18, 19:04 e 22:50, e depois 8h de silêncio).
     # Minutos fora de pico são bem mais confiáveis.
     - cron: "23 * * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Só simular: publica numa branch de teste, sem mexer no painel"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -64,4 +69,14 @@ jobs:
           git add data/neugebauer.json index.html
           # NUNCA usar [skip ci]: o Cloudflare Pages também respeita essa tag
           # e pularia o rebuild, deixando o site publicado desatualizado.
-          git diff --cached --quiet && echo "Nada mudou." || (git commit -m "Sincronização automática com ClickUp" && git push)
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            # Simulação: manda para uma branch descartável, o painel publicado
+            # (main) não é tocado.
+            git diff --cached --quiet && echo "Nada mudou." || (
+              git commit -m "PRÉVIA (não publicado)" &&
+              git push -f origin HEAD:refs/heads/previa-sync
+            )
+            echo "Modo simulação: nada foi publicado em main."
+          else
+            git diff --cached --quiet && echo "Nada mudou." || (git commit -m "Sincronização automática com ClickUp" && git push)
+          fi

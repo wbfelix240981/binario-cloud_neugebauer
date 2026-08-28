@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-08-28T16:43:52.517273Z",
+ "last_synced": "2026-08-28T18:39:19.080751Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -485,13 +485,6 @@
        "due": 1787900400000,
        "original_due": 1787900400000,
        "id": "86ajrf5nv"
-      },
-      {
-       "n": "Testar conectividade entre ambientes",
-       "status": "backlog",
-       "due": 1787900400000,
-       "original_due": 1787900400000,
-       "id": "86ajrf5pm"
       }
      ]
     },
@@ -518,14 +511,35 @@
       },
       {
        "n": "Configurar interfaces",
-       "status": "backlog",
+       "status": "shipped",
        "due": 1789369200000,
        "original_due": 1789369200000,
        "id": "86ajrf5qe"
       },
       {
-       "n": "Configurar rotas",
+       "n": "Configurar VPNs IPsec site to site",
+       "status": "in progress",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qv"
+      },
+      {
+       "n": "Configurar regras NATs",
        "status": "backlog",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qw"
+      },
+      {
+       "n": "Configurar regras de proxy reverso",
+       "status": "backlog",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ak7vzqq"
+      },
+      {
+       "n": "Configurar roteamento",
+       "status": "in progress",
        "due": 1789369200000,
        "original_due": 1789369200000,
        "id": "86ajrf5qg"
@@ -538,18 +552,11 @@
        "id": "86ajrf5qr"
       },
       {
-       "n": "Configurar NATs",
+       "n": "Testar conectividade entre ambientes",
        "status": "backlog",
-       "due": 1789369200000,
-       "original_due": 1789369200000,
-       "id": "86ajrf5qw"
-      },
-      {
-       "n": "Configurar VPNs",
-       "status": "backlog",
-       "due": 1789369200000,
-       "original_due": 1789369200000,
-       "id": "86ajrf5qv"
+       "due": 1787900400000,
+       "original_due": 1787900400000,
+       "id": "86ajrf5pm"
       }
      ]
     },
@@ -575,8 +582,8 @@
        "id": "86ajrf5hb"
       },
       {
-       "n": "Levantar integrações externas, IPs e domínios",
-       "status": "in progress",
+       "n": "Levantar dependência entre servidores e serviços.",
+       "status": "in review",
        "due": 1787900400000,
        "original_due": null,
        "id": "86ajrf5hu"

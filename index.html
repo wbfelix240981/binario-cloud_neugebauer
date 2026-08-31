@@ -385,7 +385,7 @@
   /* ===== Gantt chart ===== */
   .gantt{
     max-width:1180px; margin:0 auto; padding:4px 28px 26px;
-    display:flex; border:1px solid var(--border); border-radius:14px; background:var(--panel);
+    display:flex; flex-wrap:wrap; border:1px solid var(--border); border-radius:14px; background:var(--panel);
     overflow:hidden;
   }
   .gantt-left{flex:none; width:238px; border-right:1px solid var(--border);}
@@ -419,6 +419,38 @@
     box-shadow:0 0 0 1px rgba(255,255,255,.06) inset; transition:filter .15s, transform .15s;
   }
   .gantt-bar:hover{filter:brightness(1.18); transform:translateY(-1px);}
+
+  /* --- atraso no Gantt (mesma regra da visão de Metas) --- */
+  .gantt-bar.atrasada{box-shadow:0 0 0 1.5px var(--red), 0 0 12px -3px rgba(255,90,90,.6);}
+  .gantt-bar.atencao{box-shadow:0 0 0 1.5px var(--amber);}
+  /* "estouro": quanto o prazo já passou, desenhado do vencimento até hoje */
+  .gantt-estouro{
+    position:absolute; height:13px; top:50%; transform:translateY(-50%);
+    border-radius:0 4px 4px 0; pointer-events:none;
+    background:repeating-linear-gradient(135deg,
+      rgba(255,90,90,.85) 0 5px, rgba(255,90,90,.35) 5px 10px);
+    border:1px solid var(--red); border-left:none;
+  }
+  .gantt-atraso-badge{
+    font-family:var(--mono); font-size:8.5px; font-weight:700; color:var(--red);
+    background:rgba(255,90,90,.14); border:1px solid #5c1f1f; border-radius:999px;
+    padding:1px 6px; margin-left:6px; white-space:nowrap;
+  }
+  .gantt-atencao-badge{
+    font-family:var(--mono); font-size:8.5px; font-weight:700; color:var(--amber);
+    background:rgba(255,198,92,.14); border:1px solid #5c4a1f; border-radius:999px;
+    padding:1px 6px; margin-left:6px; white-space:nowrap;
+  }
+  .gantt-resumo{
+    flex:0 0 100%; box-sizing:border-box; margin-top:12px;
+    display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    padding:8px 12px; margin-bottom:10px;
+    background:var(--panel); border:1px solid var(--border); border-radius:8px;
+    font-family:var(--mono); font-size:10.5px;
+  }
+  .gantt-resumo .r-atraso{color:var(--red); font-weight:700;}
+  .gantt-resumo .r-atencao{color:var(--amber); font-weight:700;}
+  .gantt-resumo .r-ok{color:var(--green); font-weight:700;}
   .gantt-bar span{font-family:var(--mono); font-size:9.5px; font-weight:700; color:#04121a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
   .gantt-today-line{position:absolute; top:0; bottom:0; width:0; border-left:2px solid var(--red); z-index:3; pointer-events:none;}
   .gantt-today-label{
@@ -1720,6 +1752,24 @@ function fmtMonthShort(ms){
   return new Date(ms).toLocaleDateString('pt-BR',{month:'short',year:'2-digit'}).replace('.','');
 }
 
+// Regra de atraso no Gantt -- mantida igual à da visão de Metas de propósito:
+// ter dois critérios diferentes de "atrasado" no mesmo painel confunde mais
+// do que ajuda. Diferença: aqui os status são os crus do ClickUp.
+const GANTT_STATUS_CONCLUIDO = ['fechado', 'concluído', 'concluido', 'entregue'];
+
+function ganttDueState(item){
+  if(!item.due || GANTT_STATUS_CONCLUIDO.includes(String(item.status).toLowerCase())) return null;
+  const hoje = startOfDay(Date.now());
+  const dia  = startOfDay(item.due);
+  if(dia < hoje) return 'atrasada';
+  if(dia >= startOfWeek(Date.now()) && dia <= endOfWeek(Date.now())) return 'atencao';
+  return null;
+}
+function ganttDiasAtraso(item){
+  if(!item.due) return 0;
+  return Math.round((startOfDay(Date.now()) - startOfDay(item.due)) / 86400000);
+}
+
 function renderGantt(){
   const q = document.getElementById('searchInput').value.trim().toLowerCase();
   const wrap = document.getElementById('ganttChart');
@@ -1750,34 +1800,57 @@ function renderGantt(){
     cursor.setMonth(cursor.getMonth()+1);
   }
 
+  const agora = Date.now();
+  let totalAtrasadas = 0, totalAtencao = 0;
   const leftRows = [`<div class="gantt-left-head">Fase / Subfase</div>`];
   const rightRows = [`<div class="gantt-months-row">${months.map(m=>`<div class="gantt-month-tick" style="left:${pct(m)}%"><span>${fmtMonthShort(m)}</span></div>`).join('')}</div>`];
 
   visibleTasks.forEach(f=>{
     const fMeta = ROADMAP_STATUS_META[f.status] || {label:f.status, color:'var(--slate)'};
+    const fEstado = ganttDueState(f);
+    const fDias = fEstado === 'atrasada' ? ganttDiasAtraso(f) : 0;
+    if(fEstado === 'atrasada') totalAtrasadas++; else if(fEstado === 'atencao') totalAtencao++;
+    const fBadge = fEstado === 'atrasada'
+      ? `<span class="gantt-atraso-badge">⚠ ${fDias}d</span>`
+      : (fEstado === 'atencao' ? `<span class="gantt-atencao-badge">● esta semana</span>` : '');
+    // "estouro": barra hachurada do vencimento até hoje, para o atraso ter tamanho
+    const fEstouro = (fEstado === 'atrasada' && agora > f.due)
+      ? `<div class="gantt-estouro" style="left:${pct(f.due)}%; width:calc(${pct(agora)}% - ${pct(f.due)}%);" title="${fDias} dia(s) de atraso"></div>`
+      : '';
     leftRows.push(`
       <div class="gantt-left-row gantt-parent" data-nav="${f.metaNum}">
-        <div class="gantt-lr-name">${f.name}</div>
+        <div class="gantt-lr-name">${f.name}${fBadge}</div>
         <div class="gantt-lr-assignee">${f.assignee||'—'}</div>
       </div>`);
     rightRows.push(`
       <div class="gantt-right-row gantt-parent-row">
-        <div class="gantt-bar" data-nav="${f.metaNum}" style="left:${pct(f.start)}%; width:calc(${pct(f.due)}% - ${pct(f.start)}%); background:${fMeta.color};" title="${f.name} · ${fMeta.label} · ${fmtDate(f.start)} → ${fmtDate(f.due)}">
+        <div class="gantt-bar${fEstado==='atrasada'?' atrasada':(fEstado==='atencao'?' atencao':'')}" data-nav="${f.metaNum}" style="left:${pct(f.start)}%; width:calc(${pct(f.due)}% - ${pct(f.start)}%); background:${fMeta.color};" title="${f.name} · ${fMeta.label} · ${fmtDate(f.start)} → ${fmtDate(f.due)}${fEstado==='atrasada'?' · '+fDias+' dia(s) de atraso':''}">
           <span>${fMeta.label}</span>
         </div>
+        ${fEstouro}
       </div>`);
     f.children.forEach(c=>{
       const cMeta = ROADMAP_STATUS_META[c.status] || {label:c.status, color:'var(--slate)'};
+      const cEstado = ganttDueState(c);
+      const cDias = cEstado === 'atrasada' ? ganttDiasAtraso(c) : 0;
+      if(cEstado === 'atrasada') totalAtrasadas++; else if(cEstado === 'atencao') totalAtencao++;
+      const cBadge = cEstado === 'atrasada'
+        ? `<span class="gantt-atraso-badge">⚠ ${cDias}d</span>`
+        : (cEstado === 'atencao' ? `<span class="gantt-atencao-badge">● esta semana</span>` : '');
+      const cEstouro = (cEstado === 'atrasada' && agora > c.due)
+        ? `<div class="gantt-estouro" style="left:${pct(c.due)}%; width:calc(${pct(agora)}% - ${pct(c.due)}%);" title="${cDias} dia(s) de atraso"></div>`
+        : '';
       leftRows.push(`
         <div class="gantt-left-row gantt-child">
-          <div class="gantt-lr-name">${c.name}</div>
+          <div class="gantt-lr-name">${c.name}${cBadge}</div>
           <div class="gantt-lr-assignee">${c.assignee||'—'}</div>
         </div>`);
       rightRows.push(`
         <div class="gantt-right-row">
-          <div class="gantt-bar" style="left:${pct(c.start)}%; width:calc(${pct(c.due)}% - ${pct(c.start)}%); background:${cMeta.color}CC;" title="${c.name} · ${cMeta.label} · ${fmtDate(c.start)} → ${fmtDate(c.due)}">
+          <div class="gantt-bar${cEstado==='atrasada'?' atrasada':(cEstado==='atencao'?' atencao':'')}" style="left:${pct(c.start)}%; width:calc(${pct(c.due)}% - ${pct(c.start)}%); background:${cMeta.color}CC;" title="${c.name} · ${cMeta.label} · ${fmtDate(c.start)} → ${fmtDate(c.due)}${cEstado==='atrasada'?' · '+cDias+' dia(s) de atraso':''}">
             <span>${cMeta.label}</span>
           </div>
+          ${cEstouro}
         </div>`);
     });
   });
@@ -1787,7 +1860,19 @@ function renderGantt(){
     ? `<div class="gantt-today-line" style="left:${pct(now)}%"></div><div class="gantt-today-label" style="left:${pct(now)}%">Hoje</div>`
     : '';
 
-  wrap.innerHTML = `
+  const totalBarras = visibleTasks.reduce((n,f)=>n+1+f.children.length, 0);
+  const emDia = totalBarras - totalAtrasadas - totalAtencao;
+  const resumo = `
+    <div class="gantt-resumo">
+      <span class="r-atraso">⚠ ${totalAtrasadas} atrasada${totalAtrasadas!==1?'s':''}</span>
+      <span style="color:var(--border-hi)">|</span>
+      <span class="r-atencao">● ${totalAtencao} vence${totalAtencao!==1?'m':''} esta semana</span>
+      <span style="color:var(--border-hi)">|</span>
+      <span class="r-ok">✓ ${emDia} em dia</span>
+      <span style="color:var(--text-mute); margin-left:auto;">Faixa hachurada = dias corridos além do prazo</span>
+    </div>`;
+
+  wrap.innerHTML = resumo + `
     <div class="gantt-left">${leftRows.join('')}</div>
     <div class="gantt-right-scroll"><div class="gantt-right">${rightRows.join('')}${todayHtml}</div></div>`;
 

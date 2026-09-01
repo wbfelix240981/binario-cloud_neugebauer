@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-08-30T11:59:07.011543Z",
+ "last_synced": "2026-09-01T01:24:47.315019Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -97,7 +97,7 @@
     {
      "id": "86ajrf5dj",
      "name": "2.2 Rede e conectividade",
-     "status": "em andamento",
+     "status": "fechado",
      "start": 1787641200000,
      "due": 1788332400000,
      "assignee": "Alexandre Pereira / Brunno Lopes"
@@ -134,7 +134,7 @@
      "name": "3.2 Migração piloto",
      "status": "em andamento",
      "start": 1787727600000,
-     "due": 1787900400000,
+     "due": 1788159600000,
      "assignee": "José Maria Ferreira da Silva"
     },
     {
@@ -453,7 +453,7 @@
     },
     {
      "n": "2.2 Rede e conectividade",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "Brunno Leonardo Borges Lopes",
      "due": 1788332400000,
      "id": "86ajrf5dj",
@@ -554,7 +554,7 @@
       {
        "n": "Testar conectividade entre ambientes",
        "status": "backlog",
-       "due": 1787900400000,
+       "due": 1789110000000,
        "original_due": 1787900400000,
        "id": "86ajrf5pm"
       }
@@ -583,7 +583,7 @@
       },
       {
        "n": "Levantar dependência entre servidores e serviços.",
-       "status": "in review",
+       "status": "shipped",
        "due": 1787900400000,
        "original_due": null,
        "id": "86ajrf5hu"
@@ -624,26 +624,26 @@
      "n": "3.2 Migração piloto",
      "status": "in progress",
      "assignee": "José Maria Ferreira da Silva",
-     "due": 1787900400000,
+     "due": 1788159600000,
      "id": "86ajrf5dx",
      "ativ": [
       {
        "n": "Restauração de srv's Piloto",
        "status": "in progress",
-       "due": 1787900400000,
+       "due": 1788159600000,
        "original_due": 1787900400000,
        "id": "86ajrf5x1"
       },
       {
        "n": "Executar teste funcional",
-       "status": "backlog",
+       "status": "in progress",
        "due": 1788159600000,
        "original_due": 1788159600000,
        "id": "86ajrf5xf"
       },
       {
        "n": "Registrar problemas encontrados",
-       "status": "backlog",
+       "status": "in progress",
        "due": 1788159600000,
        "original_due": 1788159600000,
        "id": "86ajrf5xn"
@@ -736,13 +736,6 @@
        "due": 1790924400000,
        "original_due": 1790924400000,
        "id": "86ajrf5u4"
-      },
-      {
-       "n": "Configurar Jobs",
-       "status": "backlog",
-       "due": 1790924400000,
-       "original_due": 1790924400000,
-       "id": "86ak6dv7p"
       },
       {
        "n": "Definir schedule e politica de retenção",

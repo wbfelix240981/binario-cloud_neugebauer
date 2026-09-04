@@ -44,6 +44,15 @@ jobs:
             "https://api.clickup.com/api/v2/list/901328018187/task?page=0")
           if [ "$CODE" != "200" ]; then
             echo "::error::ClickUp respondeu HTTP $CODE. Resposta: $(head -c 200 /tmp/cu.json)"
+            {
+              echo "gerado em: $(date -u)"
+              echo "HTTP: $CODE"
+              echo "prefixo do token: ${CLICKUP_TOKEN:0:11} (tamanho ${#CLICKUP_TOKEN})"
+              echo "resposta:"; head -c 300 /tmp/cu.json
+            } > DIAGNOSTICO.txt
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add DIAGNOSTICO.txt && git commit -m "diagnóstico" && git push || true
             echo "Se for 401 'Token invalid', o token foi revogado/regenerado."
             echo "Gere outro em app.clickup.com/3080406/settings/apps e atualize o secret CLICKUP_TOKEN."
             exit 1

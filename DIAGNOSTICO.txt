@@ -1,5 +1,0 @@
-gerado em: Fri Sep  4 09:36:54 UTC 2026
-HTTP: 401
-prefixo do token: pk_11804391 (tamanho 45)
-resposta:
-{"err":"Token invalid","ECODE":"OAUTH_025"}

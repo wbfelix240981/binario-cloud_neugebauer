@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-03T18:43:18.682822Z",
+ "last_synced": "2026-09-05T00:09:24.437107Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -112,13 +112,13 @@
      "name": "2.3 Firewall e segurança",
      "status": "em andamento",
      "start": 1787554800000,
-     "due": 1789542000000,
+     "due": 1789023600000,
      "assignee": "Brunno Lopes / Alexandre Pereira"
     },
     {
      "id": "86ajwq6ah",
      "name": "2.7 Coleta de dados e configurações locais",
-     "status": "em andamento",
+     "status": "fechado",
      "start": 1785135600000,
      "due": 1787900400000,
      "assignee": "Lucas Federissis de Souza"
@@ -147,7 +147,7 @@
      "name": "3.3 Ondas de migração",
      "status": "aberto",
      "start": 1788332400000,
-     "due": 1790319600000,
+     "due": 1789887600000,
      "assignee": "José Maria Ferreira da Silva"
     }
    ]
@@ -497,7 +497,7 @@
      "n": "2.3 Firewall e segurança",
      "status": "in progress",
      "assignee": "Brunno Leonardo Borges Lopes",
-     "due": 1789542000000,
+     "due": 1789023600000,
      "id": "86ajrf5dk",
      "ativ": [
       {
@@ -530,14 +530,14 @@
       },
       {
        "n": "Configurar regras NATs",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1789369200000,
        "original_due": 1789369200000,
        "id": "86ajrf5qw"
       },
       {
        "n": "Configurar regras de proxy reverso",
-       "status": "backlog",
+       "status": "in progress",
        "due": 1789369200000,
        "original_due": 1789369200000,
        "id": "86ak7vzqq"
@@ -566,8 +566,8 @@
      ]
     },
     {
-     "n": "2.7 Coleta de dados e configurações locais",
-     "status": "in progress",
+     "n": "2.4 Coleta de dados e configurações locais",
+     "status": "shipped",
      "assignee": "Lucas Federissis de Souza",
      "due": 1787900400000,
      "id": "86ajwq6ah",
@@ -599,13 +599,36 @@
        "due": 1787900400000,
        "original_due": 1787900400000,
        "id": "86ajwq728"
+      }
+     ]
+    },
+    {
+     "n": "2.5 Instalação do Agent de backup",
+     "status": "in progress",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1789110000000,
+     "id": "86ajwq7dt",
+     "ativ": [
+      {
+       "n": "Servidores Windows",
+       "status": "shipped",
+       "due": 1787900400000,
+       "original_due": 1787900400000,
+       "id": "86ajwq7jc"
       },
       {
-       "n": "Instalação do Agent de backup nos servidores para mapear processo de migração",
+       "n": "Servidores Linux",
        "status": "in progress",
        "due": 1787900400000,
        "original_due": 1787900400000,
-       "id": "86ajwq7dt"
+       "id": "86ajwq7nk"
+      },
+      {
+       "n": "Servidores Desligados",
+       "status": "backlog",
+       "due": null,
+       "original_due": null,
+       "id": "86ajwqbxa"
       }
      ]
     }
@@ -656,51 +679,23 @@
      ]
     },
     {
-     "n": "3.3 Ondas de migração",
+     "n": "3.3 Migração",
      "status": "backlog",
      "assignee": "José Maria Ferreira da Silva",
-     "due": 1790319600000,
+     "due": 1789887600000,
      "id": "86ajrf5dy",
      "ativ": [
       {
        "n": "Virada de chave",
        "status": "backlog",
-       "due": 1790319600000,
+       "due": 1789282800000,
        "original_due": 1790319600000,
        "id": "86ajrf5e4"
       },
       {
-       "n": "Onda 1 — Servidores críticos",
-       "status": "backlog",
-       "due": 1788850800000,
-       "original_due": 1788850800000,
-       "id": "86ajrf5y6"
-      },
-      {
-       "n": "Onda 2 — Aplicações intermediárias",
-       "status": "backlog",
-       "due": 1789455600000,
-       "original_due": 1789455600000,
-       "id": "86ajrf5y0"
-      },
-      {
-       "n": "Onda 3 — Oracle",
-       "status": "backlog",
-       "due": 1790319600000,
-       "original_due": 1790319600000,
-       "id": "86ajrf5y2"
-      },
-      {
-       "n": "Onda 4 — SAP/HANA",
-       "status": "backlog",
-       "due": 1790319600000,
-       "original_due": 1790319600000,
-       "id": "86ajrf5y4"
-      },
-      {
        "n": "Onda 5 — Servidores de baixa criticidade",
        "status": "backlog",
-       "due": 1790319600000,
+       "due": null,
        "original_due": 1790319600000,
        "id": "86ajrf5xy"
       }
@@ -965,6 +960,18 @@
      "ativ": []
     }
    ]
+  },
+  {
+   "id": "86akce127",
+   "num": 999,
+   "name": "Incompatibilidade Servidores SUSE",
+   "short": "Incompatibilidade Servidores SUSE",
+   "detail": "",
+   "tags": [],
+   "status": "blocked",
+   "due": 1789110000000,
+   "assignee": "José Maria Ferreira da Silva",
+   "fases": []
   }
  ],
  "ignore_root_ids": [

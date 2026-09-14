@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-14T19:26:00.587078Z",
+ "last_synced": "2026-09-14T23:11:10.965171Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -112,7 +112,7 @@
      "name": "2.3 Firewall e segurança",
      "status": "em andamento",
      "start": 1787554800000,
-     "due": 1789023600000,
+     "due": 1789714800000,
      "assignee": "Brunno Lopes / Alexandre Pereira"
     },
     {
@@ -131,7 +131,7 @@
    "name": "Fase 3 — Migração",
    "status": "em andamento",
    "start": 1787727600000,
-   "due": 1789110000000,
+   "due": 1789974000000,
    "assignee": "José Maria Ferreira da Silva / Diogo Lerison",
    "children": [
     {
@@ -139,7 +139,7 @@
      "name": "3.2 Migração piloto",
      "status": "em andamento",
      "start": 1787727600000,
-     "due": 1788159600000,
+     "due": 1789974000000,
      "assignee": "José Maria Ferreira da Silva"
     },
     {
@@ -147,7 +147,7 @@
      "name": "3.3 Ondas de migração",
      "status": "aberto",
      "start": 1788332400000,
-     "due": 1789887600000,
+     "due": 1793343600000,
      "assignee": "José Maria Ferreira da Silva"
     }
    ]
@@ -497,7 +497,7 @@
      "n": "2.3 Firewall e segurança",
      "status": "in progress",
      "assignee": "Brunno Leonardo Borges Lopes",
-     "due": 1789023600000,
+     "due": 1789714800000,
      "id": "86ajrf5dk",
      "ativ": [
       {
@@ -545,21 +545,21 @@
       {
        "n": "Configurar roteamento",
        "status": "in progress",
-       "due": 1789369200000,
+       "due": 1789714800000,
        "original_due": 1789369200000,
        "id": "86ajrf5qg"
       },
       {
        "n": "Configurar políticas de segurança",
-       "status": "backlog",
-       "due": 1789369200000,
+       "status": "in progress",
+       "due": 1789714800000,
        "original_due": 1789369200000,
        "id": "86ajrf5qr"
       },
       {
        "n": "Testar conectividade entre ambientes",
-       "status": "backlog",
-       "due": 1789110000000,
+       "status": "in progress",
+       "due": 1789714800000,
        "original_due": 1787900400000,
        "id": "86ajrf5pm"
       }
@@ -604,7 +604,7 @@
     },
     {
      "n": "2.5 Instalação do Agent de backup",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "Lucas Federissis de Souza",
      "due": 1789110000000,
      "id": "86ajwq7dt",
@@ -618,17 +618,10 @@
       },
       {
        "n": "Servidores Linux",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1787900400000,
        "original_due": 1787900400000,
        "id": "86ajwq7nk"
-      },
-      {
-       "n": "Servidores Desligados",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ajwqbxa"
       }
      ]
     }
@@ -638,7 +631,7 @@
    "num": 3,
    "id": "86ajrf5cy",
    "status": "in progress",
-   "due": 1789110000000,
+   "due": 1789974000000,
    "name": "Fase 3 — Migração dos ambientes Neugebauer para a BCP",
    "short": "Fase 3 — Migração",
    "assignee": "José Maria Ferreira da Silva",
@@ -652,29 +645,22 @@
      "n": "3.2 Migração piloto",
      "status": "in progress",
      "assignee": "José Maria Ferreira da Silva",
-     "due": 1788159600000,
+     "due": 1789974000000,
      "id": "86ajrf5dx",
      "ativ": [
       {
-       "n": "Restauração de srv's Piloto",
-       "status": "in progress",
+       "n": "Migração de srv's via Veeam",
+       "status": "shipped",
        "due": 1788159600000,
        "original_due": 1787900400000,
        "id": "86ajrf5x1"
       },
       {
-       "n": "Executar teste funcional",
+       "n": "Migração Imagem QCOW2",
        "status": "in progress",
-       "due": 1788159600000,
-       "original_due": 1788159600000,
-       "id": "86ajrf5xf"
-      },
-      {
-       "n": "Registrar problemas encontrados",
-       "status": "in progress",
-       "due": 1788159600000,
-       "original_due": 1788159600000,
-       "id": "86ajrf5xn"
+       "due": 1789974000000,
+       "original_due": 1789974000000,
+       "id": "86akhx6eg"
       }
      ]
     },
@@ -682,20 +668,13 @@
      "n": "3.3 Migração",
      "status": "backlog",
      "assignee": "José Maria Ferreira da Silva",
-     "due": 1789887600000,
+     "due": 1793343600000,
      "id": "86ajrf5dy",
      "ativ": [
       {
-       "n": "Virada de chave",
-       "status": "backlog",
-       "due": 1789282800000,
-       "original_due": 1790319600000,
-       "id": "86ajrf5e4"
-      },
-      {
        "n": "Onda 5 — Servidores de baixa criticidade",
        "status": "backlog",
-       "due": null,
+       "due": 1793343600000,
        "original_due": 1790319600000,
        "id": "86ajrf5xy"
       }
@@ -968,7 +947,7 @@
    "short": "Incompatibilidade Servidores SUSE",
    "detail": "",
    "tags": [],
-   "status": "blocked",
+   "status": "shipped",
    "due": 1789110000000,
    "assignee": "José Maria Ferreira da Silva",
    "fases": []

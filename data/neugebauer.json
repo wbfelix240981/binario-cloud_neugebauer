@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-15T07:49:53.988723Z",
+ "last_synced": "2026-09-15T13:37:58.158408Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -88,7 +88,7 @@
    "name": "Fase 2 — Preparação e implementação",
    "status": "em andamento",
    "start": 1785135600000,
-   "due": 1789542000000,
+   "due": 1789714800000,
    "assignee": "José Maria Ferreira da Silva",
    "children": [
     {
@@ -158,7 +158,7 @@
    "name": "Fase 4 — Go-live e estabilização",
    "status": "aberto",
    "start": 1790146800000,
-   "due": 1791529200000,
+   "due": 1791183600000,
    "assignee": "Diogo Lerison / José Maria Ferreira da Silva",
    "children": [
     {
@@ -417,7 +417,7 @@
    "num": 2,
    "id": "86ajrf5cz",
    "status": "in progress",
-   "due": 1789542000000,
+   "due": 1789714800000,
    "name": "Fase 2 — Preparação e implementação da infraestrutura Neugebauer",
    "short": "Fase 2 — Preparação e implementação",
    "assignee": "José Maria Ferreira da Silva",
@@ -672,7 +672,14 @@
      "id": "86ajrf5dy",
      "ativ": [
       {
-       "n": "Onda 5 — Servidores de baixa criticidade",
+       "n": "Onda 1 - Servidores de produção.",
+       "status": "backlog",
+       "due": 1790492400000,
+       "original_due": 1790492400000,
+       "id": "86akj6p2r"
+      },
+      {
+       "n": "Onda 2 — Servidores de baixa criticidade",
        "status": "backlog",
        "due": 1793343600000,
        "original_due": 1790319600000,
@@ -686,7 +693,7 @@
    "num": 4,
    "id": "86ajrf5d3",
    "status": "backlog",
-   "due": 1791529200000,
+   "due": 1791183600000,
    "name": "Fase 4 — Go-live e estabilização do ambiente Neugebauer",
    "short": "Fase 4 — Go-live e estabilização",
    "assignee": "Diogo Lerison",
@@ -840,7 +847,7 @@
    "num": 5,
    "id": "86ajrf5d6",
    "status": "backlog",
-   "due": 1791529200000,
+   "due": null,
    "name": "Fase 5 — Encerramento e transição do Projeto Neugebauer",
    "short": "Fase 5 — Encerramento e transição",
    "assignee": "",

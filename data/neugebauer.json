@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-16T20:12:06.226969Z",
+ "last_synced": "2026-09-16T22:59:48.205114Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -687,14 +687,14 @@
      "ativ": [
       {
        "n": "Inventario de servidores Kosmo",
-       "status": "backlog",
+       "status": "shipped",
        "due": 1789542000000,
        "original_due": 1789542000000,
        "id": "86akjfvpb"
       },
       {
        "n": "Validação do inventario",
-       "status": "backlog",
+       "status": "in progress",
        "due": 1789542000000,
        "original_due": 1789542000000,
        "id": "86akjg2ux"

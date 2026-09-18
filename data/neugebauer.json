@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-18T16:29:42.512739Z",
+ "last_synced": "2026-09-18T19:41:16.848277Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -137,7 +137,7 @@
     {
      "id": "86ajrf5dx",
      "name": "3.2 Migração piloto",
-     "status": "em andamento",
+     "status": "concluído",
      "start": 1787727600000,
      "due": 1789974000000,
      "assignee": "José Maria Ferreira da Silva"
@@ -544,7 +544,7 @@
       },
       {
        "n": "Configurar regras de proxy reverso",
-       "status": "shipped",
+       "status": "in review",
        "due": 1789369200000,
        "original_due": 1789369200000,
        "id": "86ak7vzqq"
@@ -657,7 +657,7 @@
    "fases": [
     {
      "n": "3.2 Migração piloto",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "José Maria Ferreira da Silva",
      "due": 1789974000000,
      "id": "86ajrf5dx",
@@ -671,7 +671,7 @@
       },
       {
        "n": "Migração Imagem QCOW2",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1789714800000,
        "original_due": 1789974000000,
        "id": "86akhx6eg"
@@ -694,14 +694,14 @@
       },
       {
        "n": "Validação do inventario",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1789542000000,
        "original_due": 1789542000000,
        "id": "86akjg2ux"
       },
       {
        "n": "Definição estrategia de migração",
-       "status": "backlog",
+       "status": "shipped",
        "due": 1789542000000,
        "original_due": 1789542000000,
        "id": "86akjftv3"

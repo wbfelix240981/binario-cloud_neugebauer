@@ -604,7 +604,7 @@
 
 <script>
 // ================= DADOS =================
-const LAST_SYNC_UTC = "2026-09-21T17:06:21.030168Z";
+const LAST_SYNC_UTC = "2026-09-21T21:07:15.841532Z";
 
 // Cronograma (Gantt) — mesma lista ClickUp "Neugebauer", nível Fase → subfase (X.Y), com datas reais de início/prazo.
 const GANTT_TASKS = [
@@ -690,7 +690,7 @@ const GANTT_TASKS = [
   "id": "86ajrf5cy",
   "metaNum": 3,
   "name": "Fase 3 — Migração",
-  "status": "em andamento",
+  "status": "concluído",
   "start": 1787727600000,
   "due": 1789974000000,
   "assignee": "José Maria Ferreira da Silva / Diogo Lerison",
@@ -706,9 +706,9 @@ const GANTT_TASKS = [
    {
     "id": "86ajrf5dy",
     "name": "3.3 Ondas de migração",
-    "status": "aberto",
+    "status": "em andamento",
     "start": 1788332400000,
-    "due": 1792134000000,
+    "due": 1791097200000,
     "assignee": "José Maria Ferreira da Silva"
    }
   ]
@@ -1206,7 +1206,7 @@ const RAFAEL_METAS = [
  {
   "num": 3,
   "id": "86ajrf5cy",
-  "status": "in progress",
+  "status": "shipped",
   "due": 1789974000000,
   "name": "Fase 3 — Migração dos ambientes Neugebauer para a BCP",
   "short": "Fase 3 — Migração",
@@ -1237,64 +1237,6 @@ const RAFAEL_METAS = [
       "due": 1789714800000,
       "original_due": 1789974000000,
       "id": "86akhx6eg"
-     }
-    ]
-   },
-   {
-    "n": "3.3 Migração",
-    "status": "backlog",
-    "assignee": "José Maria Ferreira da Silva",
-    "due": 1792134000000,
-    "id": "86ajrf5dy",
-    "ativ": [
-     {
-      "n": "Inventario de servidores Kosmo",
-      "status": "shipped",
-      "due": 1789542000000,
-      "original_due": 1789542000000,
-      "id": "86akjfvpb"
-     },
-     {
-      "n": "Validação do inventario",
-      "status": "shipped",
-      "due": 1789542000000,
-      "original_due": 1789542000000,
-      "id": "86akjg2ux"
-     },
-     {
-      "n": "Definição estrategia de migração",
-      "status": "shipped",
-      "due": 1789542000000,
-      "original_due": 1789542000000,
-      "id": "86akjftv3"
-     },
-     {
-      "n": "Baremetal Oracle",
-      "status": "backlog",
-      "due": null,
-      "original_due": null,
-      "id": "86akjfr1x"
-     },
-     {
-      "n": "Licenciamento SUSE",
-      "status": "backlog",
-      "due": null,
-      "original_due": null,
-      "id": "86akjfppv"
-     },
-     {
-      "n": "Onda 1 - Servidores de produção.",
-      "status": "backlog",
-      "due": 1790492400000,
-      "original_due": 1790492400000,
-      "id": "86akj6p2r"
-     },
-     {
-      "n": "Onda 2 — Servidores de baixa criticidade",
-      "status": "backlog",
-      "due": 1792134000000,
-      "original_due": 1790319600000,
-      "id": "86ajrf5xy"
      }
     ]
    }
@@ -1569,6 +1511,616 @@ const RAFAEL_METAS = [
   "due": 1792998000000,
   "assignee": "Diogo Lerison",
   "fases": []
+ },
+ {
+  "id": "86ajrf5dy",
+  "num": 999,
+  "name": "3.1 Migração PROD.",
+  "short": "3.1 Migração PROD.",
+  "detail": "",
+  "tags": [],
+  "status": "in progress",
+  "due": 1791097200000,
+  "assignee": "Lucas Federissis de Souza",
+  "fases": [
+   {
+    "n": "Inventario de servidores Kosmo",
+    "status": "shipped",
+    "assignee": "Diogo Lerison",
+    "due": 1789542000000,
+    "id": "86akjfvpb",
+    "ativ": []
+   },
+   {
+    "n": "Validação do inventario",
+    "status": "shipped",
+    "assignee": "Diogo Lerison",
+    "due": 1789542000000,
+    "id": "86akjg2ux",
+    "ativ": []
+   },
+   {
+    "n": "Definição estrategia de migração",
+    "status": "shipped",
+    "assignee": "Diogo Lerison",
+    "due": 1789542000000,
+    "id": "86akjftv3",
+    "ativ": [
+     {
+      "n": "Transferencia Fisica",
+      "status": "blocked",
+      "due": 1789542000000,
+      "original_due": 1789542000000,
+      "id": "86akjfu21"
+     },
+     {
+      "n": "Transferencia via rede",
+      "status": "shipped",
+      "due": 1789542000000,
+      "original_due": 1789542000000,
+      "id": "86akjfuap"
+     }
+    ]
+   },
+   {
+    "n": "Baremetal Oracle",
+    "status": "backlog",
+    "assignee": "Diogo Lerison",
+    "due": null,
+    "id": "86akjfr1x",
+    "ativ": []
+   },
+   {
+    "n": "Licenciamento SUSE",
+    "status": "backlog",
+    "assignee": "Diogo Lerison",
+    "due": null,
+    "id": "86akjfppv",
+    "ativ": []
+   },
+   {
+    "n": "Onda 1 - Servidores de produção.",
+    "status": "backlog",
+    "assignee": "",
+    "due": 1790492400000,
+    "id": "86akj6p2r",
+    "ativ": [
+     {
+      "n": "NGBULTRAPARERP",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c34g"
+     },
+     {
+      "n": "NGBORAPRD01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72rve"
+     },
+     {
+      "n": "NGB-ABS-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c35v"
+     },
+     {
+      "n": "NGB-IFR-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c37p"
+     },
+     {
+      "n": "NGBHRC04",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c3bm"
+     },
+     {
+      "n": "NGB-RSW-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c3je"
+     },
+     {
+      "n": "NGB-ETL-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c3ju"
+     },
+     {
+      "n": "NGB-ETL-W22-V02",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c3p0"
+     },
+     {
+      "n": "NGB-ETL-W22-V03",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c3q9"
+     },
+     {
+      "n": "NGB-ELO-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak6c3uc"
+     },
+     {
+      "n": "NGBMAXDB01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72hap"
+     },
+     {
+      "n": "NGBMAXDB02",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72hbd"
+     },
+     {
+      "n": "CNGB-IFR-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72rxp"
+     },
+     {
+      "n": "NGBCICLOPRD01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72t00"
+     },
+     {
+      "n": "NGBERPQAS",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72t0r"
+     },
+     {
+      "n": "NGBSYBASE01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak72t2n"
+     },
+     {
+      "n": "NGB-RSW-W12-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ak9gkyj"
+     },
+     {
+      "n": "CNGB-TMV-W22-V01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akafjer"
+     },
+     {
+      "n": "NGBELO01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akbccz9"
+     },
+     {
+      "n": "NGBELO02",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akbcf2x"
+     },
+     {
+      "n": "NGBORADEV01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akbcf65"
+     },
+     {
+      "n": "NGBVONSAC2",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akc6dyd"
+     },
+     {
+      "n": "NGBCICLODEV01",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akc6e7k"
+     },
+     {
+      "n": "NGBHNQAS",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86akc75yp"
+     },
+     {
+      "n": "NGBSITEDEV",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ajxm32x"
+     },
+     {
+      "n": "NGBSITEPRD",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ajwq8yg"
+     },
+     {
+      "n": "NGBNEOGRID",
+      "status": "backlog",
+      "due": null,
+      "original_due": null,
+      "id": "86ajwq8mm"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "86akn63gf",
+  "num": 999,
+  "name": "3.2 Migração NPROD",
+  "short": "3.2 Migração NPROD",
+  "detail": "",
+  "tags": [],
+  "status": "in progress",
+  "due": null,
+  "assignee": "",
+  "fases": [
+   {
+    "n": "Onda 2 — Servidores de baixa criticidade",
+    "status": "backlog",
+    "assignee": "",
+    "due": 1792134000000,
+    "id": "86ajrf5xy",
+    "ativ": [
+     {
+      "n": "NGBDLM01",
+      "status": "blocked",
+      "due": null,
+      "original_due": null,
+      "id": "86ajwq8pb"
+     },
+     {
+      "n": "NGBORA1",
+      "status": "blocked",
+      "due": null,
+      "original_due": null,
+      "id": "86ajwq91c"
+     },
+     {
+      "n": "NGBSAPORA01",
+      "status": "blocked",
+      "due": null,
+      "original_due": null,
+      "id": "86ajwq9ft"
+     },
+     {
+      "n": "AM-HVP-W22-F01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc2b"
+     },
+     {
+      "n": "AM-IFR-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc3x"
+     },
+     {
+      "n": "POA-HVP-W22-F01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc5g"
+     },
+     {
+      "n": "POA-IFR-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc6w"
+     },
+     {
+      "n": "AM-WFS-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc7n"
+     },
+     {
+      "n": "POA-WFS-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc8k"
+     },
+     {
+      "n": "NGBERPPRDA1",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqc99"
+     },
+     {
+      "n": "NGBERPPRDA2",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcaa"
+     },
+     {
+      "n": "NGBFIOPRD",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcc6"
+     },
+     {
+      "n": "NGBPOPRD",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcdj"
+     },
+     {
+      "n": "NGBNFEPRD",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcf7"
+     },
+     {
+      "n": "NGBWDPRD",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqch3"
+     },
+     {
+      "n": "AM-WMI-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcke"
+     },
+     {
+      "n": "AM-BKP-LIN-F01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcn8"
+     },
+     {
+      "n": "AM-BKP-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcpx"
+     },
+     {
+      "n": "POA-BKP-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqct5"
+     },
+     {
+      "n": "AM-DFS-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcv6"
+     },
+     {
+      "n": "AM-RLY-W22-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqcyh"
+     },
+     {
+      "n": "NGBSLM",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd07"
+     },
+     {
+      "n": "NGBROUTER",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd1c"
+     },
+     {
+      "n": "AM-TSS-W12-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd26"
+     },
+     {
+      "n": "AM-GLP-LIN-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd39"
+     },
+     {
+      "n": "AM-HUB-LIN-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd44"
+     },
+     {
+      "n": "AM-VIP-LIN-V03",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd4t"
+     },
+     {
+      "n": "AM-WEB-LIN-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd5v"
+     },
+     {
+      "n": "NGBBOQAS",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd6g"
+     },
+     {
+      "n": "NGBFIOQAS",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd73"
+     },
+     {
+      "n": "NGBWDDEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd7u"
+     },
+     {
+      "n": "NGBPODEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd89"
+     },
+     {
+      "n": "NGBBODEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqd9q"
+     },
+     {
+      "n": "NGBFIODEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdbt"
+     },
+     {
+      "n": "NGBHNDEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdcc"
+     },
+     {
+      "n": "NGBNFEDEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdcr"
+     },
+     {
+      "n": "NGBSISROT01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqddr"
+     },
+     {
+      "n": "NGB-BB-TMV-W12-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdfc"
+     },
+     {
+      "n": "NGB-BB-TSS-W12-V01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdkf"
+     },
+     {
+      "n": "NGBERPDEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdp4"
+     },
+     {
+      "n": "NGB-IFR-W12-V01-DEV",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdrj"
+     },
+     {
+      "n": "NGBWIN01",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdtb"
+     },
+     {
+      "n": "NGBWIN02",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqduh"
+     },
+     {
+      "n": "SWAPLMS1",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdve"
+     },
+     {
+      "n": "SWDBMS1",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdw4"
+     },
+     {
+      "n": "NGBBOPRD",
+      "status": "backlog",
+      "due": 1792134000000,
+      "original_due": 1792134000000,
+      "id": "86ajwqdx1"
+     }
+    ]
+   }
+  ]
  },
  {
   "id": "86akjg9f6",

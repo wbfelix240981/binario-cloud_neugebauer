@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-22T10:03:24.417088Z",
+ "last_synced": "2026-09-22T14:59:34.953879Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -951,272 +951,6 @@
    "fases": []
   },
   {
-   "id": "86ajrf5dy",
-   "num": 999,
-   "name": "3.1 Migração PROD.",
-   "short": "3.1 Migração PROD.",
-   "detail": "",
-   "tags": [],
-   "status": "in progress",
-   "due": 1791097200000,
-   "assignee": "Lucas Federissis de Souza",
-   "fases": [
-    {
-     "n": "Inventario de servidores Kosmo",
-     "status": "shipped",
-     "assignee": "Diogo Lerison",
-     "due": 1789542000000,
-     "id": "86akjfvpb",
-     "ativ": []
-    },
-    {
-     "n": "Validação do inventario",
-     "status": "shipped",
-     "assignee": "Diogo Lerison",
-     "due": 1789542000000,
-     "id": "86akjg2ux",
-     "ativ": []
-    },
-    {
-     "n": "Definição estrategia de migração",
-     "status": "shipped",
-     "assignee": "Diogo Lerison",
-     "due": 1789542000000,
-     "id": "86akjftv3",
-     "ativ": [
-      {
-       "n": "Transferencia Fisica",
-       "status": "blocked",
-       "due": 1789542000000,
-       "original_due": 1789542000000,
-       "id": "86akjfu21"
-      },
-      {
-       "n": "Transferencia via rede",
-       "status": "shipped",
-       "due": 1789542000000,
-       "original_due": 1789542000000,
-       "id": "86akjfuap"
-      }
-     ]
-    },
-    {
-     "n": "Baremetal Oracle",
-     "status": "backlog",
-     "assignee": "Diogo Lerison",
-     "due": null,
-     "id": "86akjfr1x",
-     "ativ": []
-    },
-    {
-     "n": "Licenciamento SUSE",
-     "status": "backlog",
-     "assignee": "Diogo Lerison",
-     "due": null,
-     "id": "86akjfppv",
-     "ativ": []
-    },
-    {
-     "n": "Onda 1 - Servidores de produção.",
-     "status": "backlog",
-     "assignee": "",
-     "due": 1790492400000,
-     "id": "86akj6p2r",
-     "ativ": [
-      {
-       "n": "NGBULTRAPARERP",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c34g"
-      },
-      {
-       "n": "NGBORAPRD01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72rve"
-      },
-      {
-       "n": "NGB-ABS-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c35v"
-      },
-      {
-       "n": "NGB-IFR-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c37p"
-      },
-      {
-       "n": "NGBHRC04",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c3bm"
-      },
-      {
-       "n": "NGB-RSW-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c3je"
-      },
-      {
-       "n": "NGB-ETL-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c3ju"
-      },
-      {
-       "n": "NGB-ETL-W22-V02",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c3p0"
-      },
-      {
-       "n": "NGB-ETL-W22-V03",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c3q9"
-      },
-      {
-       "n": "NGB-ELO-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak6c3uc"
-      },
-      {
-       "n": "NGBMAXDB01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72hap"
-      },
-      {
-       "n": "NGBMAXDB02",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72hbd"
-      },
-      {
-       "n": "CNGB-IFR-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72rxp"
-      },
-      {
-       "n": "NGBCICLOPRD01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72t00"
-      },
-      {
-       "n": "NGBERPQAS",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72t0r"
-      },
-      {
-       "n": "NGBSYBASE01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak72t2n"
-      },
-      {
-       "n": "NGB-RSW-W12-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ak9gkyj"
-      },
-      {
-       "n": "CNGB-TMV-W22-V01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akafjer"
-      },
-      {
-       "n": "NGBELO01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akbccz9"
-      },
-      {
-       "n": "NGBELO02",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akbcf2x"
-      },
-      {
-       "n": "NGBORADEV01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akbcf65"
-      },
-      {
-       "n": "NGBVONSAC2",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akc6dyd"
-      },
-      {
-       "n": "NGBCICLODEV01",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akc6e7k"
-      },
-      {
-       "n": "NGBHNQAS",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86akc75yp"
-      },
-      {
-       "n": "NGBSITEDEV",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ajxm32x"
-      },
-      {
-       "n": "NGBSITEPRD",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ajwq8yg"
-      },
-      {
-       "n": "NGBNEOGRID",
-       "status": "backlog",
-       "due": null,
-       "original_due": null,
-       "id": "86ajwq8mm"
-      }
-     ]
-    }
-   ]
-  },
-  {
    "id": "86akn63gf",
    "num": 999,
    "name": "3.2 Migração NPROD",
@@ -1228,9 +962,17 @@
    "assignee": "",
    "fases": [
     {
+     "n": "Disponibilização de imagens Compactadas",
+     "status": "backlog",
+     "assignee": "Diogo Lerison",
+     "due": null,
+     "id": "86aknc0rm",
+     "ativ": []
+    },
+    {
      "n": "Onda 2 — Servidores de baixa criticidade",
      "status": "backlog",
-     "assignee": "",
+     "assignee": "Lucas Federissis de Souza",
      "due": 1792134000000,
      "id": "86ajrf5xy",
      "ativ": [

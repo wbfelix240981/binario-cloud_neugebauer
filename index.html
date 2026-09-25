@@ -604,7 +604,7 @@
 
 <script>
 // ================= DADOS =================
-const LAST_SYNC_UTC = "2026-09-25T18:41:15.562635Z";
+const LAST_SYNC_UTC = "2026-09-25T22:26:30.096213Z";
 
 // Cronograma (Gantt) — mesma lista ClickUp "Neugebauer", nível Fase → subfase (X.Y), com datas reais de início/prazo.
 const GANTT_TASKS = [
@@ -647,7 +647,7 @@ const GANTT_TASKS = [
   "id": "86ajrf5cz",
   "metaNum": 2,
   "name": "Fase 2 — Preparação e implementação",
-  "status": "em andamento",
+  "status": "fechado",
   "start": 1785135600000,
   "due": 1789714800000,
   "assignee": "José Maria Ferreira da Silva",
@@ -671,7 +671,7 @@ const GANTT_TASKS = [
    {
     "id": "86ajrf5dk",
     "name": "2.3 Firewall e segurança",
-    "status": "em andamento",
+    "status": "fechado",
     "start": 1787554800000,
     "due": 1789714800000,
     "assignee": "Brunno Lopes / Alexandre Pereira"
@@ -978,7 +978,7 @@ const RAFAEL_METAS = [
  {
   "num": 2,
   "id": "86ajrf5cz",
-  "status": "in progress",
+  "status": "shipped",
   "due": 1789714800000,
   "name": "Fase 2 — Preparação e implementação da infraestrutura Neugebauer",
   "short": "Fase 2 — Preparação e implementação",
@@ -1018,7 +1018,7 @@ const RAFAEL_METAS = [
      },
      {
       "n": "Hands-on BCP",
-      "status": "backlog",
+      "status": "shipped",
       "due": 1790578800000,
       "original_due": 1790578800000,
       "id": "86akjfc3g"
@@ -1064,7 +1064,7 @@ const RAFAEL_METAS = [
    },
    {
     "n": "2.3 Firewall e segurança",
-    "status": "in progress",
+    "status": "shipped",
     "assignee": "Brunno Leonardo Borges Lopes",
     "due": 1789714800000,
     "id": "86ajrf5dk",
@@ -1106,7 +1106,7 @@ const RAFAEL_METAS = [
      },
      {
       "n": "Configurar regras de proxy reverso",
-      "status": "in review",
+      "status": "shipped",
       "due": 1789369200000,
       "original_due": 1789369200000,
       "id": "86ak7vzqq"
@@ -1127,17 +1127,10 @@ const RAFAEL_METAS = [
      },
      {
       "n": "Testar conectividade entre ambientes",
-      "status": "in progress",
+      "status": "shipped",
       "due": 1789714800000,
       "original_due": 1787900400000,
       "id": "86ajrf5pm"
-     },
-     {
-      "n": "Validar conexão entre filiais SP x POA",
-      "status": "backlog",
-      "due": null,
-      "original_due": null,
-      "id": "86akjg6z2"
      }
     ]
    },
@@ -1513,6 +1506,18 @@ const RAFAEL_METAS = [
   "fases": []
  },
  {
+  "id": "86akpu58t",
+  "num": 999,
+  "name": "Liberação Link 500Mbp's",
+  "short": "Liberação Link 500Mbp's",
+  "detail": "",
+  "tags": [],
+  "status": "in progress",
+  "due": 1791961200000,
+  "assignee": "Diogo Lerison",
+  "fases": []
+ },
+ {
   "id": "86akn63gf",
   "num": 999,
   "name": "3.2 Migração NPROD",
@@ -1521,8 +1526,16 @@ const RAFAEL_METAS = [
   "tags": [],
   "status": "in progress",
   "due": null,
-  "assignee": "",
+  "assignee": "Lucas Federissis de Souza",
   "fases": [
+   {
+    "n": "Validar conexão entre filiais SP x POA",
+    "status": "backlog",
+    "assignee": "Alexandre Pereira",
+    "due": null,
+    "id": "86akjg6z2",
+    "ativ": []
+   },
    {
     "n": "Disponibilização de imagens Compactadas",
     "status": "backlog",

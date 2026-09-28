@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-09-28T07:01:12.396877Z",
+ "last_synced": "2026-09-28T15:34:34.626495Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -649,7 +649,7 @@
    "detail": "Execução da migração piloto e das ondas de migração planejadas até a virada de chave definitiva.",
    "fases": [
     {
-     "n": "3.2 Migração piloto",
+     "n": "3 Migração piloto",
      "status": "shipped",
      "assignee": "José Maria Ferreira da Silva",
      "due": 1789974000000,
@@ -944,6 +944,243 @@
    "fases": []
   },
   {
+   "id": "86akq7uxp",
+   "num": 999,
+   "name": "Fase 3.1 - Virada de chave",
+   "short": "Fase 3.1 - Virada de chave",
+   "detail": "",
+   "tags": [],
+   "status": "in progress",
+   "due": 1791097200000,
+   "assignee": "Lucas Federissis de Souza",
+   "fases": [
+    {
+     "n": "NGB-IFR-W22-V01 - 10.200.12.5",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7ar8",
+     "ativ": []
+    },
+    {
+     "n": "NGBNEOGRID - 10.200.12.207",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akqa8f0",
+     "ativ": []
+    },
+    {
+     "n": "NGBSITEPRD - 10.210.12.220",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akqa4fw",
+     "ativ": []
+    },
+    {
+     "n": "NGBORAPRD01 - 10.200.12.252",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7aqw",
+     "ativ": []
+    },
+    {
+     "n": "NGB-ABS-W22-V01 - 10.200.12.223",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7ar1",
+     "ativ": []
+    },
+    {
+     "n": "NGBHRC04 10.200.12.220",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7arf",
+     "ativ": []
+    },
+    {
+     "n": "NGBMAXDB01 - 10.200.12.225",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7atw",
+     "ativ": []
+    },
+    {
+     "n": "NGBMAXDB02 - 10.200.12.218",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7aua",
+     "ativ": []
+    },
+    {
+     "n": "NGBULTRAPARERP - 10.200.12.215",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7aqu",
+     "ativ": []
+    },
+    {
+     "n": "NGBELO01 - 10.200.12.231",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7ax4",
+     "ativ": []
+    },
+    {
+     "n": "NGBELO02 - 10.200.12.232",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7axj",
+     "ativ": []
+    },
+    {
+     "n": "NGBVONSAC2 - 10.200.12.206",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7aye",
+     "ativ": []
+    },
+    {
+     "n": "CNGB-IFR-W22-V01 - 10.200.160.5",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7aux",
+     "ativ": []
+    },
+    {
+     "n": "CNGB-TMV-W22-V01 - 10.200.160.10",
+     "status": "in progress",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7awy",
+     "ativ": []
+    },
+    {
+     "n": "NGB-RSW-W22-V01 - 10.200.12.246",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7art",
+     "ativ": []
+    },
+    {
+     "n": "NGB-ETL-W22-V01 - 10.200.12.238",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7ary",
+     "ativ": []
+    },
+    {
+     "n": "NGB-ETL-W22-V02 - 10.200.12.239",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7at2",
+     "ativ": []
+    },
+    {
+     "n": "NGB-ETL-W22-V03 - 10.200.12.233",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7atk",
+     "ativ": []
+    },
+    {
+     "n": "NGBCICLOPRD01 - 10.200.12.233",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7avm",
+     "ativ": []
+    },
+    {
+     "n": "NGBERPQAS - 10.200.12.62",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7avw",
+     "ativ": []
+    },
+    {
+     "n": "NGBHNQAS - 10.200.12.64",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7az1",
+     "ativ": []
+    },
+    {
+     "n": "NGBORADEV01 - 10.200.12.251",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7axw",
+     "ativ": []
+    },
+    {
+     "n": "NGBCICLODEV01 - 10.200.12.234",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7ayr",
+     "ativ": []
+    },
+    {
+     "n": "NGBSYBASE01 - 10.200.12.226",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7aw7",
+     "ativ": []
+    },
+    {
+     "n": "NGB-RSW-W12-V01 - 10.200.12.230",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7awn",
+     "ativ": []
+    },
+    {
+     "n": "NGB-ELO-W22-V01 - 10.200.12.247",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akm7att",
+     "ativ": []
+    },
+    {
+     "n": "NGBSITEDEV - 10.210.12.219",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akqa8qh",
+     "ativ": []
+    },
+    {
+     "n": "NGBDLM01 - \t10.200.12.217",
+     "status": "backlog",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akqa8vf",
+     "ativ": []
+    }
+   ]
+  },
+  {
    "id": "86akpu58t",
    "num": 999,
    "name": "Liberação Link 500Mbp's",
@@ -983,7 +1220,7 @@
      "ativ": []
     },
     {
-     "n": "Onda 2 — Servidores de baixa criticidade",
+     "n": "Servidores ambiente não produtivo",
      "status": "backlog",
      "assignee": "Lucas Federissis de Souza",
      "due": 1792134000000,

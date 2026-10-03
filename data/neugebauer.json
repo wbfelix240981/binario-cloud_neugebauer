@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-03T08:13:29.632810Z",
+ "last_synced": "2026-10-03T13:27:55.161170Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -956,7 +956,7 @@
    "fases": [
     {
      "n": "NGB-IFR-W22-V01 - 10.200.12.5",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7ar8",
@@ -964,7 +964,7 @@
     },
     {
      "n": "NGBNEOGRID - 10.200.12.207",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akqa8f0",
@@ -972,7 +972,7 @@
     },
     {
      "n": "NGBSITEPRD - 10.210.12.220",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akqa4fw",
@@ -980,7 +980,7 @@
     },
     {
      "n": "NGBORAPRD01 - 10.200.12.252",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7aqw",
@@ -988,7 +988,7 @@
     },
     {
      "n": "NGB-ABS-W22-V01 - 10.200.12.223",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7ar1",
@@ -996,7 +996,7 @@
     },
     {
      "n": "NGBHRC04 10.200.12.220",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7arf",
@@ -1004,7 +1004,7 @@
     },
     {
      "n": "NGBMAXDB01 - 10.200.12.225",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7atw",
@@ -1012,7 +1012,7 @@
     },
     {
      "n": "NGBMAXDB02 - 10.200.12.218",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7aua",
@@ -1020,7 +1020,7 @@
     },
     {
      "n": "NGBULTRAPARERP - 10.200.12.215",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7aqu",
@@ -1028,7 +1028,7 @@
     },
     {
      "n": "NGBELO01 - 10.200.12.231",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7ax4",
@@ -1036,7 +1036,7 @@
     },
     {
      "n": "NGBELO02 - 10.200.12.232",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7axj",
@@ -1044,7 +1044,7 @@
     },
     {
      "n": "NGBVONSAC2 - 10.200.12.206",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7aye",
@@ -1052,7 +1052,7 @@
     },
     {
      "n": "CNGB-IFR-W22-V01 - 10.200.160.5",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7aux",
@@ -1060,7 +1060,7 @@
     },
     {
      "n": "CNGB-TMV-W22-V01 - 10.200.160.10",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7awy",
@@ -1068,7 +1068,7 @@
     },
     {
      "n": "NGB-RSW-W22-V01 - 10.200.12.246",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7art",
@@ -1076,7 +1076,7 @@
     },
     {
      "n": "NGB-ETL-W22-V01 - 10.200.12.238",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7ary",
@@ -1084,7 +1084,7 @@
     },
     {
      "n": "NGB-ETL-W22-V02 - 10.200.12.239",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7at2",
@@ -1092,7 +1092,7 @@
     },
     {
      "n": "NGB-ETL-W22-V03 - 10.200.12.233",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7atk",
@@ -1100,7 +1100,7 @@
     },
     {
      "n": "NGBCICLOPRD01 - 10.200.12.233",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7avm",
@@ -1108,7 +1108,7 @@
     },
     {
      "n": "NGBERPQAS - 10.200.12.62",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7avw",
@@ -1116,7 +1116,7 @@
     },
     {
      "n": "NGBHNQAS - 10.200.12.64",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7az1",
@@ -1124,7 +1124,7 @@
     },
     {
      "n": "NGBORADEV01 - 10.200.12.251",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7axw",
@@ -1132,7 +1132,7 @@
     },
     {
      "n": "NGBCICLODEV01 - 10.200.12.234",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7ayr",
@@ -1140,7 +1140,7 @@
     },
     {
      "n": "NGBSYBASE01 - 10.200.12.226",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7aw7",
@@ -1148,7 +1148,7 @@
     },
     {
      "n": "NGB-RSW-W12-V01 - 10.200.12.230",
-     "status": "backlog",
+     "status": "in progress",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7awn",
@@ -1156,7 +1156,7 @@
     },
     {
      "n": "NGB-ELO-W22-V01 - 10.200.12.247",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akm7att",
@@ -1164,7 +1164,7 @@
     },
     {
      "n": "NGBSITEDEV - 10.210.12.219",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akqa8qh",
@@ -1172,7 +1172,7 @@
     },
     {
      "n": "NGBDLM01 - \t10.200.12.217",
-     "status": "backlog",
+     "status": "in review",
      "assignee": "Lucas Federissis de Souza",
      "due": 1791097200000,
      "id": "86akqa8vf",

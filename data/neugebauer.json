@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-06T17:16:21.895417Z",
+ "last_synced": "2026-10-06T21:40:35.772143Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -156,7 +156,7 @@
    "id": "86ajrf5d3",
    "metaNum": 4,
    "name": "Fase 4 — Go-live e estabilização",
-   "status": "aberto",
+   "status": "em andamento",
    "start": 1790146800000,
    "due": 1792134000000,
    "assignee": "Diogo Lerison / José Maria Ferreira da Silva",
@@ -676,7 +676,7 @@
   {
    "num": 4,
    "id": "86ajrf5d3",
-   "status": "backlog",
+   "status": "in progress",
    "due": 1792134000000,
    "name": "Fase 4 — Go-live e estabilização do ambiente Neugebauer",
    "short": "Fase 4 — Go-live e estabilização",

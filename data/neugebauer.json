@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-09T16:17:33.559356Z",
+ "last_synced": "2026-10-09T20:58:16.451665Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -172,7 +172,7 @@
     {
      "id": "86ajrf5dt",
      "name": "4.3 Monitoramento",
-     "status": "aberto",
+     "status": "em andamento",
      "start": 1790319600000,
      "due": 1792134000000,
      "assignee": ""
@@ -709,14 +709,14 @@
       },
       {
        "n": "Definir schedule e politica de retenção",
-       "status": "backlog",
-       "due": 1791183600000,
+       "status": "in progress",
+       "due": 1791961200000,
        "original_due": 1790924400000,
        "id": "86ak6dvc4"
       },
       {
        "n": "Executar primeiro backup",
-       "status": "backlog",
+       "status": "shipped",
        "due": 1791183600000,
        "original_due": 1790924400000,
        "id": "86ajrf5uu"
@@ -732,8 +732,8 @@
     },
     {
      "n": "4.3 Monitoramento",
-     "status": "backlog",
-     "assignee": "",
+     "status": "in progress",
+     "assignee": "Lucas Federissis de Souza",
      "due": 1792134000000,
      "id": "86ajrf5dt",
      "ativ": [
@@ -766,64 +766,6 @@
        "id": "86ajrf5vt"
       }
      ]
-    },
-    {
-     "n": "4.4 Testes finais",
-     "status": "backlog",
-     "assignee": "Diogo Lerison",
-     "due": 1792134000000,
-     "id": "86ajrf5e8",
-     "ativ": [
-      {
-       "n": "Testar conectividade",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5ye"
-      },
-      {
-       "n": "Testar aplicações",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5yf"
-      },
-      {
-       "n": "Testar integrações",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5yk"
-      },
-      {
-       "n": "Testar acessos externos",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5yu"
-      },
-      {
-       "n": "Testar firewall e políticas",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5yy"
-      },
-      {
-       "n": "Testar jobs de backup",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5yx"
-      },
-      {
-       "n": "Testar restauração",
-       "status": "backlog",
-       "due": 1792134000000,
-       "original_due": 1791529200000,
-       "id": "86ajrf5zc"
-      }
-     ]
     }
    ]
   },
@@ -834,7 +776,7 @@
    "due": 1792134000000,
    "name": "Fase 5 — Encerramento e transição do Projeto Neugebauer",
    "short": "Fase 5 — Encerramento e transição",
-   "assignee": "",
+   "assignee": "Diogo Lerison",
    "tags": [
     "Projeto Neugebauer"
    ],
@@ -843,7 +785,7 @@
     {
      "n": "5.1 Transição para operação",
      "status": "backlog",
-     "assignee": "",
+     "assignee": "Diogo Lerison",
      "due": 1792134000000,
      "id": "86ajrf5ee",
      "ativ": [
@@ -887,7 +829,7 @@
     {
      "n": "5.2 Encerramento",
      "status": "backlog",
-     "assignee": "",
+     "assignee": "Diogo Lerison",
      "due": 1792134000000,
      "id": "86ajrf5ef",
      "ativ": [
@@ -924,7 +866,7 @@
     {
      "n": "Elaboração da TEP",
      "status": "backlog",
-     "assignee": "",
+     "assignee": "Diogo Lerison",
      "due": 1791788400000,
      "id": "86ak080ug",
      "ativ": []
@@ -963,7 +905,7 @@
    "detail": "",
    "tags": [],
    "status": "in progress",
-   "due": null,
+   "due": 1792738800000,
    "assignee": "Lucas Federissis de Souza",
    "fases": [
     {
@@ -976,9 +918,9 @@
     },
     {
      "n": "Disponibilização de imagens Compactadas",
-     "status": "backlog",
+     "status": "in progress",
      "assignee": "Diogo Lerison",
-     "due": null,
+     "due": 1792393200000,
      "id": "86aknc0rm",
      "ativ": []
     },
@@ -986,7 +928,7 @@
      "n": "Servidores ambiente não produtivo",
      "status": "backlog",
      "assignee": "Lucas Federissis de Souza",
-     "due": 1792134000000,
+     "due": 1792738800000,
      "id": "86ajrf5xy",
      "ativ": [
       {

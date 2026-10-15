@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-15T20:22:37.647066Z",
+ "last_synced": "2026-10-15T23:06:49.542146Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -934,315 +934,315 @@
       {
        "n": "NGB-ABS-W12-V01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynp"
       },
       {
        "n": "NGB-ABS-W12-V02",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynq"
       },
       {
        "n": "NGB-ABS-W22-V02",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynr"
       },
       {
        "n": "NGBQUEOPS01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynu"
       },
       {
        "n": "NGBSWRH1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynv"
       },
       {
        "n": "NGDS",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynw"
       },
       {
        "n": "NGPPRDEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynx"
       },
       {
        "n": "NGPPRPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyny"
       },
       {
        "n": "NGSAPORA01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvynz"
       },
       {
        "n": "NGSLM",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp0"
       },
       {
        "n": "NGTSITS01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp1"
       },
       {
        "n": "SWINTRANET1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp2"
       },
       {
        "n": "SWMSF1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp4"
       },
       {
        "n": "SWMSF2",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp5"
       },
       {
        "n": "SWSADIG1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp6"
       },
       {
        "n": "ULTRAPARERP",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyp8"
       },
       {
        "n": "NGBHRC03",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypb"
       },
       {
        "n": "NGBERPPRDCI",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypc"
       },
       {
        "n": "NGBHNPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvype"
       },
       {
        "n": "NGBERPPRDA1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypf"
       },
       {
        "n": "NGBERPPRDA2",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyph"
       },
       {
        "n": "NGBFIOPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypj"
       },
       {
        "n": "NGBPOPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypm"
       },
       {
        "n": "NGBNFEPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypp"
       },
       {
        "n": "NGBWDPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypq"
       },
       {
        "n": "NGBSLM",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypr"
       },
       {
        "n": "NGBROUTER",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypt"
       },
       {
        "n": "NGBBOQAS",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypu"
       },
       {
        "n": "NGBFIOQAS",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypv"
       },
       {
        "n": "NGBWDDEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypx"
       },
       {
        "n": "NGBPODEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvypz"
       },
       {
        "n": "NGBBODEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq1"
       },
       {
        "n": "NGBFIODEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq2"
       },
       {
        "n": "NGBHNDEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq3"
       },
       {
        "n": "NGBNFEDEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq5"
       },
       {
        "n": "NGBSISROT01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq7"
       },
       {
        "n": "NGB_BB_TMV_W12_V01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq8"
       },
       {
        "n": "NGB_BB_TSS_W12_V01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyq9"
       },
       {
        "n": "NGBERPDEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqa"
       },
       {
        "n": "NGB_IFR_W12_V01_DEV",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqc"
       },
       {
        "n": "NGBWIN01",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqd"
       },
       {
        "n": "NGBWIN02",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqe"
       },
       {
        "n": "SWAPLMS1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqf"
       },
       {
        "n": "SWDBMS1",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqg"
       },
       {
        "n": "NGBBOPRD",
        "status": "backlog",
-       "due": null,
+       "due": 1792998000000,
        "original_due": null,
        "id": "17ttbukvyqj"
       }

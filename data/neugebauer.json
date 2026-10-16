@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-16T21:17:26.021140Z",
+ "last_synced": "2026-10-16T23:38:53.657079Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -201,7 +201,7 @@
      "name": "Elaboração da TEP",
      "status": "aberto",
      "start": 1791529200000,
-     "due": 1791788400000,
+     "due": 1793343600000,
      "assignee": ""
     },
     {
@@ -209,7 +209,7 @@
      "name": "5.1 Transição para operação",
      "status": "aberto",
      "start": 1791529200000,
-     "due": 1792134000000,
+     "due": 1792738800000,
      "assignee": ""
     },
     {
@@ -217,7 +217,7 @@
      "name": "5.2 Encerramento",
      "status": "aberto",
      "start": 1791788400000,
-     "due": 1792134000000,
+     "due": 1792738800000,
      "assignee": ""
     }
    ]
@@ -786,41 +786,41 @@
      "n": "5.1 Transição para operação",
      "status": "backlog",
      "assignee": "Diogo Lerison",
-     "due": 1792134000000,
+     "due": 1792738800000,
      "id": "86ajrf5ee",
      "ativ": [
       {
        "n": "Elaborar documentação as built",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf61r"
       },
       {
        "n": "Documentar topologia de rede",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf62b"
       },
       {
        "n": "Documentar rotinas de backup",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf62f"
       },
       {
        "n": "Realizar passagem para o CCOE",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf62u"
       },
       {
        "n": "Realizar reunião de transição",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf63c"
       }
@@ -830,34 +830,34 @@
      "n": "5.2 Encerramento",
      "status": "backlog",
      "assignee": "Diogo Lerison",
-     "due": 1792134000000,
+     "due": 1792738800000,
      "id": "86ajrf5ef",
      "ativ": [
       {
        "n": "Elaborar relatório final",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf63u"
       },
       {
        "n": "Realizar reunião de encerramento",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf63z"
       },
       {
        "n": "Enviar termo de aceite",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf63y"
       },
       {
        "n": "Obter aceite formal da Neugebauer",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1792134000000,
        "id": "86ajrf643"
       }
@@ -867,7 +867,7 @@
      "n": "Elaboração da TEP",
      "status": "backlog",
      "assignee": "Diogo Lerison",
-     "due": 1791788400000,
+     "due": 1793343600000,
      "id": "86ak080ug",
      "ativ": []
     }

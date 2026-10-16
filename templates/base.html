@@ -252,6 +252,9 @@ button{font-family:inherit}
 .g-bar .done{position:absolute;inset:0 auto 0 0;background:rgba(255,255,255,.28)}
 .g-bar span{position:relative;font-size:10.5px;font-weight:800;color:#fff;padding:0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .g-bar.late{box-shadow:0 0 0 2px var(--late)}
+/* % das barras curtas: a .g-bar tem overflow:hidden, então o rótulo que não
+   cabe dentro vira um irmão posicionado logo à direita dela. */
+.g-pct{position:absolute;top:50%;transform:translateY(-50%);margin-left:6px;font-size:10px;font-weight:800;color:var(--text-2);white-space:nowrap;pointer-events:none}
 .g-over{position:absolute;top:14px;height:12px;border-radius:0 5px 5px 0;background:repeating-linear-gradient(135deg,var(--late) 0 4px,transparent 4px 8px);border:1px solid var(--late);border-left:none;opacity:.8}
 .g-ms{position:absolute;top:13px;width:14px;height:14px;transform:translateX(-50%) rotate(45deg);border-radius:3px;box-shadow:0 0 0 2px var(--surface)}
 .g-ms.late{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--late)}
@@ -1180,8 +1183,13 @@ function renderGantt(){
     const col = r.p ? st(r.status).color==='#8F7A6C' ? '#F0B323' : st(r.status).color : (isDone(r.item)?'#1F8F63':PARTY[r.party]?.color||st(r.status).color);
     const over = s==='late' ? `<div class="g-over" style="left:${X(r.due)};width:calc(${X(TODAY)} - ${X(r.due)})" title="${daysLate(r.item)} dia(s) além do prazo"></div>` : '';
     if(r.num===999) return `<div class="g-rr p"><div class="g-ms${s==='late'?' late':''}" style="left:${X(r.due)};background:${col}" title="${esc(r.name)} · prazo ${fmtY(r.due)}"></div>${over}</div>`;
-    return `<div class="g-rr ${r.p?'p':''}"><div class="g-bar${s==='late'?' late':''}" style="left:${X(r.start)};width:calc(${X(r.due+DAY*0.85)} - ${X(r.start)});background:${col}" title="${esc(r.name)} · ${esc(r.who||'')} · ${st(r.status).label} · ${fmtY(r.start)} → ${fmtY(r.due)}">
-      <div class="done" style="width:${Math.round(r.prog*100)}%"></div><span>${r.p?Math.round(r.prog*100)+'%':(r.party&&r.party!=='nd'?PARTY[r.party].label:'')}</span></div>${over}</div>`;
+    // Toda barra mostra o %, inclusive 100%. Numa barra curta "100%" não cabe
+    // dentro, então vai para fora, encostado na ponta direita.
+    const pct = Math.round(r.prog*100) + '%';
+    const barPx = (r.due + DAY*0.85 - r.start) / span * (pxDay ? span/DAY*pxDay : 900);
+    const dentro = barPx >= 44;
+    return `<div class="g-rr ${r.p?'p':''}"><div class="g-bar${s==='late'?' late':''}" style="left:${X(r.start)};width:calc(${X(r.due+DAY*0.85)} - ${X(r.start)});background:${col}" title="${esc(r.name)} · ${esc(r.who||'')} · ${st(r.status).label} · ${pct} · ${fmtY(r.start)} → ${fmtY(r.due)}">
+      <div class="done" style="width:${Math.round(r.prog*100)}%"></div><span>${dentro?pct:''}</span></div>${dentro?'':`<span class="g-pct" style="left:calc(${X(r.due+DAY*0.85)})">${pct}</span>`}${over}</div>`;
   }).join('');
 
   g.innerHTML = `<div class="g-legend">

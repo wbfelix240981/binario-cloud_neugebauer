@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-19T06:18:51.077645Z",
+ "last_synced": "2026-10-19T13:31:35.314971Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -174,7 +174,7 @@
      "name": "4.3 Monitoramento",
      "status": "em andamento",
      "start": 1790319600000,
-     "due": 1792134000000,
+     "due": 1792738800000,
      "assignee": ""
     },
     {
@@ -193,7 +193,7 @@
    "name": "Fase 5 — Encerramento e transição",
    "status": "aberto",
    "start": 1791183600000,
-   "due": 1792134000000,
+   "due": 1793343600000,
    "assignee": "",
    "children": [
     {
@@ -734,34 +734,34 @@
      "n": "4.3 Monitoramento",
      "status": "in progress",
      "assignee": "Lucas Federissis de Souza",
-     "due": 1792134000000,
+     "due": 1792738800000,
      "id": "86ajrf5dt",
      "ativ": [
       {
        "n": "Configurar monitoramento das VMs",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1790924400000,
        "id": "86ajrf5v9"
       },
       {
        "n": "Configurar monitoramento do firewall",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1790924400000,
        "id": "86ajrf5vn"
       },
       {
        "n": "Configurar monitoramento dos backups",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1790924400000,
        "id": "86ajrf5vm"
       },
       {
        "n": "Validar geração automática de alertas",
        "status": "backlog",
-       "due": 1792134000000,
+       "due": 1792738800000,
        "original_due": 1790924400000,
        "id": "86ajrf5vt"
       }
@@ -773,7 +773,7 @@
    "num": 5,
    "id": "86ajrf5d6",
    "status": "backlog",
-   "due": 1792134000000,
+   "due": 1793343600000,
    "name": "Fase 5 — Encerramento e transição do Projeto Neugebauer",
    "short": "Fase 5 — Encerramento e transição",
    "assignee": "Diogo Lerison",
@@ -874,30 +874,6 @@
    ]
   },
   {
-   "id": "86akjgbjg",
-   "num": 999,
-   "name": "Encerramento Kosmo",
-   "short": "Encerramento Kosmo",
-   "detail": "",
-   "tags": [],
-   "status": "backlog",
-   "due": 1792998000000,
-   "assignee": "Diogo Lerison",
-   "fases": []
-  },
-  {
-   "id": "86akpu58t",
-   "num": 999,
-   "name": "Liberação Link 500Mbp's",
-   "short": "Liberação Link 500Mbp's",
-   "detail": "",
-   "tags": [],
-   "status": "in progress",
-   "due": 1791961200000,
-   "assignee": "Diogo Lerison",
-   "fases": []
-  },
-  {
    "id": "86akn63gf",
    "num": 999,
    "name": "3.2 Migração NPROD",
@@ -912,12 +888,12 @@
      "n": "Validar conexão entre filiais SP x POA",
      "status": "shipped",
      "assignee": "Alexandre Pereira",
-     "due": null,
+     "due": 1791356400000,
      "id": "86akjg6z2",
      "ativ": []
     },
     {
-     "n": "Disponibilização de imagens Compactadas",
+     "n": "Disponibilização de imagens e dados Compactados",
      "status": "in progress",
      "assignee": "Diogo Lerison",
      "due": 1792393200000,
@@ -925,326 +901,60 @@
      "ativ": []
     },
     {
-     "n": "Servidores ambiente não produtivo",
-     "status": "backlog",
+     "n": "Transferencia de dados",
+     "status": "in progress",
      "assignee": "Lucas Federissis de Souza",
      "due": 1792738800000,
      "id": "86ajrf5xy",
      "ativ": [
       {
-       "n": "NGB-ABS-W12-V01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynp"
-      },
-      {
-       "n": "NGB-ABS-W12-V02",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynq"
-      },
-      {
-       "n": "NGB-ABS-W22-V02",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynr"
-      },
-      {
-       "n": "NGBQUEOPS01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynu"
-      },
-      {
-       "n": "NGBSWRH1",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynv"
-      },
-      {
-       "n": "NGDS",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynw"
-      },
-      {
-       "n": "NGPPRDEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynx"
-      },
-      {
-       "n": "NGPPRPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyny"
+       "n": "NGBORA01",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2f7"
       },
       {
        "n": "NGSAPORA01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvynz"
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2f9"
       },
       {
-       "n": "NGSLM",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp0"
+       "n": "Legado-21-20",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2fa"
       },
       {
-       "n": "NGTSITS01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp1"
+       "n": "JAN-22",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2kz"
       },
       {
-       "n": "SWINTRANET1",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp2"
+       "n": "JAN-23",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2m1"
       },
       {
-       "n": "SWMSF1",
+       "n": "JAN-24",
        "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp4"
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2m2"
       },
       {
-       "n": "SWMSF2",
+       "n": "JAN-25",
        "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp5"
-      },
-      {
-       "n": "SWSADIG1",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp6"
-      },
-      {
-       "n": "ULTRAPARERP",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyp8"
-      },
-      {
-       "n": "NGBHRC03",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypb"
-      },
-      {
-       "n": "NGBERPPRDCI",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypc"
-      },
-      {
-       "n": "NGBHNPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvype"
-      },
-      {
-       "n": "NGBERPPRDA1",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypf"
-      },
-      {
-       "n": "NGBERPPRDA2",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyph"
-      },
-      {
-       "n": "NGBFIOPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypj"
-      },
-      {
-       "n": "NGBPOPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypm"
-      },
-      {
-       "n": "NGBNFEPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypp"
-      },
-      {
-       "n": "NGBWDPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypq"
-      },
-      {
-       "n": "NGBSLM",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypr"
-      },
-      {
-       "n": "NGBROUTER",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypt"
-      },
-      {
-       "n": "NGBBOQAS",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypu"
-      },
-      {
-       "n": "NGBFIOQAS",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypv"
-      },
-      {
-       "n": "NGBWDDEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypx"
-      },
-      {
-       "n": "NGBPODEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvypz"
-      },
-      {
-       "n": "NGBBODEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq1"
-      },
-      {
-       "n": "NGBFIODEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq2"
-      },
-      {
-       "n": "NGBHNDEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq3"
-      },
-      {
-       "n": "NGBNFEDEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq5"
-      },
-      {
-       "n": "NGBSISROT01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq7"
-      },
-      {
-       "n": "NGB_BB_TMV_W12_V01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq8"
-      },
-      {
-       "n": "NGB_BB_TSS_W12_V01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyq9"
-      },
-      {
-       "n": "NGBERPDEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqa"
-      },
-      {
-       "n": "NGB_IFR_W12_V01_DEV",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqc"
-      },
-      {
-       "n": "NGBWIN01",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqd"
-      },
-      {
-       "n": "NGBWIN02",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqe"
-      },
-      {
-       "n": "SWAPLMS1",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqf"
-      },
-      {
-       "n": "SWDBMS1",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqg"
-      },
-      {
-       "n": "NGBBOPRD",
-       "status": "backlog",
-       "due": 1792998000000,
-       "original_due": null,
-       "id": "17ttbukvyqj"
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2m3"
       }
      ]
     }
@@ -1534,6 +1244,30 @@
      "ativ": []
     }
    ]
+  },
+  {
+   "id": "86akpu58t",
+   "num": 999,
+   "name": "Liberação Link 500Mbp's",
+   "short": "Liberação Link 500Mbp's",
+   "detail": "",
+   "tags": [],
+   "status": "shipped",
+   "due": 1791961200000,
+   "assignee": "Diogo Lerison",
+   "fases": []
+  },
+  {
+   "id": "86akjgbjg",
+   "num": 999,
+   "name": "Encerramento Kosmo",
+   "short": "Encerramento Kosmo",
+   "detail": "",
+   "tags": [],
+   "status": "in progress",
+   "due": 1792998000000,
+   "assignee": "Diogo Lerison",
+   "fases": []
   }
  ],
  "ignore_root_ids": [

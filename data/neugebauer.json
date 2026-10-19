@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-19T13:31:35.314971Z",
+ "last_synced": "2026-10-19T19:58:59.779919Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas.",
  "login": {
   "users": [
@@ -158,7 +158,7 @@
    "name": "Fase 4 — Go-live e estabilização",
    "status": "em andamento",
    "start": 1790146800000,
-   "due": 1792134000000,
+   "due": 1792738800000,
    "assignee": "Diogo Lerison / José Maria Ferreira da Silva",
    "children": [
     {
@@ -166,7 +166,7 @@
      "name": "4.2 Configurar Backup Binario",
      "status": "em andamento",
      "start": 1790319600000,
-     "due": 1791183600000,
+     "due": 1792738800000,
      "assignee": "José Maria Ferreira da Silva"
     },
     {
@@ -677,7 +677,7 @@
    "num": 4,
    "id": "86ajrf5d3",
    "status": "in progress",
-   "due": 1792134000000,
+   "due": 1792738800000,
    "name": "Fase 4 — Go-live e estabilização do ambiente Neugebauer",
    "short": "Fase 4 — Go-live e estabilização",
    "assignee": "Diogo Lerison",
@@ -690,7 +690,7 @@
      "n": "4.2 Configurar Backup Binario",
      "status": "in progress",
      "assignee": "Lucas Federissis de Souza",
-     "due": 1791183600000,
+     "due": 1792738800000,
      "id": "86ajrf5dr",
      "ativ": [
       {
@@ -710,7 +710,7 @@
       {
        "n": "Definir schedule e politica de retenção",
        "status": "in progress",
-       "due": 1791961200000,
+       "due": 1792738800000,
        "original_due": 1790924400000,
        "id": "86ak6dvc4"
       },
@@ -724,7 +724,7 @@
       {
        "n": "Executar teste de restauração",
        "status": "backlog",
-       "due": 1791183600000,
+       "due": 1792738800000,
        "original_due": 1790924400000,
        "id": "86ajrf5uw"
       }

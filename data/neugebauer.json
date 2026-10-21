@@ -1,1281 +1,1234 @@
 {
-  "list_id": "901328018187",
-  "last_synced": "2026-10-21T11:16:12.100042Z",
-  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
-  "login": {
-    "users": [
-      {
-        "usuario": "neugebauer",
-        "senha": "binario2026",
-        "nome": "Acesso geral"
-      },
-      {
-        "usuario": "binario",
-        "senha": "binario@2026",
-        "nome": "Binário Cloud"
-      },
-      {
-        "usuario": "ndomingues",
-        "senha": "Norton@2026",
-        "nome": "Norton Soares Domingues"
-      },
-      {
-        "usuario": "fpicoli",
-        "senha": "Francis@2026",
-        "nome": "Francis Picoli"
-      },
-      {
-        "usuario": "cmsantos",
-        "senha": "Cassiano@2026",
-        "nome": "Cassiano Morin dos Santos"
-      },
-      {
-        "usuario": "wfelix",
-        "senha": "Wagner@2026",
-        "nome": "Wagner Bento Felix"
-      },
-      {
-        "usuario": "rmartins",
-        "senha": "Rogerio@2026",
-        "nome": "Rogerio Martins de Oliveira"
-      },
-      {
-        "usuario": "liz",
-        "senha": "Liz123",
-        "nome": "Liz"
-      }
-    ]
+ "list_id": "901328018187",
+ "last_synced": "2026-10-21T11:28:26.431103Z",
+ "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
+ "login": {
+  "users": [
+   {
+    "usuario": "neugebauer",
+    "senha": "binario2026",
+    "nome": "Acesso geral"
+   },
+   {
+    "usuario": "binario",
+    "senha": "binario@2026",
+    "nome": "Binário Cloud"
+   },
+   {
+    "usuario": "ndomingues",
+    "senha": "Norton@2026",
+    "nome": "Norton Soares Domingues"
+   },
+   {
+    "usuario": "fpicoli",
+    "senha": "Francis@2026",
+    "nome": "Francis Picoli"
+   },
+   {
+    "usuario": "cmsantos",
+    "senha": "Cassiano@2026",
+    "nome": "Cassiano Morin dos Santos"
+   },
+   {
+    "usuario": "wfelix",
+    "senha": "Wagner@2026",
+    "nome": "Wagner Bento Felix"
+   },
+   {
+    "usuario": "rmartins",
+    "senha": "Rogerio@2026",
+    "nome": "Rogerio Martins de Oliveira"
+   },
+   {
+    "usuario": "liz",
+    "senha": "Liz123",
+    "nome": "Liz"
+   }
+  ]
+ },
+ "gantt": [
+  {
+   "id": "86ajrf5d1",
+   "metaNum": 1,
+   "name": "Fase 1 — Iniciação e planejamento",
+   "status": "fechado",
+   "start": 1784530800000,
+   "due": 1787760083675,
+   "assignee": "Diogo Lerison",
+   "children": [
+    {
+     "id": "86ajrf5df",
+     "name": "1.1 Kickoff e formalização",
+     "status": "fechado",
+     "start": 1784790000000,
+     "due": 1785394800000,
+     "assignee": "Diogo Lerison"
+    },
+    {
+     "id": "86ajrf5de",
+     "name": "1.2 Refinamento do escopo",
+     "status": "fechado",
+     "start": 1784530800000,
+     "due": 1787759359090,
+     "assignee": "Diogo Lerison"
+    },
+    {
+     "id": "86ajrf5dc",
+     "name": "1.3 Planejamento do projeto",
+     "status": "fechado",
+     "start": 1784530800000,
+     "due": 1787760079291,
+     "assignee": "Diogo Lerison"
+    }
+   ]
   },
-  "gantt": [
+  {
+   "id": "86ajrf5cz",
+   "metaNum": 2,
+   "name": "Fase 2 — Preparação e implementação",
+   "status": "fechado",
+   "start": 1785135600000,
+   "due": 1789714800000,
+   "assignee": "José Maria Ferreira da Silva",
+   "children": [
     {
-      "id": "86ajrf5d1",
-      "metaNum": 1,
-      "name": "Fase 1 — Iniciação e planejamento",
-      "status": "fechado",
-      "start": 1784530800000,
-      "due": 1787760083675,
-      "assignee": "Diogo Lerison",
-      "children": [
-        {
-          "id": "86ajrf5df",
-          "name": "1.1 Kickoff e formalização",
-          "status": "fechado",
-          "start": 1784790000000,
-          "due": 1785394800000,
-          "assignee": "Diogo Lerison"
-        },
-        {
-          "id": "86ajrf5de",
-          "name": "1.2 Refinamento do escopo",
-          "status": "fechado",
-          "start": 1784530800000,
-          "due": 1787759359090,
-          "assignee": "Diogo Lerison"
-        },
-        {
-          "id": "86ajrf5dc",
-          "name": "1.3 Planejamento do projeto",
-          "status": "fechado",
-          "start": 1784530800000,
-          "due": 1787760079291,
-          "assignee": "Diogo Lerison"
-        }
-      ]
+     "id": "86ajrf5dh",
+     "name": "2.1 Preparação da Binário Cloud",
+     "status": "fechado",
+     "start": 1785135600000,
+     "due": 1787814000000,
+     "assignee": "José Maria Ferreira da Silva"
     },
     {
-      "id": "86ajrf5cz",
-      "metaNum": 2,
-      "name": "Fase 2 — Preparação e implementação",
-      "status": "fechado",
-      "start": 1785135600000,
-      "due": 1789714800000,
-      "assignee": "José Maria Ferreira da Silva",
-      "children": [
-        {
-          "id": "86ajrf5dh",
-          "name": "2.1 Preparação da Binário Cloud",
-          "status": "fechado",
-          "start": 1785135600000,
-          "due": 1787814000000,
-          "assignee": "José Maria Ferreira da Silva"
-        },
-        {
-          "id": "86ajrf5dj",
-          "name": "2.2 Rede e conectividade",
-          "status": "fechado",
-          "start": 1787641200000,
-          "due": 1788332400000,
-          "assignee": "Alexandre Pereira / Brunno Lopes"
-        },
-        {
-          "id": "86ajrf5dk",
-          "name": "2.3 Firewall e segurança",
-          "status": "fechado",
-          "start": 1787554800000,
-          "due": 1789714800000,
-          "assignee": "Brunno Lopes / Alexandre Pereira"
-        },
-        {
-          "id": "86ajwq6ah",
-          "name": "2.7 Coleta de dados e configurações locais",
-          "status": "fechado",
-          "start": 1785135600000,
-          "due": 1787900400000,
-          "assignee": "Lucas Federissis de Souza"
-        }
-      ]
+     "id": "86ajrf5dj",
+     "name": "2.2 Rede e conectividade",
+     "status": "fechado",
+     "start": 1787641200000,
+     "due": 1788332400000,
+     "assignee": "Alexandre Pereira / Brunno Lopes"
     },
     {
-      "id": "86ajrf5cy",
-      "metaNum": 3,
-      "name": "Fase 3 — Migração",
-      "status": "fechado",
-      "start": 1787727600000,
-      "due": 1789974000000,
-      "assignee": "José Maria Ferreira da Silva / Diogo Lerison",
-      "children": [
-        {
-          "id": "86ajrf5dx",
-          "name": "3.2 Migração piloto",
-          "status": "fechado",
-          "start": 1787727600000,
-          "due": 1789974000000,
-          "assignee": "José Maria Ferreira da Silva"
-        },
-        {
-          "id": "86ajrf5dy",
-          "name": "3.3 Ondas de migração",
-          "status": "em andamento",
-          "start": 1788332400000,
-          "due": 1791097200000,
-          "assignee": "José Maria Ferreira da Silva"
-        }
-      ]
+     "id": "86ajrf5dk",
+     "name": "2.3 Firewall e segurança",
+     "status": "fechado",
+     "start": 1787554800000,
+     "due": 1789714800000,
+     "assignee": "Brunno Lopes / Alexandre Pereira"
     },
     {
-      "id": "86ajrf5d3",
-      "metaNum": 4,
-      "name": "Fase 4 — Go-live e estabilização",
-      "status": "em andamento",
-      "start": 1790146800000,
-      "due": 1792738800000,
-      "assignee": "Diogo Lerison / José Maria Ferreira da Silva",
-      "children": [
-        {
-          "id": "86ajrf5dr",
-          "name": "4.2 Configurar Backup Binario",
-          "status": "em andamento",
-          "start": 1790319600000,
-          "due": 1792738800000,
-          "assignee": "José Maria Ferreira da Silva"
-        },
-        {
-          "id": "86ajrf5dt",
-          "name": "4.3 Monitoramento",
-          "status": "em andamento",
-          "start": 1790319600000,
-          "due": 1792738800000,
-          "assignee": ""
-        },
-        {
-          "id": "86ajrf5e8",
-          "name": "4.4 Testes finais",
-          "status": "aberto",
-          "start": 1790924400000,
-          "due": 1792134000000,
-          "assignee": "Diogo Lerison / José Maria Ferreira da Silva"
-        }
-      ]
-    },
-    {
-      "id": "86ajrf5d6",
-      "metaNum": 5,
-      "name": "Fase 5 — Encerramento e transição",
-      "status": "aberto",
-      "start": 1791183600000,
-      "due": 1793343600000,
-      "assignee": "",
-      "children": [
-        {
-          "id": "86ak080ug",
-          "name": "Elaboração da TEP",
-          "status": "aberto",
-          "start": 1791529200000,
-          "due": 1793343600000,
-          "assignee": ""
-        },
-        {
-          "id": "86ajrf5ee",
-          "name": "5.1 Transição para operação",
-          "status": "aberto",
-          "start": 1791529200000,
-          "due": 1792738800000,
-          "assignee": ""
-        },
-        {
-          "id": "86ajrf5ef",
-          "name": "5.2 Encerramento",
-          "status": "aberto",
-          "start": 1791788400000,
-          "due": 1792738800000,
-          "assignee": ""
-        }
-      ]
+     "id": "86ajwq6ah",
+     "name": "2.7 Coleta de dados e configurações locais",
+     "status": "fechado",
+     "start": 1785135600000,
+     "due": 1787900400000,
+     "assignee": "Lucas Federissis de Souza"
     }
-  ],
-  "metas": [
+   ]
+  },
+  {
+   "id": "86ajrf5cy",
+   "metaNum": 3,
+   "name": "Fase 3 — Migração",
+   "status": "fechado",
+   "start": 1787727600000,
+   "due": 1789974000000,
+   "assignee": "José Maria Ferreira da Silva / Diogo Lerison",
+   "children": [
     {
-      "num": 1,
-      "id": "86ajrf5d1",
-      "status": "shipped",
-      "due": null,
-      "name": "Fase 1 — Iniciação e planejamento do Projeto Neugebauer",
-      "short": "Fase 1 — Iniciação e planejamento",
-      "assignee": "Diogo Lerison",
-      "tags": [
-        "Projeto Neugebauer"
-      ],
-      "detail": "Formalização do projeto, refinamento técnico, planejamento e aprovação do cronograma junto à Neugebauer.",
-      "fases": [
-        {
-          "n": "1.1 Kickoff e formalização",
-          "status": "shipped",
-          "assignee": "Diogo Lerison",
-          "due": 1785394800000,
-          "id": "86ajrf5df",
-          "ativ": [
-            {
-              "n": "Definir stakeholders",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5ew"
-            },
-            {
-              "n": "Elaborar apresentação de kickoff",
-              "status": "shipped",
-              "due": 1784703600000,
-              "original_due": 1784703600000,
-              "id": "86ajrf5ex"
-            },
-            {
-              "n": "Realizar reunião de kickoff",
-              "status": "shipped",
-              "due": 1784790000000,
-              "original_due": 1784790000000,
-              "id": "86ajrf5ey"
-            },
-            {
-              "n": "Registrar decisões e pendências do kickoff",
-              "status": "shipped",
-              "due": 1784790000000,
-              "original_due": 1784790000000,
-              "id": "86ajrf5f5"
-            },
-            {
-              "n": "Elaborar TAP",
-              "status": "shipped",
-              "due": 1784876400000,
-              "original_due": 1784876400000,
-              "id": "86ajrf5f6"
-            },
-            {
-              "n": "Enviar TAP para assinatura",
-              "status": "shipped",
-              "due": 1785481200000,
-              "original_due": 1785481200000,
-              "id": "86ajrf5f7"
-            },
-            {
-              "n": "Obter assinatura da Binário Cloud",
-              "status": "shipped",
-              "due": 1785481200000,
-              "original_due": 1785481200000,
-              "id": "86ajrf5fm"
-            },
-            {
-              "n": "Obter assinatura da Neugebauer",
-              "status": "shipped",
-              "due": 1785481200000,
-              "original_due": 1785481200000,
-              "id": "86ajrf5fp"
-            },
-            {
-              "n": "Formalizar abertura do projeto",
-              "status": "shipped",
-              "due": 1785481200000,
-              "original_due": 1785481200000,
-              "id": "86ajrf5fq"
-            }
-          ]
-        },
-        {
-          "n": "1.2 Refinamento do escopo",
-          "status": "shipped",
-          "assignee": "Diogo Lerison",
-          "due": null,
-          "id": "86ajrf5de",
-          "ativ": [
-            {
-              "n": "Validar inventário de servidores",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5fv"
-            },
-            {
-              "n": "Validar servidores ativos e desligados",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5g4"
-            },
-            {
-              "n": "Identificar servidores que serão migrados",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5g7"
-            },
-            {
-              "n": "Identificar servidores fora do escopo",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5ge"
-            },
-            {
-              "n": "Levantar sistemas operacionais",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5gm"
-            },
-            {
-              "n": "Levantar capacidade de disco por servidor",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5gr"
-            },
-            {
-              "n": "Levantar serviços hospedados",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5gp"
-            }
-          ]
-        },
-        {
-          "n": "1.3 Planejamento do projeto",
-          "status": "shipped",
-          "assignee": "Diogo Lerison",
-          "due": null,
-          "id": "86ajrf5dc",
-          "ativ": [
-            {
-              "n": "Definir marcos do projeto",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5k0"
-            },
-            {
-              "n": "Definir responsáveis por frente",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5jz"
-            },
-            {
-              "n": "Elaborar plano de comunicação",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5kq"
-            },
-            {
-              "n": "Definir reuniões semanais de acompanhamento",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5kt"
-            },
-            {
-              "n": "Criar registro de riscos e impedimentos",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5kv"
-            }
-          ]
-        }
-      ]
+     "id": "86ajrf5dx",
+     "name": "3.2 Migração piloto",
+     "status": "fechado",
+     "start": 1787727600000,
+     "due": 1789974000000,
+     "assignee": "José Maria Ferreira da Silva"
     },
     {
-      "num": 2,
-      "id": "86ajrf5cz",
-      "status": "shipped",
-      "due": 1789714800000,
-      "name": "Fase 2 — Preparação e implementação da infraestrutura Neugebauer",
-      "short": "Fase 2 — Preparação e implementação",
-      "assignee": "José Maria Ferreira da Silva",
-      "tags": [
-        "Projeto Neugebauer"
-      ],
-      "detail": "Preparação do ambiente na Binário Cloud, rede e conectividade, firewall e segurança, e coleta de dados/configurações do ambiente atual (Kosmo) para a migração.",
-      "fases": [
-        {
-          "n": "2.1 Preparação da Binário Cloud",
-          "status": "shipped",
-          "assignee": "José Maria Ferreira da Silva",
-          "due": 1787814000000,
-          "id": "86ajrf5dh",
-          "ativ": [
-            {
-              "n": "Criação de dominio",
-              "status": "shipped",
-              "due": 1785481200000,
-              "original_due": 1785481200000,
-              "id": "86ak6bqth"
-            },
-            {
-              "n": "Criação de projeto",
-              "status": "shipped",
-              "due": 1785481200000,
-              "original_due": 1785481200000,
-              "id": "86ajrf5mb"
-            },
-            {
-              "n": "Criar usuários e permissões",
-              "status": "shipped",
-              "due": 1787814000000,
-              "original_due": 1787814000000,
-              "id": "86ajrf5me"
-            },
-            {
-              "n": "Hands-on BCP",
-              "status": "shipped",
-              "due": 1790578800000,
-              "original_due": 1790578800000,
-              "id": "86akjfc3g"
-            }
-          ]
-        },
-        {
-          "n": "2.2 Rede e conectividade",
-          "status": "shipped",
-          "assignee": "Brunno Leonardo Borges Lopes",
-          "due": 1788332400000,
-          "id": "86ajrf5dj",
-          "ativ": [
-            {
-              "n": "Criar segmentos de rede",
-              "status": "shipped",
-              "due": 1787727600000,
-              "original_due": 1787727600000,
-              "id": "86ak6chyn"
-            },
-            {
-              "n": "Validar throughput disponível",
-              "status": "shipped",
-              "due": 1787727600000,
-              "original_due": 1787727600000,
-              "id": "86ajrf5ph"
-            },
-            {
-              "n": "Definir gateways",
-              "status": "shipped",
-              "due": 1787727600000,
-              "original_due": 1787727600000,
-              "id": "86ajrf5nq"
-            },
-            {
-              "n": "Definir modelo de conectividade entre ambientes",
-              "status": "shipped",
-              "due": 1787900400000,
-              "original_due": 1787900400000,
-              "id": "86ajrf5nv"
-            }
-          ]
-        },
-        {
-          "n": "2.3 Firewall e segurança",
-          "status": "shipped",
-          "assignee": "Brunno Leonardo Borges Lopes",
-          "due": 1789714800000,
-          "id": "86ajrf5dk",
-          "ativ": [
-            {
-              "n": "Criação do FORTIVM bc1-firewall-4-16",
-              "status": "shipped",
-              "due": 1787641200000,
-              "original_due": 1787641200000,
-              "id": "86ajxt0gj"
-            },
-            {
-              "n": "Levantamento FW Kosmo",
-              "status": "shipped",
-              "due": 1788332400000,
-              "original_due": 1788332400000,
-              "id": "86ak6cty1"
-            },
-            {
-              "n": "Configurar interfaces",
-              "status": "shipped",
-              "due": 1789369200000,
-              "original_due": 1789369200000,
-              "id": "86ajrf5qe"
-            },
-            {
-              "n": "Configurar VPNs IPsec site to site",
-              "status": "shipped",
-              "due": 1789369200000,
-              "original_due": 1789369200000,
-              "id": "86ajrf5qv"
-            },
-            {
-              "n": "Configurar regras NATs",
-              "status": "shipped",
-              "due": 1789369200000,
-              "original_due": 1789369200000,
-              "id": "86ajrf5qw"
-            },
-            {
-              "n": "Configurar regras de proxy reverso",
-              "status": "shipped",
-              "due": 1789369200000,
-              "original_due": 1789369200000,
-              "id": "86ak7vzqq"
-            },
-            {
-              "n": "Configurar roteamento",
-              "status": "shipped",
-              "due": 1789714800000,
-              "original_due": 1789369200000,
-              "id": "86ajrf5qg"
-            },
-            {
-              "n": "Configurar políticas de segurança",
-              "status": "shipped",
-              "due": 1789714800000,
-              "original_due": 1789369200000,
-              "id": "86ajrf5qr"
-            },
-            {
-              "n": "Testar conectividade entre ambientes",
-              "status": "shipped",
-              "due": 1789714800000,
-              "original_due": 1787900400000,
-              "id": "86ajrf5pm"
-            }
-          ]
-        },
-        {
-          "n": "2.4 Coleta de dados e configurações locais",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1787900400000,
-          "id": "86ajwq6ah",
-          "ativ": [
-            {
-              "n": "Levantar dependências entre aplicações",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5h1"
-            },
-            {
-              "n": "Definir criticidade dos sistemas",
-              "status": "shipped",
-              "due": null,
-              "original_due": null,
-              "id": "86ajrf5hb"
-            },
-            {
-              "n": "Levantar dependência entre servidores e serviços.",
-              "status": "shipped",
-              "due": 1787900400000,
-              "original_due": null,
-              "id": "86ajrf5hu"
-            },
-            {
-              "n": "Coleta de informações para inventario do ambiente NGB Kosmo",
-              "status": "shipped",
-              "due": 1787900400000,
-              "original_due": 1787900400000,
-              "id": "86ajwq728"
-            }
-          ]
-        },
-        {
-          "n": "2.5 Instalação do Agent de backup",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1789110000000,
-          "id": "86ajwq7dt",
-          "ativ": [
-            {
-              "n": "Servidores Windows",
-              "status": "shipped",
-              "due": 1787900400000,
-              "original_due": 1787900400000,
-              "id": "86ajwq7jc"
-            },
-            {
-              "n": "Servidores Linux",
-              "status": "shipped",
-              "due": 1787900400000,
-              "original_due": 1787900400000,
-              "id": "86ajwq7nk"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "num": 3,
-      "id": "86ajrf5cy",
-      "status": "shipped",
-      "due": 1789974000000,
-      "name": "Fase 3 — Migração dos ambientes Neugebauer para a BCP",
-      "short": "Fase 3 — Migração",
-      "assignee": "José Maria Ferreira da Silva",
-      "tags": [
-        "Projeto Neugebauer",
-        "migração"
-      ],
-      "detail": "Execução da migração piloto e das ondas de migração planejadas até a virada de chave definitiva.",
-      "fases": [
-        {
-          "n": "3 Migração piloto",
-          "status": "shipped",
-          "assignee": "José Maria Ferreira da Silva",
-          "due": 1789974000000,
-          "id": "86ajrf5dx",
-          "ativ": [
-            {
-              "n": "Migração de srv's via Veeam",
-              "status": "shipped",
-              "due": 1788159600000,
-              "original_due": 1787900400000,
-              "id": "86ajrf5x1"
-            },
-            {
-              "n": "Migração Imagem QCOW2",
-              "status": "shipped",
-              "due": 1789714800000,
-              "original_due": 1789974000000,
-              "id": "86akhx6eg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "num": 4,
-      "id": "86ajrf5d3",
-      "status": "in progress",
-      "due": 1792738800000,
-      "name": "Fase 4 — Go-live e estabilização do ambiente Neugebauer",
-      "short": "Fase 4 — Go-live e estabilização",
-      "assignee": "Diogo Lerison",
-      "tags": [
-        "Projeto Neugebauer"
-      ],
-      "detail": "Configuração de backup na Binário Cloud, monitoramento do ambiente e bateria de testes finais antes da estabilização.",
-      "fases": [
-        {
-          "n": "4.2 Configurar Backup Binario",
-          "status": "in progress",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1792738800000,
-          "id": "86ajrf5dr",
-          "ativ": [
-            {
-              "n": "Criar tenant Veeam",
-              "status": "shipped",
-              "due": 1791183600000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5u0"
-            },
-            {
-              "n": "Configurar repositório",
-              "status": "shipped",
-              "due": 1791183600000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5u4"
-            },
-            {
-              "n": "Definir schedule e politica de retenção",
-              "status": "in progress",
-              "due": 1792738800000,
-              "original_due": 1790924400000,
-              "id": "86ak6dvc4"
-            },
-            {
-              "n": "Executar primeiro backup",
-              "status": "shipped",
-              "due": 1791183600000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5uu"
-            },
-            {
-              "n": "Executar teste de restauração",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5uw"
-            }
-          ]
-        },
-        {
-          "n": "4.3 Monitoramento",
-          "status": "in progress",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1792738800000,
-          "id": "86ajrf5dt",
-          "ativ": [
-            {
-              "n": "Configurar monitoramento das VMs",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5v9"
-            },
-            {
-              "n": "Configurar monitoramento do firewall",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5vn"
-            },
-            {
-              "n": "Configurar monitoramento dos backups",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5vm"
-            },
-            {
-              "n": "Validar geração automática de alertas",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1790924400000,
-              "id": "86ajrf5vt"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "num": 5,
-      "id": "86ajrf5d6",
-      "status": "backlog",
-      "due": 1793343600000,
-      "name": "Fase 5 — Encerramento e transição do Projeto Neugebauer",
-      "short": "Fase 5 — Encerramento e transição",
-      "assignee": "Diogo Lerison",
-      "tags": [
-        "Projeto Neugebauer"
-      ],
-      "detail": "Elaboração da TEP, transição do ambiente para operação e encerramento formal do projeto junto à Neugebauer.",
-      "fases": [
-        {
-          "n": "5.1 Transição para operação",
-          "status": "backlog",
-          "assignee": "Diogo Lerison",
-          "due": 1792738800000,
-          "id": "86ajrf5ee",
-          "ativ": [
-            {
-              "n": "Elaborar documentação as built",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf61r"
-            },
-            {
-              "n": "Documentar topologia de rede",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf62b"
-            },
-            {
-              "n": "Documentar rotinas de backup",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf62f"
-            },
-            {
-              "n": "Realizar passagem para o CCOE",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf62u"
-            },
-            {
-              "n": "Realizar reunião de transição",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf63c"
-            }
-          ]
-        },
-        {
-          "n": "5.2 Encerramento",
-          "status": "backlog",
-          "assignee": "Diogo Lerison",
-          "due": 1792738800000,
-          "id": "86ajrf5ef",
-          "ativ": [
-            {
-              "n": "Elaborar relatório final",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf63u"
-            },
-            {
-              "n": "Realizar reunião de encerramento",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf63z"
-            },
-            {
-              "n": "Enviar termo de aceite",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf63y"
-            },
-            {
-              "n": "Obter aceite formal da Neugebauer",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792134000000,
-              "id": "86ajrf643"
-            }
-          ]
-        },
-        {
-          "n": "Elaboração da TEP",
-          "status": "backlog",
-          "assignee": "Diogo Lerison",
-          "due": 1793343600000,
-          "id": "86ak080ug",
-          "ativ": []
-        }
-      ]
-    },
-    {
-      "id": "86akn63gf",
-      "num": 999,
-      "name": "3.2 Migração NPROD",
-      "short": "3.2 Migração NPROD",
-      "detail": "",
-      "tags": [],
-      "status": "in progress",
-      "due": 1792738800000,
-      "assignee": "Lucas Federissis de Souza",
-      "fases": [
-        {
-          "n": "Validar conexão entre filiais SP x POA",
-          "status": "shipped",
-          "assignee": "Alexandre Pereira",
-          "due": 1791356400000,
-          "id": "86akjg6z2",
-          "ativ": []
-        },
-        {
-          "n": "Disponibilização de imagens e dados Compactados",
-          "status": "in progress",
-          "assignee": "Diogo Lerison",
-          "due": 1792393200000,
-          "id": "86aknc0rm",
-          "ativ": []
-        },
-        {
-          "n": "Transferencia de dados",
-          "status": "in progress",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1792738800000,
-          "id": "86ajrf5xy",
-          "ativ": [
-            {
-              "n": "NGBORA01",
-              "status": "in progress",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2f7"
-            },
-            {
-              "n": "NGSAPORA01",
-              "status": "in progress",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2f9"
-            },
-            {
-              "n": "Legado-21-20",
-              "status": "in progress",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2fa"
-            },
-            {
-              "n": "JAN-22",
-              "status": "in progress",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2kz"
-            },
-            {
-              "n": "JAN-23",
-              "status": "in progress",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2m1"
-            },
-            {
-              "n": "JAN-24",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2m2"
-            },
-            {
-              "n": "JAN-25",
-              "status": "backlog",
-              "due": 1792738800000,
-              "original_due": 1792738800000,
-              "id": "17ttbukx2m3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "86akjg9f6",
-      "num": 999,
-      "name": "Envio do aviso previo entre Kosmo x NGB",
-      "short": "Envio do aviso previo entre Kosmo x NGB",
-      "detail": "",
-      "tags": [],
-      "status": "shipped",
-      "due": 1785222000000,
-      "assignee": "",
-      "fases": []
-    },
-    {
-      "id": "86akce127",
-      "num": 999,
-      "name": "Incompatibilidade Servidores SUSE",
-      "short": "Incompatibilidade Servidores SUSE",
-      "detail": "",
-      "tags": [],
-      "status": "shipped",
-      "due": 1789110000000,
-      "assignee": "José Maria Ferreira da Silva",
-      "fases": []
-    },
-    {
-      "id": "86akmf6hm",
-      "num": 999,
-      "name": "Liberação de portas/acessos no firewall da Kosmo (chamado 697)",
-      "short": "Liberação de portas/acessos no firewall da Kosmo (chamado 697)",
-      "detail": "",
-      "tags": [],
-      "status": "shipped",
-      "due": 1792998000000,
-      "assignee": "Diogo Lerison",
-      "fases": []
-    },
-    {
-      "id": "86akmf6px",
-      "num": 999,
-      "name": "Acesso direto da Binário ao firewall da Kosmo",
-      "short": "Acesso direto da Binário ao firewall da Kosmo",
-      "detail": "",
-      "tags": [],
-      "status": "shipped",
-      "due": 1792998000000,
-      "assignee": "Diogo Lerison",
-      "fases": []
-    },
-    {
-      "id": "86akq7uxp",
-      "num": 999,
-      "name": "Fase 3.1 - Virada de chave",
-      "short": "Fase 3.1 - Virada de chave",
-      "detail": "",
-      "tags": [],
-      "status": "shipped",
-      "due": 1791097200000,
-      "assignee": "Lucas Federissis de Souza",
-      "fases": [
-        {
-          "n": "NGB-IFR-W22-V01 - 10.200.12.5",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7ar8",
-          "ativ": []
-        },
-        {
-          "n": "NGBNEOGRID - 10.200.12.207",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akqa8f0",
-          "ativ": []
-        },
-        {
-          "n": "NGBSITEPRD - 10.210.12.220",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akqa4fw",
-          "ativ": []
-        },
-        {
-          "n": "NGBORAPRD01 - 10.200.12.252",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7aqw",
-          "ativ": []
-        },
-        {
-          "n": "NGB-ABS-W22-V01 - 10.200.12.223",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7ar1",
-          "ativ": []
-        },
-        {
-          "n": "NGBHRC04 10.200.12.220",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7arf",
-          "ativ": []
-        },
-        {
-          "n": "NGBMAXDB01 - 10.200.12.225",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7atw",
-          "ativ": []
-        },
-        {
-          "n": "NGBMAXDB02 - 10.200.12.218",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7aua",
-          "ativ": []
-        },
-        {
-          "n": "NGBULTRAPARERP - 10.200.12.215",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7aqu",
-          "ativ": []
-        },
-        {
-          "n": "NGBELO01 - 10.200.12.231",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7ax4",
-          "ativ": []
-        },
-        {
-          "n": "NGBELO02 - 10.200.12.232",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7axj",
-          "ativ": []
-        },
-        {
-          "n": "NGBVONSAC2 - 10.200.12.206",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7aye",
-          "ativ": []
-        },
-        {
-          "n": "CNGB-IFR-W22-V01 - 10.200.160.5",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7aux",
-          "ativ": []
-        },
-        {
-          "n": "CNGB-TMV-W22-V01 - 10.200.160.10",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7awy",
-          "ativ": []
-        },
-        {
-          "n": "NGB-RSW-W22-V01 - 10.200.12.246",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7art",
-          "ativ": []
-        },
-        {
-          "n": "NGB-ETL-W22-V01 - 10.200.12.238",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7ary",
-          "ativ": []
-        },
-        {
-          "n": "NGB-ETL-W22-V02 - 10.200.12.239",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7at2",
-          "ativ": []
-        },
-        {
-          "n": "NGB-ETL-W22-V03 - 10.200.12.233",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7atk",
-          "ativ": []
-        },
-        {
-          "n": "NGBCICLOPRD01 - 10.200.12.233",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7avm",
-          "ativ": []
-        },
-        {
-          "n": "NGBERPQAS - 10.200.12.62",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7avw",
-          "ativ": []
-        },
-        {
-          "n": "NGBHNQAS - 10.200.12.64",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7az1",
-          "ativ": []
-        },
-        {
-          "n": "NGBORADEV01 - 10.200.12.251",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7axw",
-          "ativ": []
-        },
-        {
-          "n": "NGBCICLODEV01 - 10.200.12.234",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7ayr",
-          "ativ": []
-        },
-        {
-          "n": "NGBSYBASE01 - 10.200.12.226",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7aw7",
-          "ativ": []
-        },
-        {
-          "n": "NGB-RSW-W12-V01 - 10.200.12.230",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7awn",
-          "ativ": []
-        },
-        {
-          "n": "NGB-ELO-W22-V01 - 10.200.12.247",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akm7att",
-          "ativ": []
-        },
-        {
-          "n": "NGBSITEDEV - 10.210.12.219",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akqa8qh",
-          "ativ": []
-        },
-        {
-          "n": "NGBDLM01 - \t10.200.12.217",
-          "status": "shipped",
-          "assignee": "Lucas Federissis de Souza",
-          "due": 1791097200000,
-          "id": "86akqa8vf",
-          "ativ": []
-        }
-      ]
-    },
-    {
-      "id": "86akpu58t",
-      "num": 999,
-      "name": "Liberação Link 500Mbp's",
-      "short": "Liberação Link 500Mbp's",
-      "detail": "",
-      "tags": [],
-      "status": "shipped",
-      "due": 1791961200000,
-      "assignee": "Diogo Lerison",
-      "fases": []
-    },
-    {
-      "id": "86akjgbjg",
-      "num": 999,
-      "name": "Encerramento Kosmo",
-      "short": "Encerramento Kosmo",
-      "detail": "",
-      "tags": [],
-      "status": "in progress",
-      "due": 1792998000000,
-      "assignee": "Diogo Lerison",
-      "fases": []
+     "id": "86ajrf5dy",
+     "name": "3.3 Ondas de migração",
+     "status": "em andamento",
+     "start": 1788332400000,
+     "due": 1791097200000,
+     "assignee": "José Maria Ferreira da Silva"
     }
-  ],
-  "ignore_root_ids": [
-    "86ajwdywa",
-    "86ajwdxee"
-  ],
-  "reparentar": {
-    "86akq7uxp": 3,
-    "86akn63gf": 3
+   ]
+  },
+  {
+   "id": "86ajrf5d3",
+   "metaNum": 4,
+   "name": "Fase 4 — Go-live e estabilização",
+   "status": "em andamento",
+   "start": 1790146800000,
+   "due": 1792738800000,
+   "assignee": "Diogo Lerison / José Maria Ferreira da Silva",
+   "children": [
+    {
+     "id": "86ajrf5dr",
+     "name": "4.2 Configurar Backup Binario",
+     "status": "em andamento",
+     "start": 1790319600000,
+     "due": 1792738800000,
+     "assignee": "José Maria Ferreira da Silva"
+    },
+    {
+     "id": "86ajrf5dt",
+     "name": "4.3 Monitoramento",
+     "status": "em andamento",
+     "start": 1790319600000,
+     "due": 1792738800000,
+     "assignee": ""
+    },
+    {
+     "id": "86ajrf5e8",
+     "name": "4.4 Testes finais",
+     "status": "aberto",
+     "start": 1790924400000,
+     "due": 1792134000000,
+     "assignee": "Diogo Lerison / José Maria Ferreira da Silva"
+    }
+   ]
+  },
+  {
+   "id": "86ajrf5d6",
+   "metaNum": 5,
+   "name": "Fase 5 — Encerramento e transição",
+   "status": "aberto",
+   "start": 1791183600000,
+   "due": 1793343600000,
+   "assignee": "",
+   "children": [
+    {
+     "id": "86ak080ug",
+     "name": "Elaboração da TEP",
+     "status": "aberto",
+     "start": 1791529200000,
+     "due": 1793343600000,
+     "assignee": ""
+    },
+    {
+     "id": "86ajrf5ee",
+     "name": "5.1 Transição para operação",
+     "status": "aberto",
+     "start": 1791529200000,
+     "due": 1792738800000,
+     "assignee": ""
+    },
+    {
+     "id": "86ajrf5ef",
+     "name": "5.2 Encerramento",
+     "status": "aberto",
+     "start": 1791788400000,
+     "due": 1792738800000,
+     "assignee": ""
+    }
+   ]
   }
+ ],
+ "metas": [
+  {
+   "num": 1,
+   "id": "86ajrf5d1",
+   "status": "shipped",
+   "due": null,
+   "name": "Fase 1 — Iniciação e planejamento do Projeto Neugebauer",
+   "short": "Fase 1 — Iniciação e planejamento",
+   "assignee": "Diogo Lerison",
+   "tags": [
+    "Projeto Neugebauer"
+   ],
+   "detail": "Formalização do projeto, refinamento técnico, planejamento e aprovação do cronograma junto à Neugebauer.",
+   "fases": [
+    {
+     "n": "1.1 Kickoff e formalização",
+     "status": "shipped",
+     "assignee": "Diogo Lerison",
+     "due": 1785394800000,
+     "id": "86ajrf5df",
+     "ativ": [
+      {
+       "n": "Definir stakeholders",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5ew"
+      },
+      {
+       "n": "Elaborar apresentação de kickoff",
+       "status": "shipped",
+       "due": 1784703600000,
+       "original_due": 1784703600000,
+       "id": "86ajrf5ex"
+      },
+      {
+       "n": "Realizar reunião de kickoff",
+       "status": "shipped",
+       "due": 1784790000000,
+       "original_due": 1784790000000,
+       "id": "86ajrf5ey"
+      },
+      {
+       "n": "Registrar decisões e pendências do kickoff",
+       "status": "shipped",
+       "due": 1784790000000,
+       "original_due": 1784790000000,
+       "id": "86ajrf5f5"
+      },
+      {
+       "n": "Elaborar TAP",
+       "status": "shipped",
+       "due": 1784876400000,
+       "original_due": 1784876400000,
+       "id": "86ajrf5f6"
+      },
+      {
+       "n": "Enviar TAP para assinatura",
+       "status": "shipped",
+       "due": 1785481200000,
+       "original_due": 1785481200000,
+       "id": "86ajrf5f7"
+      },
+      {
+       "n": "Obter assinatura da Binário Cloud",
+       "status": "shipped",
+       "due": 1785481200000,
+       "original_due": 1785481200000,
+       "id": "86ajrf5fm"
+      },
+      {
+       "n": "Obter assinatura da Neugebauer",
+       "status": "shipped",
+       "due": 1785481200000,
+       "original_due": 1785481200000,
+       "id": "86ajrf5fp"
+      },
+      {
+       "n": "Formalizar abertura do projeto",
+       "status": "shipped",
+       "due": 1785481200000,
+       "original_due": 1785481200000,
+       "id": "86ajrf5fq"
+      }
+     ]
+    },
+    {
+     "n": "1.2 Refinamento do escopo",
+     "status": "shipped",
+     "assignee": "Diogo Lerison",
+     "due": null,
+     "id": "86ajrf5de",
+     "ativ": [
+      {
+       "n": "Validar inventário de servidores",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5fv"
+      },
+      {
+       "n": "Validar servidores ativos e desligados",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5g4"
+      },
+      {
+       "n": "Identificar servidores que serão migrados",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5g7"
+      },
+      {
+       "n": "Identificar servidores fora do escopo",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5ge"
+      },
+      {
+       "n": "Levantar sistemas operacionais",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5gm"
+      },
+      {
+       "n": "Levantar capacidade de disco por servidor",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5gr"
+      },
+      {
+       "n": "Levantar serviços hospedados",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5gp"
+      }
+     ]
+    },
+    {
+     "n": "1.3 Planejamento do projeto",
+     "status": "shipped",
+     "assignee": "Diogo Lerison",
+     "due": null,
+     "id": "86ajrf5dc",
+     "ativ": [
+      {
+       "n": "Definir marcos do projeto",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5k0"
+      },
+      {
+       "n": "Definir responsáveis por frente",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5jz"
+      },
+      {
+       "n": "Elaborar plano de comunicação",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5kq"
+      },
+      {
+       "n": "Definir reuniões semanais de acompanhamento",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5kt"
+      },
+      {
+       "n": "Criar registro de riscos e impedimentos",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5kv"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": 2,
+   "id": "86ajrf5cz",
+   "status": "shipped",
+   "due": 1789714800000,
+   "name": "Fase 2 — Preparação e implementação da infraestrutura Neugebauer",
+   "short": "Fase 2 — Preparação e implementação",
+   "assignee": "José Maria Ferreira da Silva",
+   "tags": [
+    "Projeto Neugebauer"
+   ],
+   "detail": "Preparação do ambiente na Binário Cloud, rede e conectividade, firewall e segurança, e coleta de dados/configurações do ambiente atual (Kosmo) para a migração.",
+   "fases": [
+    {
+     "n": "2.1 Preparação da Binário Cloud",
+     "status": "shipped",
+     "assignee": "José Maria Ferreira da Silva",
+     "due": 1787814000000,
+     "id": "86ajrf5dh",
+     "ativ": [
+      {
+       "n": "Criação de dominio",
+       "status": "shipped",
+       "due": 1785481200000,
+       "original_due": 1785481200000,
+       "id": "86ak6bqth"
+      },
+      {
+       "n": "Criação de projeto",
+       "status": "shipped",
+       "due": 1785481200000,
+       "original_due": 1785481200000,
+       "id": "86ajrf5mb"
+      },
+      {
+       "n": "Criar usuários e permissões",
+       "status": "shipped",
+       "due": 1787814000000,
+       "original_due": 1787814000000,
+       "id": "86ajrf5me"
+      },
+      {
+       "n": "Hands-on BCP",
+       "status": "shipped",
+       "due": 1790578800000,
+       "original_due": 1790578800000,
+       "id": "86akjfc3g"
+      }
+     ]
+    },
+    {
+     "n": "2.2 Rede e conectividade",
+     "status": "shipped",
+     "assignee": "Brunno Leonardo Borges Lopes",
+     "due": 1788332400000,
+     "id": "86ajrf5dj",
+     "ativ": [
+      {
+       "n": "Criar segmentos de rede",
+       "status": "shipped",
+       "due": 1787727600000,
+       "original_due": 1787727600000,
+       "id": "86ak6chyn"
+      },
+      {
+       "n": "Validar throughput disponível",
+       "status": "shipped",
+       "due": 1787727600000,
+       "original_due": 1787727600000,
+       "id": "86ajrf5ph"
+      },
+      {
+       "n": "Definir gateways",
+       "status": "shipped",
+       "due": 1787727600000,
+       "original_due": 1787727600000,
+       "id": "86ajrf5nq"
+      },
+      {
+       "n": "Definir modelo de conectividade entre ambientes",
+       "status": "shipped",
+       "due": 1787900400000,
+       "original_due": 1787900400000,
+       "id": "86ajrf5nv"
+      }
+     ]
+    },
+    {
+     "n": "2.3 Firewall e segurança",
+     "status": "shipped",
+     "assignee": "Brunno Leonardo Borges Lopes",
+     "due": 1789714800000,
+     "id": "86ajrf5dk",
+     "ativ": [
+      {
+       "n": "Criação do FORTIVM bc1-firewall-4-16",
+       "status": "shipped",
+       "due": 1787641200000,
+       "original_due": 1787641200000,
+       "id": "86ajxt0gj"
+      },
+      {
+       "n": "Levantamento FW Kosmo",
+       "status": "shipped",
+       "due": 1788332400000,
+       "original_due": 1788332400000,
+       "id": "86ak6cty1"
+      },
+      {
+       "n": "Configurar interfaces",
+       "status": "shipped",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qe"
+      },
+      {
+       "n": "Configurar VPNs IPsec site to site",
+       "status": "shipped",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qv"
+      },
+      {
+       "n": "Configurar regras NATs",
+       "status": "shipped",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qw"
+      },
+      {
+       "n": "Configurar regras de proxy reverso",
+       "status": "shipped",
+       "due": 1789369200000,
+       "original_due": 1789369200000,
+       "id": "86ak7vzqq"
+      },
+      {
+       "n": "Configurar roteamento",
+       "status": "shipped",
+       "due": 1789714800000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qg"
+      },
+      {
+       "n": "Configurar políticas de segurança",
+       "status": "shipped",
+       "due": 1789714800000,
+       "original_due": 1789369200000,
+       "id": "86ajrf5qr"
+      },
+      {
+       "n": "Testar conectividade entre ambientes",
+       "status": "shipped",
+       "due": 1789714800000,
+       "original_due": 1787900400000,
+       "id": "86ajrf5pm"
+      }
+     ]
+    },
+    {
+     "n": "2.4 Coleta de dados e configurações locais",
+     "status": "shipped",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1787900400000,
+     "id": "86ajwq6ah",
+     "ativ": [
+      {
+       "n": "Levantar dependências entre aplicações",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5h1"
+      },
+      {
+       "n": "Definir criticidade dos sistemas",
+       "status": "shipped",
+       "due": null,
+       "original_due": null,
+       "id": "86ajrf5hb"
+      },
+      {
+       "n": "Levantar dependência entre servidores e serviços.",
+       "status": "shipped",
+       "due": 1787900400000,
+       "original_due": null,
+       "id": "86ajrf5hu"
+      },
+      {
+       "n": "Coleta de informações para inventario do ambiente NGB Kosmo",
+       "status": "shipped",
+       "due": 1787900400000,
+       "original_due": 1787900400000,
+       "id": "86ajwq728"
+      }
+     ]
+    },
+    {
+     "n": "2.5 Instalação do Agent de backup",
+     "status": "shipped",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1789110000000,
+     "id": "86ajwq7dt",
+     "ativ": [
+      {
+       "n": "Servidores Windows",
+       "status": "shipped",
+       "due": 1787900400000,
+       "original_due": 1787900400000,
+       "id": "86ajwq7jc"
+      },
+      {
+       "n": "Servidores Linux",
+       "status": "shipped",
+       "due": 1787900400000,
+       "original_due": 1787900400000,
+       "id": "86ajwq7nk"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": 3,
+   "id": "86ajrf5cy",
+   "status": "shipped",
+   "due": 1789974000000,
+   "name": "Fase 3 — Migração dos ambientes Neugebauer para a BCP",
+   "short": "Fase 3 — Migração",
+   "assignee": "José Maria Ferreira da Silva",
+   "tags": [
+    "Projeto Neugebauer",
+    "migração"
+   ],
+   "detail": "Execução da migração piloto e das ondas de migração planejadas até a virada de chave definitiva.",
+   "fases": [
+    {
+     "n": "3 Migração piloto",
+     "status": "shipped",
+     "assignee": "José Maria Ferreira da Silva",
+     "due": 1789974000000,
+     "id": "86ajrf5dx",
+     "ativ": [
+      {
+       "n": "Migração de srv's via Veeam",
+       "status": "shipped",
+       "due": 1788159600000,
+       "original_due": 1787900400000,
+       "id": "86ajrf5x1"
+      },
+      {
+       "n": "Migração Imagem QCOW2",
+       "status": "shipped",
+       "due": 1789714800000,
+       "original_due": 1789974000000,
+       "id": "86akhx6eg"
+      }
+     ]
+    },
+    {
+     "n": "Fase 3.1 - Virada de chave - Neugebauer",
+     "status": "shipped",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1791097200000,
+     "id": "86akq7uxp",
+     "ativ": [
+      {
+       "n": "NGB-IFR-W22-V01 - 10.200.12.5",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7ar8"
+      },
+      {
+       "n": "NGBNEOGRID - 10.200.12.207",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akqa8f0"
+      },
+      {
+       "n": "NGBSITEPRD - 10.210.12.220",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akqa4fw"
+      },
+      {
+       "n": "NGBORAPRD01 - 10.200.12.252",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7aqw"
+      },
+      {
+       "n": "NGB-ABS-W22-V01 - 10.200.12.223",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7ar1"
+      },
+      {
+       "n": "NGBHRC04 10.200.12.220",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7arf"
+      },
+      {
+       "n": "NGBMAXDB01 - 10.200.12.225",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7atw"
+      },
+      {
+       "n": "NGBMAXDB02 - 10.200.12.218",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7aua"
+      },
+      {
+       "n": "NGBULTRAPARERP - 10.200.12.215",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7aqu"
+      },
+      {
+       "n": "NGBELO01 - 10.200.12.231",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7ax4"
+      },
+      {
+       "n": "NGBELO02 - 10.200.12.232",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7axj"
+      },
+      {
+       "n": "NGBVONSAC2 - 10.200.12.206",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7aye"
+      },
+      {
+       "n": "CNGB-IFR-W22-V01 - 10.200.160.5",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7aux"
+      },
+      {
+       "n": "CNGB-TMV-W22-V01 - 10.200.160.10",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7awy"
+      },
+      {
+       "n": "NGB-RSW-W22-V01 - 10.200.12.246",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7art"
+      },
+      {
+       "n": "NGB-ETL-W22-V01 - 10.200.12.238",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7ary"
+      },
+      {
+       "n": "NGB-ETL-W22-V02 - 10.200.12.239",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7at2"
+      },
+      {
+       "n": "NGB-ETL-W22-V03 - 10.200.12.233",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7atk"
+      },
+      {
+       "n": "NGBCICLOPRD01 - 10.200.12.233",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7avm"
+      },
+      {
+       "n": "NGBERPQAS - 10.200.12.62",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7avw"
+      },
+      {
+       "n": "NGBHNQAS - 10.200.12.64",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7az1"
+      },
+      {
+       "n": "NGBORADEV01 - 10.200.12.251",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7axw"
+      },
+      {
+       "n": "NGBCICLODEV01 - 10.200.12.234",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7ayr"
+      },
+      {
+       "n": "NGBSYBASE01 - 10.200.12.226",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7aw7"
+      },
+      {
+       "n": "NGB-RSW-W12-V01 - 10.200.12.230",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7awn"
+      },
+      {
+       "n": "NGB-ELO-W22-V01 - 10.200.12.247",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akm7att"
+      },
+      {
+       "n": "NGBSITEDEV - 10.210.12.219",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akqa8qh"
+      },
+      {
+       "n": "NGBDLM01 - \t10.200.12.217",
+       "status": "shipped",
+       "due": 1791097200000,
+       "original_due": 1791097200000,
+       "id": "86akqa8vf"
+      }
+     ]
+    },
+    {
+     "n": "Fase 3.2 Migração NPROD - Neugebauer",
+     "status": "in progress",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1792738800000,
+     "id": "86akn63gf",
+     "ativ": [
+      {
+       "n": "Validar conexão entre filiais SP x POA",
+       "status": "shipped",
+       "due": 1791356400000,
+       "original_due": 1791356400000,
+       "id": "86akjg6z2"
+      },
+      {
+       "n": "Disponibilização de imagens e dados Compactados",
+       "status": "in progress",
+       "due": 1792393200000,
+       "original_due": 1792393200000,
+       "id": "86aknc0rm"
+      },
+      {
+       "n": "NGBORA01",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2f7"
+      },
+      {
+       "n": "NGSAPORA01",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2f9"
+      },
+      {
+       "n": "Legado-21-20",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2fa"
+      },
+      {
+       "n": "JAN-22",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2kz"
+      },
+      {
+       "n": "JAN-23",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2m1"
+      },
+      {
+       "n": "JAN-24",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2m2"
+      },
+      {
+       "n": "JAN-25",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792738800000,
+       "id": "17ttbukx2m3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": 4,
+   "id": "86ajrf5d3",
+   "status": "in progress",
+   "due": 1792738800000,
+   "name": "Fase 4 — Go-live e estabilização do ambiente Neugebauer",
+   "short": "Fase 4 — Go-live e estabilização",
+   "assignee": "Diogo Lerison",
+   "tags": [
+    "Projeto Neugebauer"
+   ],
+   "detail": "Configuração de backup na Binário Cloud, monitoramento do ambiente e bateria de testes finais antes da estabilização.",
+   "fases": [
+    {
+     "n": "4.2 Configurar Backup Binario",
+     "status": "in progress",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1792738800000,
+     "id": "86ajrf5dr",
+     "ativ": [
+      {
+       "n": "Criar tenant Veeam",
+       "status": "shipped",
+       "due": 1791183600000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5u0"
+      },
+      {
+       "n": "Configurar repositório",
+       "status": "shipped",
+       "due": 1791183600000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5u4"
+      },
+      {
+       "n": "Definir schedule e politica de retenção",
+       "status": "in progress",
+       "due": 1792738800000,
+       "original_due": 1790924400000,
+       "id": "86ak6dvc4"
+      },
+      {
+       "n": "Executar primeiro backup",
+       "status": "shipped",
+       "due": 1791183600000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5uu"
+      },
+      {
+       "n": "Executar teste de restauração",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5uw"
+      }
+     ]
+    },
+    {
+     "n": "4.3 Monitoramento",
+     "status": "in progress",
+     "assignee": "Lucas Federissis de Souza",
+     "due": 1792738800000,
+     "id": "86ajrf5dt",
+     "ativ": [
+      {
+       "n": "Configurar monitoramento das VMs",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5v9"
+      },
+      {
+       "n": "Configurar monitoramento do firewall",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5vn"
+      },
+      {
+       "n": "Configurar monitoramento dos backups",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5vm"
+      },
+      {
+       "n": "Validar geração automática de alertas",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1790924400000,
+       "id": "86ajrf5vt"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "num": 5,
+   "id": "86ajrf5d6",
+   "status": "backlog",
+   "due": 1793343600000,
+   "name": "Fase 5 — Encerramento e transição do Projeto Neugebauer",
+   "short": "Fase 5 — Encerramento e transição",
+   "assignee": "Diogo Lerison",
+   "tags": [
+    "Projeto Neugebauer"
+   ],
+   "detail": "Elaboração da TEP, transição do ambiente para operação e encerramento formal do projeto junto à Neugebauer.",
+   "fases": [
+    {
+     "n": "5.1 Transição para operação",
+     "status": "backlog",
+     "assignee": "Diogo Lerison",
+     "due": 1792738800000,
+     "id": "86ajrf5ee",
+     "ativ": [
+      {
+       "n": "Elaborar documentação as built",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf61r"
+      },
+      {
+       "n": "Documentar topologia de rede",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf62b"
+      },
+      {
+       "n": "Documentar rotinas de backup",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf62f"
+      },
+      {
+       "n": "Realizar passagem para o CCOE",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf62u"
+      },
+      {
+       "n": "Realizar reunião de transição",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf63c"
+      }
+     ]
+    },
+    {
+     "n": "5.2 Encerramento",
+     "status": "backlog",
+     "assignee": "Diogo Lerison",
+     "due": 1792738800000,
+     "id": "86ajrf5ef",
+     "ativ": [
+      {
+       "n": "Elaborar relatório final",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf63u"
+      },
+      {
+       "n": "Realizar reunião de encerramento",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf63z"
+      },
+      {
+       "n": "Enviar termo de aceite",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf63y"
+      },
+      {
+       "n": "Obter aceite formal da Neugebauer",
+       "status": "backlog",
+       "due": 1792738800000,
+       "original_due": 1792134000000,
+       "id": "86ajrf643"
+      }
+     ]
+    },
+    {
+     "n": "Elaboração da TEP",
+     "status": "backlog",
+     "assignee": "Diogo Lerison",
+     "due": 1793343600000,
+     "id": "86ak080ug",
+     "ativ": []
+    }
+   ]
+  },
+  {
+   "id": "86akjg9f6",
+   "num": 999,
+   "name": "Envio do aviso previo entre Kosmo x NGB",
+   "short": "Envio do aviso previo entre Kosmo x NGB",
+   "detail": "",
+   "tags": [],
+   "status": "shipped",
+   "due": 1785222000000,
+   "assignee": "",
+   "fases": []
+  },
+  {
+   "id": "86akce127",
+   "num": 999,
+   "name": "Incompatibilidade Servidores SUSE",
+   "short": "Incompatibilidade Servidores SUSE",
+   "detail": "",
+   "tags": [],
+   "status": "shipped",
+   "due": 1789110000000,
+   "assignee": "José Maria Ferreira da Silva",
+   "fases": []
+  },
+  {
+   "id": "86akmf6hm",
+   "num": 999,
+   "name": "Liberação de portas/acessos no firewall da Kosmo (chamado 697)",
+   "short": "Liberação de portas/acessos no firewall da Kosmo (chamado 697)",
+   "detail": "",
+   "tags": [],
+   "status": "shipped",
+   "due": 1792998000000,
+   "assignee": "Diogo Lerison",
+   "fases": []
+  },
+  {
+   "id": "86akmf6px",
+   "num": 999,
+   "name": "Acesso direto da Binário ao firewall da Kosmo",
+   "short": "Acesso direto da Binário ao firewall da Kosmo",
+   "detail": "",
+   "tags": [],
+   "status": "shipped",
+   "due": 1792998000000,
+   "assignee": "Diogo Lerison",
+   "fases": []
+  },
+  {
+   "id": "86akpu58t",
+   "num": 999,
+   "name": "Liberação Link 500Mbp's",
+   "short": "Liberação Link 500Mbp's",
+   "detail": "",
+   "tags": [],
+   "status": "shipped",
+   "due": 1791961200000,
+   "assignee": "Diogo Lerison",
+   "fases": []
+  },
+  {
+   "id": "86akjgbjg",
+   "num": 999,
+   "name": "Encerramento Kosmo",
+   "short": "Encerramento Kosmo",
+   "detail": "",
+   "tags": [],
+   "status": "in progress",
+   "due": 1792998000000,
+   "assignee": "Diogo Lerison",
+   "fases": []
+  }
+ ],
+ "ignore_root_ids": [
+  "86ajwdywa",
+  "86ajwdxee"
+ ],
+ "reparentar": {
+  "86akq7uxp": 3,
+  "86akn63gf": 3
+ }
 }

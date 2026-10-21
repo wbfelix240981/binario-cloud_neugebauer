@@ -171,8 +171,11 @@ def phase_sort_key(meta):
 
 
 def sub_sort_key(name):
-    m = re.match(r"^(\d+)\.(\d+)", (name or "").strip())
-    return (int(m.group(1)), int(m.group(2))) if m else (999, 999)
+    # Aceita "4.2 ...", "3 Migração piloto" e "Fase 3.1 - ...": sem tirar o
+    # "Fase" do começo, a 3.1 caía no fim da Fase 3, depois da 3.2.
+    s = re.sub(r"^fase\s+", "", (name or "").strip(), flags=re.I)
+    m = re.match(r"^(\d+)(?:\.(\d+))?", s)
+    return (int(m.group(1)), int(m.group(2) or 0)) if m else (999, 999)
 
 
 def sync(data, tasks, warnings):
@@ -186,9 +189,67 @@ def sync(data, tasks, warnings):
     # (ex.: avisos de bloqueio criados à parte). Ficam de fora da visão
     # Metas para não virarem uma "Fase 6" fantasma.
     ignorar = set(data.get("ignore_root_ids", []))
+
+    # Tarefas que ESTÃO na raiz do ClickUp mas pertencem a uma fase: o mapa
+    # curado 'reparentar' ({id da tarefa: num da fase}) as devolve ao lugar.
+    # Sem isso elas viram fases avulsas e ficam fora do percentual -- é o caso
+    # de "Fase 3.1" e "3.2", que são a migração em si e estavam subestimando
+    # o avanço do projeto.
+    # Se alguém arrumar o pai no ClickUp, a tarefa deixa de ser raiz, o mapa
+    # não casa com nada e nada é duplicado.
+    reparentar = {str(k): v for k, v in (data.get("reparentar") or {}).items()}
+
+    # original_due é a data-base do atraso. Ao mudar um item de lugar na
+    # árvore ela se perderia e o atraso acumulado zeraria, então o valor
+    # antigo é procurado pelo id, onde quer que o item estivesse antes.
+    prev_orig = {}
+    for m in data["metas"]:
+        for f in m.get("fases", []):
+            if f.get("id") and f.get("original_due") is not None:
+                prev_orig[f["id"]] = f["original_due"]
+            for a in f.get("ativ", []):
+                if a.get("id") and a.get("original_due") is not None:
+                    prev_orig[a["id"]] = a["original_due"]
+
+    def folhas_do_ramo(task):
+        """Itens de ponta abaixo da tarefa (um nível de agrupamento some)."""
+        filhos = children.get(task["id"], [])
+        if not filhos:
+            return []
+        saida = []
+        for c in filhos:
+            netos = children.get(c["id"], [])
+            saida.extend(netos if netos else [c])
+        return saida
+
+    adotadas = defaultdict(list)   # num da fase -> fases vindas da raiz
+    for root in roots:
+        if root["id"] in ignorar or root["id"] not in reparentar:
+            continue
+        ativ = []
+        for leaf in folhas_do_ramo(root):
+            due = due_of(leaf)
+            ativ.append({
+                "n": leaf["name"],
+                "status": to_normalized(leaf["status"]["status"],
+                                        f"atividade '{leaf['name']}'", warnings),
+                "due": due,
+                "original_due": prev_orig.get(leaf["id"], due),
+                "id": leaf["id"],
+            })
+        adotadas[reparentar[root["id"]]].append({
+            "n": root["name"],
+            "status": to_normalized(root["status"]["status"],
+                                    f"fase '{root['name']}'", warnings),
+            "assignee": assignee_of(root),
+            "due": due_of(root),
+            "id": root["id"],
+            "ativ": ativ,
+        })
+
     new_metas = []
     for root in roots:
-        if root["id"] in ignorar:
+        if root["id"] in ignorar or root["id"] in reparentar:
             continue
         cur = existing_by_id.get(root["id"])
         if cur is None:
@@ -236,9 +297,16 @@ def sync(data, tasks, warnings):
                 "ativ": ativ,
             })
 
+        fases.extend(adotadas.pop(meta.get("num"), []))
         fases.sort(key=lambda f: sub_sort_key(f["n"]))
         meta["fases"] = fases
         new_metas.append(meta)
+
+    if adotadas:
+        warnings.append(
+            "'reparentar' aponta para fases que não existem no painel: "
+            + ", ".join(f"num {n}" for n in sorted(adotadas))
+        )
 
     # ordena pelo 'num' curado, nunca pela orderindex viva do ClickUp
     new_metas.sort(key=phase_sort_key)

@@ -13,6 +13,7 @@ Cobre:
       c5 - Gantt é curado: não ganha itens novos sozinho, só atualiza
       c6 - ordem das metas segue o 'num' curado, não a ordem do ClickUp
       c7 - inventário profundo (nível 4+) não vira atividade
+      c10 - tarefa solta na raiz volta para a fase certa (mapa 'reparentar')
 """
 import copy
 import json
@@ -224,11 +225,63 @@ def t_c9_timestamp_nao_congela():
     os.unlink(tmp_json); os.unlink(tmp_out)
 
 
+def t_c10_reparentar():
+    print("\n--- (c10) tarefa solta na raiz volta para a fase certa ---")
+    d = base_data()
+    # "Fase 1.9" está na raiz do ClickUp mas é trabalho da Fase 1. Ela já
+    # tinha aparecido antes como fase avulsa, com atraso acumulado.
+    d["reparentar"] = {"orf": 1}
+    d["metas"].append({
+        "num": 999, "id": "orf", "status": "shipped", "due": 7000,
+        "name": "Fase 1.9 - Virada", "short": "Fase 1.9 - Virada", "detail": "", "tags": [],
+        "fases": [{"n": "Grupo", "status": "shipped", "due": 7000, "id": "g1",
+                   "ativ": [{"n": "Item A", "status": "shipped", "due": 7000,
+                             "original_due": 3000, "id": "oa"}]}],
+    })
+    t = base_tasks() + [
+        task("orf", "Fase 1.9 - Virada", "fechado", None, 9),
+        task("g1", "Grupo", "fechado", "orf", 1),
+        task("oa", "Item A", "fechado", "g1", 1, due=7000),
+        task("ob", "Item B", "fechado", "orf", 2, due=7000),
+    ]
+    w = []
+    out = sc.sync(copy.deepcopy(d), t, w)
+
+    nums = [m["num"] for m in out["metas"]]
+    check("não sobrou fase avulsa (num 999)", 999 not in nums)
+
+    f1 = [m for m in out["metas"] if m["num"] == 1][0]
+    adotada = [f for f in f1["fases"] if f["id"] == "orf"]
+    check("a tarefa virou subfase da Fase 1", len(adotada) == 1)
+
+    if adotada:
+        ativ = {a["id"]: a for a in adotada[0]["ativ"]}
+        # "oa" está um nível abaixo de "g1"; "ob" é filho direto. Os dois
+        # precisam sobreviver ao achatamento.
+        check("itens dos dois níveis entraram", set(ativ) == {"oa", "ob"})
+        check("original_due antiga foi preservada no novo lugar",
+              ativ.get("oa", {}).get("original_due") == 3000)
+        check("item novo recebe original_due = due atual",
+              ativ.get("ob", {}).get("original_due") == 7000)
+
+    # a 1.1 curada continua lá, e a adotada entra depois dela
+    ordem = [f["n"] for f in f1["fases"]]
+    check("ordem das subfases: 1.1 antes da 1.9", ordem == ["1.1 Kickoff", "Fase 1.9 - Virada"])
+
+    # Se o ClickUp for corrigido e a tarefa deixar de ser raiz, nada duplica.
+    t2 = [dict(x, parent="f1") if x["id"] == "orf" else x for x in t]
+    out2 = sc.sync(copy.deepcopy(d), t2, [])
+    f1b = [m for m in out2["metas"] if m["num"] == 1][0]
+    check("pai corrigido no ClickUp não duplica a subfase",
+          sum(1 for f in f1b["fases"] if f["id"] == "orf") == 1)
+
+
 if __name__ == "__main__":
     for fn in (t_a_nada_mudou, t_b_algo_mudou, t_c1_dois_vocabularios,
                t_c2_status_desconhecido, t_c3_curados_sobrevivem,
                t_c4_original_due_congelada, t_c5_gantt_curado,
-               t_c6_ordem_pelo_num, t_c7_inventario_profundo, t_c8_tarefa_solta_ignorada, t_c9_timestamp_nao_congela):
+               t_c6_ordem_pelo_num, t_c7_inventario_profundo, t_c8_tarefa_solta_ignorada, t_c9_timestamp_nao_congela,
+               t_c10_reparentar):
         fn()
     print("\n" + "=" * 52)
     if FALHAS:

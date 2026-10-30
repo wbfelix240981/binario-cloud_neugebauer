@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-10-30T01:59:48.991187Z",
+ "last_synced": "2026-10-30T08:43:44.714053Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
  "login": {
   "users": [

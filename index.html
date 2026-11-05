@@ -927,16 +927,27 @@ function leaves(m){
 }
 const allLeaves = list => list.flatMap(leaves);
 
+// Só é atraso quando as DUAS datas já venceram: a original e a replanejada.
+// Uma atividade que era para 02/10 e foi reprogramada para 06/11 está dentro
+// do novo plano, então não conta como atrasada -- o replanejamento continua
+// visível na linha "02 de out → 06 de nov", mas não pinta de vermelho.
+// Quando o prazo é antecipado, vale a data original, que é a mais distante.
+const dueRef = item => {
+  const o = item.original_due, d = item.due;
+  if(o == null) return d ?? null;
+  if(d == null) return o;
+  return Math.max(o, d);
+};
 function dueState(item){
   if(item.status==='shipped') return null;
-  const d = item.original_due ?? item.due;
+  const d = dueRef(item);
   if(!d) return null;
   const day = sod(d);
   if(day < TODAY) return 'late';      // vermelho só a partir do dia seguinte ao vencimento
   if(day === TODAY) return 'warn';    // amarelo no próprio dia do vencimento
   return null;
 }
-const daysLate = item => Math.round((TODAY - sod(item.original_due ?? item.due))/DAY);
+const daysLate = item => Math.round((TODAY - sod(dueRef(item)))/DAY);
 const isDone = x => x.status==='shipped';
 function metaProg(m){
   const l=principais(leaves(m));
@@ -978,7 +989,7 @@ function renderHeader(){
   // o "7" abrir uma lista com 8 itens.
   const late = [...all, ...SIDE.map(m=>({...m, n:m.short}))]
                  .filter(a=>dueState(a)==='late').length;
-  const prox = all.filter(a=>!isDone(a) && dueState(a)!=='late' && (a.original_due??a.due) && sod(a.original_due??a.due)<=TODAY+14*DAY).length;
+  const prox = all.filter(a=>!isDone(a) && dueState(a)!=='late' && dueRef(a) && sod(dueRef(a))<=TODAY+14*DAY).length;
   const lvP = principais(lv), doneL = lvP.filter(isDone).length;
   const k = (cls,v,l,barPct,col,act)=>`<div class="kpi ${cls}" data-act="${act||''}"><div class="v">${v}</div><div class="l">${l}</div>${barPct!=null?`<div class="bar"><i style="width:${barPct}%;background:${col}"></i></div>`:''}</div>`;
   document.getElementById('kpis').innerHTML =
@@ -999,9 +1010,9 @@ function renderHeader(){
 const ATTN_OPEN = new Set();   // quadros "Próximos passos" e "Atrasadas" começam minimizados
 function renderAttn(){
   const items = [...allLeaves(VISIBLE), ...SIDE.map(m=>({...m, n:m.short, meta:'Frente paralela', fase:'', owner:m.assignee}))];
-  const dOf = a => a.original_due ?? a.due;
+  const dOf = a => a.original_due ?? a.due;   // data de origem, só para exibir o "de → para"
   const late = items.filter(a=>dueState(a)==='late').sort((a,b)=>daysLate(b)-daysLate(a));
-  const prox = items.filter(a=>!isDone(a) && dueState(a)!=='late' && dOf(a) && sod(dOf(a))<=TODAY+14*DAY).sort((a,b)=>dOf(a)-dOf(b));
+  const prox = items.filter(a=>!isDone(a) && dueState(a)!=='late' && dueRef(a) && sod(dueRef(a))<=TODAY+14*DAY).sort((a,b)=>dueRef(a)-dueRef(b));
   const row = (a,kind)=>`<div class="attn-item"><span class="t">${esc(a.n)} ${partyChip(a.party)}${a.status==='blocked'?' <span class="pill block">bloqueada</span>':''}</span>
     <span class="c">${esc(a.meta)}${a.fase?' · '+esc(a.fase):''}</span>
     <span class="d">${kind==='late'?`${daysLate(a)}d de atraso<br>`:''}${fmt(dOf(a))}${a.original_due&&a.due&&a.due!==a.original_due?` → ${fmt(a.due)}`:''}</span></div>`;

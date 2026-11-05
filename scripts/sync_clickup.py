@@ -288,11 +288,18 @@ def sync(data, tasks, warnings):
                     "id": leaf["id"],
                 })
 
+            # A subfase também congela a data-base. Uma subfase sem atividades
+            # é uma folha do painel, e sem original_due o atraso dela passava a
+            # ser medido contra a data nova: adiar o prazo no ClickUp apagava o
+            # atraso acumulado. Foi o que aconteceu com "Elaboração da TEP",
+            # adiada de 12/10 para 06/11 e exibida como se estivesse em dia.
+            sub_due = due_of(sub)
             fases.append({
                 "n": sub["name"],
                 "status": to_normalized(sub["status"]["status"], f"subfase '{sub['name']}'", warnings),
                 "assignee": assignee_of(sub),
-                "due": due_of(sub),
+                "due": sub_due,
+                "original_due": prev_orig.get(sub["id"], sub_due),
                 "id": sub["id"],
                 "ativ": ativ,
             })

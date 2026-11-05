@@ -14,6 +14,7 @@ Cobre:
       c6 - ordem das metas segue o 'num' curado, não a ordem do ClickUp
       c7 - inventário profundo (nível 4+) não vira atividade
       c10 - tarefa solta na raiz volta para a fase certa (mapa 'reparentar')
+      c11 - subfase sem atividades congela a data-base do atraso
 """
 import copy
 import json
@@ -275,13 +276,35 @@ def t_c10_reparentar():
     check("pai corrigido no ClickUp não duplica a subfase",
           sum(1 for f in f1b["fases"] if f["id"] == "orf") == 1)
 
+def t_c11_subfase_congela_data_base():
+    print("\n--- (c11) subfase sem atividades também congela a data-base ---")
+    d = base_data()
+    # 1.2 é uma subfase SEM atividades: no painel ela é uma folha, então o
+    # atraso dela precisa ser medido contra a data original, não contra a nova.
+    d["metas"][0]["fases"].append(
+        {"n": "1.2 TEP", "status": "in progress", "assignee": "Diogo",
+         "due": 5000, "original_due": 5000, "id": "s12", "ativ": []})
+    t = base_tasks() + [task("s12", "1.2 TEP", "em andamento", "f1", 2, "Diogo", due=9000)]
+    out = sc.sync(copy.deepcopy(d), t, [])
+    f12 = [f for f in out["metas"][0]["fases"] if f["id"] == "s12"][0]
+    check("prazo acompanha o ClickUp", f12["due"] == 9000)
+    check("data-base NÃO acompanha (atraso preservado)", f12["original_due"] == 5000)
+
+    # subfase nova entra com a data-base igual à data atual
+    d2 = base_data()
+    t2 = base_tasks() + [task("s13", "1.3 Nova", "em andamento", "f1", 3, due=4000)]
+    out2 = sc.sync(copy.deepcopy(d2), t2, [])
+    f13 = [f for f in out2["metas"][0]["fases"] if f["id"] == "s13"][0]
+    check("subfase nova recebe data-base = prazo atual", f13["original_due"] == 4000)
+
 
 if __name__ == "__main__":
     for fn in (t_a_nada_mudou, t_b_algo_mudou, t_c1_dois_vocabularios,
                t_c2_status_desconhecido, t_c3_curados_sobrevivem,
                t_c4_original_due_congelada, t_c5_gantt_curado,
                t_c6_ordem_pelo_num, t_c7_inventario_profundo, t_c8_tarefa_solta_ignorada, t_c9_timestamp_nao_congela,
-               t_c10_reparentar):
+               t_c10_reparentar,
+               t_c11_subfase_congela_data_base):
         fn()
     print("\n" + "=" * 52)
     if FALHAS:

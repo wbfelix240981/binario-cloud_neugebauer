@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-11-06T15:08:36.397210Z",
+ "last_synced": "2026-11-06T20:55:49.616267Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
  "login": {
   "users": [
@@ -164,7 +164,7 @@
     {
      "id": "86ajrf5dr",
      "name": "4.2 Configurar Backup Binario",
-     "status": "em andamento",
+     "status": "concluído",
      "start": 1790319600000,
      "due": 1793948400000,
      "assignee": "José Maria Ferreira da Silva"
@@ -172,7 +172,7 @@
     {
      "id": "86ajrf5dt",
      "name": "4.3 Monitoramento",
-     "status": "em andamento",
+     "status": "concluído",
      "start": 1790319600000,
      "due": 1793948400000,
      "assignee": ""
@@ -199,7 +199,7 @@
     {
      "id": "86ak080ug",
      "name": "Elaboração da TEP",
-     "status": "em andamento",
+     "status": "concluído",
      "start": 1791529200000,
      "due": 1793948400000,
      "assignee": ""
@@ -209,7 +209,7 @@
      "name": "5.1 Transição para operação",
      "status": "em andamento",
      "start": 1791529200000,
-     "due": 1793948400000,
+     "due": 1794553200000,
      "assignee": ""
     },
     {
@@ -963,11 +963,39 @@
        "id": "17ttbukyxr3"
       },
       {
-       "n": "Disponibilização dados retroativos 2026",
+       "n": "Maio PRD",
+       "status": "in review",
+       "due": 1794294000000,
+       "original_due": 1794294000000,
+       "id": "17ttbum12jd"
+      },
+      {
+       "n": "Fevereiro/Março - 3.6Tb",
+       "status": "shipped",
+       "due": 1793948400000,
+       "original_due": 1793948400000,
+       "id": "17ttbum12j7"
+      },
+      {
+       "n": "Junho",
+       "status": "in review",
+       "due": 1794553200000,
+       "original_due": 1794553200000,
+       "id": "17ttbum12jf"
+      },
+      {
+       "n": "Julho",
+       "status": "in review",
+       "due": 1794553200000,
+       "original_due": 1794553200000,
+       "id": "17ttbum12je"
+      },
+      {
+       "n": "Abril - 1.1Tb",
        "status": "in progress",
        "due": 1794553200000,
        "original_due": 1794553200000,
-       "id": "17ttbum0w7f"
+       "id": "17ttbum12j8"
       }
      ]
     }
@@ -988,7 +1016,7 @@
    "fases": [
     {
      "n": "4.2 Configurar Backup Binario",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "Lucas Federissis de Souza",
      "due": 1793948400000,
      "original_due": 1791183600000,
@@ -1033,7 +1061,7 @@
     },
     {
      "n": "4.3 Monitoramento",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "Lucas Federissis de Souza",
      "due": 1793948400000,
      "original_due": 1792134000000,
@@ -1041,7 +1069,7 @@
      "ativ": [
       {
        "n": "Configurar monitoramento das VMs",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1793948400000,
        "original_due": 1790924400000,
        "id": "86ajrf5v9"
@@ -1055,14 +1083,14 @@
       },
       {
        "n": "Configurar monitoramento dos backups",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1793948400000,
        "original_due": 1790924400000,
        "id": "86ajrf5vm"
       },
       {
        "n": "Validar geração automática de alertas",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1793948400000,
        "original_due": 1790924400000,
        "id": "86ajrf5vt"
@@ -1088,7 +1116,7 @@
      "n": "5.1 Transição para operação",
      "status": "in progress",
      "assignee": "Diogo Lerison",
-     "due": 1793948400000,
+     "due": 1794553200000,
      "original_due": 1792134000000,
      "id": "86ajrf5ee",
      "ativ": [
@@ -1155,7 +1183,7 @@
     },
     {
      "n": "Elaboração da TEP",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "Diogo Lerison",
      "due": 1793948400000,
      "original_due": 1791788400000,

@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-11-09T08:03:22.276511Z",
+ "last_synced": "2026-11-09T18:52:37.607380Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
  "login": {
   "users": [
@@ -158,7 +158,7 @@
    "name": "Fase 4 — Go-live e estabilização",
    "status": "em andamento",
    "start": 1790146800000,
-   "due": 1793948400000,
+   "due": 1794553200000,
    "assignee": "Diogo Lerison / José Maria Ferreira da Silva",
    "children": [
     {
@@ -172,7 +172,7 @@
     {
      "id": "86ajrf5dt",
      "name": "4.3 Monitoramento",
-     "status": "concluído",
+     "status": "fechado",
      "start": 1790319600000,
      "due": 1793948400000,
      "assignee": ""
@@ -907,7 +907,7 @@
        "id": "86aknc0rm"
       },
       {
-       "n": "NGBORA01",
+       "n": "NGBORA01 ",
        "status": "shipped",
        "due": 1793084400000,
        "original_due": 1793084400000,
@@ -921,53 +921,46 @@
        "id": "17ttbukx2f9"
       },
       {
-       "n": "Legado-21-20",
+       "n": "Legado-21-20 - 1.3Tb",
        "status": "shipped",
        "due": 1792738800000,
        "original_due": 1792738800000,
        "id": "17ttbukx2fa"
       },
       {
-       "n": "JAN-22",
+       "n": "JAN-22 - 683Gb",
        "status": "shipped",
        "due": 1792738800000,
        "original_due": 1792738800000,
        "id": "17ttbukx2kz"
       },
       {
-       "n": "JAN-23",
+       "n": "JAN-23 - 2.1Tb",
        "status": "shipped",
        "due": 1793343600000,
        "original_due": 1793343600000,
        "id": "17ttbukx2m1"
       },
       {
-       "n": "JAN-24",
+       "n": "JAN-24 - 2.6Tb",
        "status": "shipped",
        "due": 1793343600000,
        "original_due": 1793343600000,
        "id": "17ttbukx2m2"
       },
       {
-       "n": "JAN-25",
+       "n": "JAN-25 - 3.4Tb",
        "status": "shipped",
        "due": 1793343600000,
        "original_due": 1793343600000,
        "id": "17ttbukx2m3"
       },
       {
-       "n": "JAN-26",
+       "n": "JAN-26 - 2.3Tb",
        "status": "shipped",
        "due": 1794294000000,
        "original_due": 1793775600000,
        "id": "17ttbukyxr3"
-      },
-      {
-       "n": "Maio PRD",
-       "status": "in review",
-       "due": 1794294000000,
-       "original_due": 1794294000000,
-       "id": "17ttbum12jd"
       },
       {
        "n": "Fevereiro/Março - 3.6Tb",
@@ -977,6 +970,20 @@
        "id": "17ttbum12j7"
       },
       {
+       "n": "Abril - 1.1Tb",
+       "status": "shipped",
+       "due": 1794553200000,
+       "original_due": 1794553200000,
+       "id": "17ttbum12j8"
+      },
+      {
+       "n": "Maio - 1.7Tb",
+       "status": "in progress",
+       "due": 1794294000000,
+       "original_due": 1794294000000,
+       "id": "17ttbum12jd"
+      },
+      {
        "n": "Junho",
        "status": "in review",
        "due": 1794553200000,
@@ -984,18 +991,11 @@
        "id": "17ttbum12jf"
       },
       {
-       "n": "Julho",
-       "status": "in review",
-       "due": 1794553200000,
-       "original_due": 1794553200000,
-       "id": "17ttbum12je"
-      },
-      {
-       "n": "Abril - 1.1Tb",
+       "n": "Julho - 1.6Tb",
        "status": "in progress",
        "due": 1794553200000,
        "original_due": 1794553200000,
-       "id": "17ttbum12j8"
+       "id": "17ttbum12je"
       }
      ]
     }
@@ -1005,7 +1005,7 @@
    "num": 4,
    "id": "86ajrf5d3",
    "status": "in progress",
-   "due": 1793948400000,
+   "due": 1794553200000,
    "name": "Fase 4 — Go-live e estabilização do ambiente Neugebauer",
    "short": "Fase 4 — Go-live e estabilização",
    "assignee": "Diogo Lerison",
@@ -1076,7 +1076,7 @@
       },
       {
        "n": "Configurar monitoramento do firewall",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1793948400000,
        "original_due": 1790924400000,
        "id": "86ajrf5vn"

@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-11-10T09:57:53.309949Z",
+ "last_synced": "2026-11-10T13:45:33.509066Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
  "login": {
   "users": [
@@ -977,22 +977,22 @@
        "id": "17ttbum12j8"
       },
       {
-       "n": "Maio - 1.7Tb",
-       "status": "in progress",
+       "n": "Maio - 1.9Tb",
+       "status": "shipped",
        "due": 1794294000000,
        "original_due": 1794294000000,
        "id": "17ttbum12jd"
       },
       {
-       "n": "Junho",
-       "status": "in review",
+       "n": "Junho - 1.8Tb",
+       "status": "in progress",
        "due": 1794553200000,
        "original_due": 1794553200000,
        "id": "17ttbum12jf"
       },
       {
-       "n": "Julho - 1.6Tb",
-       "status": "in progress",
+       "n": "Julho - 1.7Tb",
+       "status": "shipped",
        "due": 1794553200000,
        "original_due": 1794553200000,
        "id": "17ttbum12je"

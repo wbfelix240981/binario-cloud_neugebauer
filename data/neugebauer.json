@@ -1,6 +1,6 @@
 {
  "list_id": "901328018187",
- "last_synced": "2026-11-25T04:18:30.024155Z",
+ "last_synced": "2026-11-25T12:47:09.211808Z",
  "_leia_me": "CURADO (o sync NUNCA sobrescreve): em metas -> num, name, short, detail, tags; em gantt -> metaNum, name, start, e a SELEÇÃO de children (o Gantt mostra um subconjunto escolhido a mão, não tudo do ClickUp). DINÂMICO (vem do ClickUp a cada sync): status, due, assignee, e a lista de fases/ativ dentro de metas. REPARENTAR: tarefas que estão na raiz da lista do ClickUp mas pertencem a uma fase ({id da tarefa: num da fase}). Sem isso elas viram fases avulsas e ficam fora do percentual. Se o pai for corrigido no ClickUp, a tarefa deixa de ser raiz e o mapa simplesmente não casa — pode ser removido daqui.",
  "login": {
   "users": [
@@ -191,7 +191,7 @@
    "id": "86ajrf5d6",
    "metaNum": 5,
    "name": "Fase 5 — Encerramento e transição",
-   "status": "em andamento",
+   "status": "fechado",
    "start": 1791183600000,
    "due": 1794553200000,
    "assignee": "",
@@ -199,7 +199,7 @@
     {
      "id": "86ak080ug",
      "name": "Elaboração da TEP",
-     "status": "concluído",
+     "status": "fechado",
      "start": 1791529200000,
      "due": 1793948400000,
      "assignee": ""
@@ -207,7 +207,7 @@
     {
      "id": "86ajrf5ee",
      "name": "5.1 Transição para operação",
-     "status": "concluído",
+     "status": "fechado",
      "start": 1791529200000,
      "due": 1794553200000,
      "assignee": ""
@@ -215,7 +215,7 @@
     {
      "id": "86ajrf5ef",
      "name": "5.2 Encerramento",
-     "status": "em andamento",
+     "status": "fechado",
      "start": 1791788400000,
      "due": 1794553200000,
      "assignee": ""
@@ -1102,7 +1102,7 @@
   {
    "num": 5,
    "id": "86ajrf5d6",
-   "status": "in progress",
+   "status": "shipped",
    "due": 1794553200000,
    "name": "Fase 5 — Encerramento e transição do Projeto Neugebauer",
    "short": "Fase 5 — Encerramento e transição",
@@ -1136,7 +1136,7 @@
       },
       {
        "n": "Realizar passagem para o CCOE",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1796108400000,
        "original_due": 1792134000000,
        "id": "86ajrf62u"
@@ -1152,7 +1152,7 @@
     },
     {
      "n": "5.2 Encerramento",
-     "status": "in progress",
+     "status": "shipped",
      "assignee": "Diogo Lerison",
      "due": 1794553200000,
      "original_due": 1792134000000,
@@ -1160,21 +1160,21 @@
      "ativ": [
       {
        "n": "Realizar reunião de encerramento",
-       "status": "in progress",
+       "status": "shipped",
        "due": 1794553200000,
        "original_due": 1792134000000,
        "id": "86ajrf63z"
       },
       {
        "n": "Enviar termo de aceite",
-       "status": "backlog",
+       "status": "shipped",
        "due": 1794553200000,
        "original_due": 1792134000000,
        "id": "86ajrf63y"
       },
       {
        "n": "Obter aceite formal da Neugebauer",
-       "status": "backlog",
+       "status": "shipped",
        "due": 1794553200000,
        "original_due": 1792134000000,
        "id": "86ajrf643"
